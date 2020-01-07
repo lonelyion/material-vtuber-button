@@ -1,9 +1,9 @@
 const ja_JP = {
     info: {
-        title: "あくあボタン",
+        title: "フブキボタン",
         info: "通知",
         null: "空",
-        audioStaff: "オーディオクリップ: mchong111 CatCoffee",
+        audioStaff: "オーディオクリップ: 孤独のイオン & フブキのこーん畑",
         toGithub: "Githubで翻訳に参加、音声を追加および提案をしてください。",
         notOfficial: "このサイトはファン作品であり、公式とは関係ありません。",
         overlapTips: "声重なる再生モードは手動で停止できません。大量のスレッドを作成するので、後リフレッシュしてください。"

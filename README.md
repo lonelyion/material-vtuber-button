@@ -1,14 +1,12 @@
-# Aqua button
+# Fubuki button
 
-Aqua button [Click here to visit https://aquaminato.moe](https://aquaminato.moe)
-
-[![Build Status](https://travis-ci.org/zyzsdy/aqua-button.svg?branch=master)](https://travis-ci.org/zyzsdy/aqua-button)
+Fubuki button [Click here to visit](https://fubuki-button.copperion.com)
 
 Related Links:
 
-* [Aqua Minato's Youtube channel](https://www.youtube.com/channel/UC1opHUrw8rvnsadT-iGp7Cg)
+* [Shirakami Fubuki's Youtube channel](https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg)
 
-* [Aqua Minato's Twitter](https://twitter.com/minatoaqua)
+* [Shirakami Fubuki's Twitter](https://twitter.com/shirakamifubuki)
 
 ## Contributing
 
