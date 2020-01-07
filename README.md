@@ -2,7 +2,7 @@
 
 Fubuki button [Click here to visit](https://fubuki-button.copperion.com)
 
-https://github.com/copperion/fubuki-button/workflows/FBK-BTN-CI/badge.svg
+![](https://github.com/copperion/fubuki-button/workflows/FBK-BTN-CI/badge.svg)
 
 Related Links:
 
