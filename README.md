@@ -2,6 +2,8 @@
 
 Fubuki button [Click here to visit](https://fubuki-button.copperion.com)
 
+https://github.com/copperion/fubuki-button/workflows/FBK-BTN-CI/badge.svg
+
 Related Links:
 
 * [Shirakami Fubuki's Youtube channel](https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg)
