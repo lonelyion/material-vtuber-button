@@ -1,4 +1,4 @@
-{
+﻿{
     "voices": [
         {
             "categoryName": "actmoe",
@@ -8,14 +8,299 @@
             },
             "voiceList": [
                 {
-                    "name": "f-1",
-                    "path": "f-1.mp3",
+                    "name": "f-002",
+                    "path": "f-002.mp3",
+                    "description": {
+                        "zh-CN": "amuamuamu（吃）",
+                        "ja-JP": "あむあむ"
+                    }
+                },
+                {
+                    "name": "f-005",
+                    "path": "f-005.mp3",
+                    "description": {
+                        "zh-CN": "布依布依布依(模仿)",
+                        "ja-JP": "イブの真似"
+                    }
+                },
+                {
+                    "name": "f-006",
+                    "path": "f-006.mp3",
+                    "description": {
+                        "zh-CN": "皮卡丘Pika(模仿)",
+                        "ja-JP": "ピカチュウの真似"
+                    }
+                },
+                {
+                    "name": "f-012",
+                    "path": "f-012.mp3",
+                    "description": {
+                        "zh-CN": "种子种子(模仿妙蛙种子)",
+                        "ja-JP": "フシギダネの真似"
+                    }
+                },
+                {
+                    "name": "f-007",
+                    "path": "f-007.mp3",
+                    "description": {
+                        "zh-CN": "狐言乱语绕口令1",
+                        "ja-JP": "早口ことば1"
+                    }
+                },
+                {
+                    "name": "f-008",
+                    "path": "f-008.mp3",
+                    "description": {
+                        "zh-CN": "狐言乱语绕口令2(中文)",
+                        "ja-JP": "早口ことば2"
+                    }
+                }
+            ]
+        },
+        {
+            "categoryName": "nakigoe",
+            "categoryDescription": {
+                "zh-CN": "叫声",
+                "ja-JP": "鳴き声"
+            },
+            "voiceList": [
+                {
+                    "name": "f-001",
+                    "path": "f-001.mp3",
                     "description": {
                         "zh-CN": "kon-nya-nya-kon~",
                         "ja-JP": "kon-nya-nya-kon~"
                     }
+                },
+                {
+                    "name": "f-003",
+                    "path": "f-003.mp3",
+                    "description": {
+                        "zh-CN": "咪~",
+                        "ja-JP": "にゃ"
+                    }
+                },
+                {
+                    "name": "f-004",
+                    "path": "f-004.mp3",
+                    "description": {
+                        "zh-CN": "嗯~konkonkonkon汪汪~汪汪konkon狐~",
+                        "ja-JP": "うん～こんこん～こんこん狐！"
+                    }
                 }
             ]
+        },
+        {
+          "categoryName": "common",
+          "categoryDescription": {
+            "zh-CN": "通用",
+            "ja-JP": "通常"
+          },
+          "voiceList": [
+            {
+                "name": "f-017",
+                "path": "f-017.mp3",
+                "description": {
+                    "zh-CN": "不是猫,不是猫啦,真是的",
+                    "ja-JP": "猫じゃないよ！もう！"
+                }
+            },
+            {
+                "name": "f-018",
+                "path": "f-018.mp3",
+                "description": {
+                    "zh-CN": "不是猫！",
+                    "ja-JP": "猫じゃない！"
+                }
+            },
+            {
+                "name": "f-019",
+                "path": "f-019.mp3",
+                "description": {
+                    "zh-CN": "(傲娇)才不要弄错了啊，人家才不会喜欢大家呢",
+                    "ja-JP": "ツンデレ"
+                }
+            },
+            {
+                "name": "f-022",
+                "path": "f-022.mp3",
+                "description": {
+                    "zh-CN": "是狐狸！",
+                    "ja-JP": "狐じゃい！"
+                }
+            },
+            {
+                "name": "f-023",
+                "path": "f-023.mp3",
+                "description": {
+                    "zh-CN": "我...我...最喜欢...大家了！嗯！我爱你！",
+                    "ja-JP": "みなんのことは大好き！！あいしている！"
+                }
+            },
+            {
+                "name": "f-024",
+                "path": "f-024.mp3",
+                "description": {
+                    "zh-CN": "我爱你！我爱你可以嘛",
+                    "ja-JP": "あいしている！"
+                }
+            },
+            {
+                "name": "f-025",
+                "path": "f-025.mp3",
+                "description": {
+                    "zh-CN": "我不是猫咪-系狐狸(中文)",
+                    "ja-JP": "猫ではない、狐！（中国語）"
+                }
+            },
+            {
+                "name": "f-029",
+                "path": "f-029.mp3",
+                "description": {
+                    "zh-CN": "怎么看都是狐狸,嗯",
+                    "ja-JP": "どう見ても狐！うん！"
+                }
+            },
+            {
+                "name": "f-030",
+                "path": "f-030.mp3",
+                "description": {
+                    "zh-CN": "这是什么东西呢？能吃么",
+                    "ja-JP": "これはなんですか？食べるの？"
+                }
+            }
+          ]
+        },
+        {
+          "categoryName": "greeting",
+          "categoryDescription": {
+            "zh-CN": "打招呼",
+            "ja-JP": "挨拶"
+          },
+          "voiceList": [
+            {
+                "name": "f-013",
+                "path": "f-013.mp3",
+                "description": {
+                    "zh-CN": "大家晚好狐",
+                    "ja-JP": "こんばん狐！"
+                }
+            },
+            {
+                "name": "f-014",
+                "path": "f-014.mp3",
+                "description": {
+                    "zh-CN": "出来~出来~出来！(中文)",
+                    "ja-JP": "出てこい！（中国語）"
+                }
+            },
+            {
+                "name": "f-031",
+                "path": "f-031.mp3",
+                "description": {
+                    "zh-CN": "自闭雪喵喵给大家拜年啦(中文)",
+                    "ja-JP": "猫年あけましておめでとう～（中国語）"
+                }
+            }
+          ]
+        },
+        {
+          "categoryName": "modal",
+          "categoryDescription": {
+            "zh-CN": "语气",
+            "ja-JP": "モーダル"
+          },
+          "voiceList": [
+            {
+                "name": "f-009",
+                "path": "f-009.mp3",
+                "description": {
+                    "zh-CN": "嗯嗯嗯~嘿嘿嘿嘿",
+                    "ja-JP": "うん~えへへ"
+                }
+            },
+            {
+                "name": "f-010",
+                "path": "f-010.mp3",
+                "description": {
+                    "zh-CN": "啊好可爱！哇哇哇！",
+                    "ja-JP": "あ！かわいい！わい！"
+                }
+            },
+            {
+                "name": "f-011",
+                "path": "f-011.mp3",
+                "description": {
+                    "zh-CN": "啊是这个！是这个！这个xN",
+                    "ja-JP": "これだ！これだ！"
+                }
+            },
+            {
+                "name": "f-016",
+                "path": "f-016.mp3",
+                "description": {
+                    "zh-CN": "啊我死啦(中文)",
+                    "ja-JP": "AWSL"
+                }
+            },
+            {
+                "name": "f-020",
+                "path": "f-020.mp3",
+                "description": {
+                    "zh-CN": "好~好~(中文)",
+                    "ja-JP": "こんにちは～こんにちは！（中国語）"
+                }
+            },
+            {
+                "name": "f-026",
+                "path": "f-026.mp3",
+                "description": {
+                    "zh-CN": "谢谢~谢谢(中文)",
+                    "ja-JP": "ありがどう！（中国語）"
+                }
+            }
+          ]
+        },
+        {
+          "categoryName": "other",
+          "categoryDescription": {
+            "zh-CN": "其他",
+            "ja-JP": "その他"
+          },
+          "voiceList": [
+            {
+                "name": "f-021",
+                "path": "f-021.mp3",
+                "description": {
+                    "zh-CN": "马自立酱！哇！嗅嗅！好香！",
+                    "ja-JP": "まつりちゃん！わい！スンスン！いい匂い！"
+                }
+            },
+            {
+                "name": "f-015",
+                "path": "f-015.mp3",
+                "description": {
+                    "zh-CN": "AMT-阿夸麻吉天使",
+                    "ja-JP": "AMT-あくあまじ天使"
+                }
+            },
+            {
+                "name": "f-027",
+                "path": "f-027.mp3",
+                "description": {
+                    "zh-CN": "新年快乐耶！新年快乐！(中文)",
+                    "ja-JP": "あけましておめでとう～（中国語）"
+                }
+            },
+            {
+                "name": "f-028",
+                "path": "f-028.mp3",
+                "description": {
+                    "zh-CN": "玉米-玉米-玉米con(中文)",
+                    "ja-JP": "こーん、こーん（中国語）"
+                }
+            }
+          ]
         }
     ]
 }

@@ -44,7 +44,7 @@
 }
 .btn-new {
     color: #fff;
-    background-color: rgb(38, 176, 211);
+    background-color: rgb(146, 188, 228);
     border-color: rgb(246, 221, 101);
 }
 .checkbox {
