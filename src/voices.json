@@ -8,6 +8,14 @@
             },
             "voiceList": [
                 {
+                    "name": "f-032",
+                    "path": "f-032.mp3",
+                    "description": {
+                        "zh-CN": "(自我介绍)我叫白上吹雪，是只狐狸！",
+                        "ja-JP": "白上フブキの自己紹介"
+                    }
+                },
+                {
                     "name": "f-002",
                     "path": "f-002.mp3",
                     "description": {
