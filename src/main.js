@@ -68,9 +68,9 @@ let locale = 'zh-CN';
 if(/ja/i.test(navigator.language)){
   locale = 'ja-JP';
 }
-// else if(/en/i.test(navigator.language)){
-//   locale = 'en-US';
-// }
+else if(/en/i.test(navigator.language)){
+  locale = 'en-US';
+}
 
 const i18n = new VueI18n({
   locale,

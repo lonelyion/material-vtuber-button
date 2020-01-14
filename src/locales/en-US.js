@@ -5,14 +5,19 @@ const en_US = {
         null: "Empty",
         audioStaff: "Audio Clip: Lonely_Ion & Fubuki's Corn Field",
         toGithub: "Please participate in translation, add audio or make suggestions on Github:",
-        notOfficial: "This site is a fan work and is not associated with the hololive official."
+        notOfficial: "This site is a fan work and is not associated with the hololive official.",
+        overlapTips: "Overlap play cann't be paused and it creates many threads so it's better to refresh occasionally."
     },
     action: {
         toggleNavbar: "Toggle navigation bar",
         close: "close",
         copy: "copy",
-        control: "Player control",
-        stopvoice: "Stop current voice"
+        control: "Player Control",
+        stopvoice: "Stop Current Voice",
+        randomplay: "Randomly Pick One",
+        overlap: "Allow Overlap",
+        playing: "Now Playing：",
+        noplay: "No Play"
     },
     lang: {
         'zh-CN': "简体中文",

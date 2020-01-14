@@ -4,6 +4,7 @@
             "categoryName": "actmoe",
             "categoryDescription": {
                 "zh-CN": "萌",
+                "en-US": "Moe",
                 "ja-JP": "もえ"
             },
             "voiceList": [
@@ -12,6 +13,7 @@
                     "path": "f-032.mp3",
                     "description": {
                         "zh-CN": "(自我介绍)我叫白上吹雪,是只狐狸！",
+                        "en-US": "(Self-intro)I'm Shirakami Fubuki, a fox!",
                         "ja-JP": "白上フブキの自己紹介"
                     }
                 },
@@ -20,6 +22,7 @@
                     "path": "f-002.mp3",
                     "description": {
                         "zh-CN": "amuamuamu(吃)",
+                        "en-US": "amuamuamu(eating)",
                         "ja-JP": "あむあむ"
                     }
                 },
@@ -28,6 +31,7 @@
                     "path": "f-005.mp3",
                     "description": {
                         "zh-CN": "布依布依布依(模仿)",
+                        "en-US": "bui-bui-bui(imitate)",
                         "ja-JP": "イブの真似"
                     }
                 },
@@ -36,6 +40,7 @@
                     "path": "f-006.mp3",
                     "description": {
                         "zh-CN": "皮卡丘Pika(模仿)",
+                        "en-US": "pika-pikachu(imitate)",
                         "ja-JP": "ピカチュウの真似"
                     }
                 },
@@ -44,6 +49,7 @@
                     "path": "f-012.mp3",
                     "description": {
                         "zh-CN": "种子种子(模仿妙蛙种子)",
+                        "en-US": "Bulbasaur(imitate)",
                         "ja-JP": "フシギダネの真似"
                     }
                 },
@@ -52,6 +58,7 @@
                     "path": "f-007.mp3",
                     "description": {
                         "zh-CN": "狐言乱语绕口令1",
+                        "en-US": "Tongue twister 1",
                         "ja-JP": "早口ことば1"
                     }
                 },
@@ -60,6 +67,7 @@
                     "path": "f-008.mp3",
                     "description": {
                         "zh-CN": "狐言乱语绕口令2(中文)",
+                        "en-US": "Tongue twister 2(Chinese)",
                         "ja-JP": "早口ことば2"
                     }
                 },
@@ -68,6 +76,7 @@
                     "path": "f-033.mp3",
                     "description": {
                         "zh-CN": "(哈欠)好想睡觉啊",
+                        "en-US": "(yawn)I wanna sleep",
                         "ja-JP": "(あくび)眠りたい"
                     }
                 },
@@ -76,6 +85,7 @@
                     "path": "f-036.mp3",
                     "description": {
                         "zh-CN": "打哈欠",
+                        "en-US": "Yawn",
                         "ja-JP": "あくび"
                     }
                 }
@@ -85,6 +95,7 @@
             "categoryName": "nakigoe",
             "categoryDescription": {
                 "zh-CN": "叫声",
+                "en-US": "Roaring",
                 "ja-JP": "鳴き声"
             },
             "voiceList": [
@@ -93,6 +104,7 @@
                     "path": "f-001.mp3",
                     "description": {
                         "zh-CN": "kon-nya-nya-kon~",
+                        "en-US": "kon-nya-nya-kon~",
                         "ja-JP": "kon-nya-nya-kon~"
                     }
                 },
@@ -101,6 +113,7 @@
                     "path": "f-003.mp3",
                     "description": {
                         "zh-CN": "咪~",
+                        "en-US": "mi~",
                         "ja-JP": "にゃ"
                     }
                 },
@@ -109,6 +122,7 @@
                     "path": "f-004.mp3",
                     "description": {
                         "zh-CN": "嗯~konkonkonkon汪汪~汪汪konkon狐~",
+                        "en-US": "en~konkonkonkon-fox",
                         "ja-JP": "うん～こんこん～こんこん狐！"
                     }
                 }
@@ -118,6 +132,7 @@
           "categoryName": "common",
           "categoryDescription": {
             "zh-CN": "通用",
+            "en-US": "Common",
             "ja-JP": "通常"
           },
           "voiceList": [
@@ -126,6 +141,7 @@
                 "path": "f-017.mp3",
                 "description": {
                     "zh-CN": "不是猫,不是猫啦,真是的",
+                    "en-US": "I'm not cat. Really!",
                     "ja-JP": "猫じゃないよ！もう！"
                 }
             },
@@ -134,6 +150,7 @@
                 "path": "f-018.mp3",
                 "description": {
                     "zh-CN": "不是猫！",
+                    "en-US": "Not CAT!",
                     "ja-JP": "猫じゃない！"
                 }
             },
@@ -142,6 +159,7 @@
                 "path": "f-019.mp3",
                 "description": {
                     "zh-CN": "(傲娇)才不要弄错了啊,人家才不会喜欢大家呢",
+                    "en-US": "Don't get it wrong, I won't like everyone of u",
                     "ja-JP": "ツンデレ"
                 }
             },
@@ -150,6 +168,7 @@
                 "path": "f-022.mp3",
                 "description": {
                     "zh-CN": "是狐狸！",
+                    "en-US": "I'm FOX!",
                     "ja-JP": "狐じゃい！"
                 }
             },
@@ -158,6 +177,7 @@
                 "path": "f-023.mp3",
                 "description": {
                     "zh-CN": "我...我...最喜欢...大家了！嗯！我爱你！",
+                    "en-US": "I...I like all of u most! Yes! I Love U!",
                     "ja-JP": "みなんのことは大好き！！あいしている！"
                 }
             },
@@ -166,6 +186,7 @@
                 "path": "f-024.mp3",
                 "description": {
                     "zh-CN": "我爱你！我爱你可以嘛",
+                    "en-US": "I Love U! (Chinese)",
                     "ja-JP": "あいしている！"
                 }
             },
@@ -174,6 +195,7 @@
                 "path": "f-025.mp3",
                 "description": {
                     "zh-CN": "我不是猫咪,系狐狸(中文)",
+                    "en-US": "I'm fox no cat(Chinese)",
                     "ja-JP": "猫ではない、狐！(中国語)"
                 }
             },
@@ -182,6 +204,7 @@
                 "path": "f-029.mp3",
                 "description": {
                     "zh-CN": "怎么看都是狐狸,嗯",
+                    "en-US": "Fox anyway! Hum",
                     "ja-JP": "どう見ても狐！うん！"
                 }
             },
@@ -190,6 +213,7 @@
                 "path": "f-030.mp3",
                 "description": {
                     "zh-CN": "这是什么东西呢？能吃么",
+                    "en-US": "What's this? Can I eat?",
                     "ja-JP": "これはなんですか？食べるの？"
                 }
             },
@@ -198,6 +222,7 @@
                 "path": "f-039.mp3",
                 "description": {
                     "zh-CN": "是狐狸nya(xN)",
+                    "en-US": "I'm fox nya~(xN)",
                     "ja-JP": "狐じゃいにゃ!(xN)"
                 }
             },
@@ -206,6 +231,7 @@
                 "path": "f-041.mp3",
                 "description": {
                     "zh-CN": "嘻嘻,是故意的哟",
+                    "en-US": "Hee hee, I did it on purpose",
                     "ja-JP": "わざとですよ!"
                 }
             }
@@ -215,6 +241,7 @@
           "categoryName": "greeting",
           "categoryDescription": {
             "zh-CN": "打招呼",
+            "en-US": "Greeting",
             "ja-JP": "挨拶"
           },
           "voiceList": [
@@ -223,6 +250,7 @@
                 "path": "f-013.mp3",
                 "description": {
                     "zh-CN": "大家晚好狐",
+                    "en-US": "Everybody good evening!",
                     "ja-JP": "こんばん狐！"
                 }
             },
@@ -231,6 +259,7 @@
                 "path": "f-014.mp3",
                 "description": {
                     "zh-CN": "出来~出来~出来！(中文)",
+                    "en-US": "Come out!(Chinese)",
                     "ja-JP": "出てこい！(中国語)"
                 }
             },
@@ -239,6 +268,7 @@
                 "path": "f-031.mp3",
                 "description": {
                     "zh-CN": "自闭雪喵喵给大家拜年啦(中文)",
+                    "en-US": "Cat wish everyone a Happy New Year(Chinese)",
                     "ja-JP": "猫年あけましておめでとう～(中国語)"
                 }
             },
@@ -247,6 +277,7 @@
                 "path": "f-038.mp3",
                 "description": {
                     "zh-CN": "你好 你好 好~好~好~(中文)",
+                    "en-US": "Hello Hello(Chinese)",
                     "ja-JP": "こんにちは!~(中国語)"
                 }
             },
@@ -255,6 +286,7 @@
                 "path": "f-040.mp3",
                 "description": {
                     "zh-CN": "我是白上吹雪",
+                    "en-US": "I'm Shirakami Fubuki",
                     "ja-JP": "白上フブキです"
                 }
             }
@@ -264,6 +296,7 @@
           "categoryName": "modal",
           "categoryDescription": {
             "zh-CN": "语气",
+            "en-US": "Modal",
             "ja-JP": "モーダル"
           },
           "voiceList": [
@@ -272,6 +305,7 @@
                 "path": "f-009.mp3",
                 "description": {
                     "zh-CN": "嗯嗯嗯~嘿嘿嘿嘿",
+                    "en-US": "Hmm~hey hey(laughter)",
                     "ja-JP": "うん~えへへ"
                 }
             },
@@ -280,6 +314,7 @@
                 "path": "f-010.mp3",
                 "description": {
                     "zh-CN": "啊好可爱！哇哇哇！",
+                    "en-US": "Ah so cute! Wow!",
                     "ja-JP": "あ！かわいい！わい！"
                 }
             },
@@ -288,6 +323,7 @@
                 "path": "f-011.mp3",
                 "description": {
                     "zh-CN": "啊是这个！是这个！这个xN",
+                    "en-US": "Ah it's this! this one!(xN)",
                     "ja-JP": "これだ！これだ！"
                 }
             },
@@ -296,6 +332,7 @@
                 "path": "f-016.mp3",
                 "description": {
                     "zh-CN": "啊我死啦(中文)",
+                    "en-US": "AWSL(Chinese)",
                     "ja-JP": "AWSL"
                 }
             },
@@ -304,6 +341,7 @@
                 "path": "f-020.mp3",
                 "description": {
                     "zh-CN": "好~好~(中文)",
+                    "en-US": "OK~OK~(Chinese)",
                     "ja-JP": "こんにちは～こんにちは！(中国語)"
                 }
             },
@@ -312,6 +350,7 @@
                 "path": "f-026.mp3",
                 "description": {
                     "zh-CN": "谢谢~谢谢(中文)",
+                    "en-US": "Thank you~(Chinese)",
                     "ja-JP": "ありがどう！(中国語)"
                 }
             },
@@ -320,6 +359,7 @@
                 "path": "f-035.mp3",
                 "description": {
                     "zh-CN": "u-mua(双声道kiss)",
+                    "en-US": "u-mua(Kiss)",
                     "ja-JP": "u-mua(なげキス)"
                 }
             },
@@ -328,6 +368,7 @@
                 "path": "f-037.mp3",
                 "description": {
                     "zh-CN": "可恶,好不甘心nya,好过分nya,什么nya这是",
+                    "en-US": "I can not be reconciled nya. A bit overkill nya!",
                     "ja-JP": "クソ!悔しい!悔しいにゃ!なんにゃこれ!やんにゃこれにゃ!"
                 }
             }
@@ -337,6 +378,7 @@
             "categoryName": "sing",
             "categoryDescription": {
               "zh-CN": "狐歌",
+              "en-US": "Sing",
               "ja-JP": "歌う"
             },
             "voiceList": [
@@ -345,6 +387,7 @@
                     "path": "f-034.mp3",
                     "description": {
                         "zh-CN": "もっふもふ DE よいのじゃよ TV ver",
+                        "en-US": "もっふもふ DE よいのじゃよ TV ver",
                         "ja-JP": "もっふもふ DE よいのじゃよ TV ver"
                     }
                 }
@@ -354,6 +397,7 @@
           "categoryName": "other",
           "categoryDescription": {
             "zh-CN": "其他",
+            "en-US": "Other",
             "ja-JP": "その他"
           },
           "voiceList": [
@@ -362,6 +406,7 @@
                 "path": "f-021.mp3",
                 "description": {
                     "zh-CN": "马自立酱！哇！嗅嗅！好香！",
+                    "en-US": "Matsuri Chan! Wow! Let me smell!",
                     "ja-JP": "まつりちゃん！わい！スンスン！いい匂い！"
                 }
             },
@@ -370,6 +415,7 @@
                 "path": "f-015.mp3",
                 "description": {
                     "zh-CN": "AMT-阿夸麻吉天使",
+                    "en-US": "AMT-Aqua is angel",
                     "ja-JP": "AMT-あくあまじ天使"
                 }
             },
@@ -378,6 +424,7 @@
                 "path": "f-027.mp3",
                 "description": {
                     "zh-CN": "新年快乐耶！新年快乐！(中文)",
+                    "en-US": "Happy New Year!(Chinese)",
                     "ja-JP": "あけましておめでとう～(中国語)"
                 }
             },
@@ -385,7 +432,8 @@
                 "name": "f-028",
                 "path": "f-028.mp3",
                 "description": {
-                    "zh-CN": "玉米-玉米-玉米con(中文)",
+                    "zh-CN": "玉米~玉米~玉米con(中文)",
+                    "en-US": "Corn~Corn~(Chinese)",
                     "ja-JP": "こーん、こーん(中国語)"
                 }
             }
