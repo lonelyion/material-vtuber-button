@@ -16,6 +16,7 @@ const en_US = {
         stopvoice: "Stop Current Voice",
         randomplay: "Randomly Pick One",
         overlap: "Allow Overlap",
+        autoplay: "Don't Stop Playing",
         playing: "Now Playing：",
         noplay: "No Play"
     },
