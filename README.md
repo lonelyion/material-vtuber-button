@@ -66,4 +66,4 @@ Related Links:
 
 This project is supported by MeowSound Idols.
 
-This project is modified based on the [Meamea button](https://github.com/zyzsdy/meamea-button).
+This project is modified based on the [Aqua button](https://github.com/zyzsdy/aqua-button).
