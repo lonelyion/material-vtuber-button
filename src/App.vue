@@ -41,8 +41,10 @@
                     <div class="text-right"><a href="https://github.com/copperion/fubuki-button" target="_blank">{{$t("info.toGithub")}} <img src="https://img.shields.io/github/stars/copperion/fubuki-button.svg?style=social"/></a></div>
                     <div class="text-right">{{$t("info.notOfficial")}}</div>
                 </div>
-                <div>{{$t("info.audioStaff")}}</div>
-                <div>copperion 2020 <span style="color: rgba(0, 0, 0, 0.1)">Powered By Meowsound Idols</span></div>
+                <div class="pull-left">
+                    <div>{{$t("info.audioStaff")}}</div>
+                    <div>copperion 2020 <span style="color: rgba(0, 0, 0, 0.1)">Powered By Meowsound Idols</span></div>
+                </div>
             </div>
         </footer>
   </div>
@@ -58,7 +60,8 @@ body{
 }
 .footer {
     width: 100%;
-    height: 60px;
+    height: 100%;
+    min-height: 60px;
     background-color: #ebebeb;
 }
 .footer-content {
