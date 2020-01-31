@@ -124,6 +124,15 @@
                         "en-US": "Want to be cured by fox?",
                         "ja-JP": "狐にいやされませんか？"
                     }
+                },
+                {
+                    "name": "f-057",
+                    "path": "f-057.mp3",
+                    "description": {
+                        "zh-CN": "ko~ko~da~yo~",
+                        "en-US": "ko~ko~da~yo~",
+                        "ja-JP": "こ～こ～だ～よ～☆"
+                    }
                 }
             ]
         },
