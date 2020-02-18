@@ -12,13 +12,15 @@ Related Links:
 
 ## 参与完善本项目
 
-请Fork本项目进行修改，完成修改后在本项目中发起一个Pull Request。
+音频添加请求请发[Issues](https://github.com/copperion/fubuki-button/issues)，附上要提交的音频与音频分类
+
+或Fork本项目进行修改，完成修改后在本项目中发起一个Pull Request。
 
 ### 添加或修改音频
 
 **简述**：所有的音频信息都存储在[src/voices.json](src/voices.json)中，要添加或修改音频，你需要对应的修改这个文件。
 
-音频一律为mp3格式，存储在[public/voices](public/voices)中。对应的URL为`voices/`。
+音频一律为mp3格式，存储在[public/voices](public/voices)中，默认用128Kbps码率压制。对应的URL为`voices/`。
 
 添加的新音频请先进行音量标准化。本分支使用Adobe Audition使用匹配响度功能进行标准化，目标响度：-24LUFS，容差:2LU，最高实际峰值电平：-2dBTP.
 
