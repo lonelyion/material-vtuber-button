@@ -215,6 +215,15 @@
                         "en-US": "Juu~juu~juu",
                         "ja-JP": "ちゅうちゅう"
                     }
+                },
+                {
+                    "name": "f-064",
+                    "path": "f-064.mp3",
+                    "description": {
+                        "zh-CN": "恐怖游戏破功狐(音量注意,心脏病患者慎入)",
+                        "en-US": "Scrared by horror game(ATTENTION LOUD)",
+                        "ja-JP": "ホラゲーに驚いたフブキちゃん(音量は大きいですよ)"
+                    }
                 }
             ]
         },
@@ -342,6 +351,24 @@
                     "en-US": "It's about to START!",
                     "ja-JP": "行きます!"
                 }
+            },
+            {
+                "name": "f-058",
+                "path": "f-058.mp3",
+                "description": {
+                    "zh-CN": "(小黑)鼓起干劲来啊笨蛋",
+                    "en-US": "(Koro-Chan)Come on!Baka",
+                    "ja-JP": "(黒様)元気出してよ、ばか"
+                }
+            },
+            {
+                "name": "f-060",
+                "path": "f-060.mp3",
+                "description": {
+                    "zh-CN": "诶怎么了怎么了",
+                    "en-US": "What's going on?",
+                    "ja-JP": "えぇ?なんだ!?なんだ、なんだ、本当"
+                }
             }
           ]
         },
@@ -396,6 +423,15 @@
                     "zh-CN": "我是白上吹雪",
                     "en-US": "I'm Shirakami Fubuki",
                     "ja-JP": "白上フブキです"
+                }
+            },
+            {
+                "name": "f-059",
+                "path": "f-059.mp3",
+                "description": {
+                    "zh-CN": "Bilibili的大家 新年快乐(中文)",
+                    "en-US": "Everyone in Bilibili happy new year(Chinese)",
+                    "ja-JP": "ビリビリの皆さん!新年あけましておめでとう!(中国語)"
                 }
             }
           ]
@@ -532,7 +568,34 @@
                     "description": {
                         "zh-CN": "狐乐器1",
                         "en-US": "FOX Music 1",
-                        "ja-JP": "ドー＼＼\\ ٩( 'ω' )و //／／ーン"
+                        "ja-JP": "きつね楽器1"
+                    }
+                },
+                {
+                    "name": "f-061",
+                    "path": "f-061.mp3",
+                    "description": {
+                        "zh-CN": "狐乐器2-Im. Scatman",
+                        "en-US": "FOX Music 2-Im. Scatman",
+                        "ja-JP": "きつね楽器2-Im. Scatman"
+                    }
+                },
+                {
+                    "name": "f-062",
+                    "path": "f-062.mp3",
+                    "description": {
+                        "zh-CN": "狐乐器3",
+                        "en-US": "FOX Music 3",
+                        "ja-JP": "きつね楽器3"
+                    }
+                },
+                {
+                    "name": "f-063",
+                    "path": "f-063.mp3",
+                    "description": {
+                        "zh-CN": "狐乐器4-Witch Doctor",
+                        "en-US": "FOX Music 4-Witch Doctor",
+                        "ja-JP": "きつね楽器4-Witch Doctor"
                     }
                 }
             ]
