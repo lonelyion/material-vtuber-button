@@ -369,6 +369,15 @@
                     "en-US": "What's going on?",
                     "ja-JP": "えぇ?なんだ!?なんだ、なんだ、本当"
                 }
+            },
+            {
+                "name": "f-068",
+                "path": "f-068.mp3",
+                "description": {
+                    "zh-CN": "大家，白上的算术教室开始了哟",
+                    "en-US": "It's the beginning of Shirakami's math class!",
+                    "ja-JP": "みんなー!白上のさんすう教室はじまるよー！"
+                }
             }
           ]
         },
@@ -548,20 +557,11 @@
         {
             "categoryName": "sing",
             "categoryDescription": {
-              "zh-CN": "狐歌",
+              "zh-CN": "狐歌/狐乐器",
               "en-US": "Sing",
               "ja-JP": "歌う"
             },
             "voiceList": [
-                {
-                    "name": "f-034",
-                    "path": "f-034.mp3",
-                    "description": {
-                        "zh-CN": "もっふもふ DE よいのじゃよ TV ver",
-                        "en-US": "もっふもふ DE よいのじゃよ TV ver",
-                        "ja-JP": "もっふもふ DE よいのじゃよ TV ver"
-                    }
-                },
                 {
                     "name": "f-049",
                     "path": "f-049.mp3",
@@ -575,27 +575,54 @@
                     "name": "f-061",
                     "path": "f-061.mp3",
                     "description": {
-                        "zh-CN": "狐乐器2-Im. Scatman",
-                        "en-US": "FOX Music 2-Im. Scatman",
-                        "ja-JP": "きつね楽器2-Im. Scatman"
+                        "zh-CN": "Im. Scatman",
+                        "en-US": "Im. Scatman",
+                        "ja-JP": "Im. Scatman"
                     }
                 },
                 {
                     "name": "f-062",
                     "path": "f-062.mp3",
                     "description": {
-                        "zh-CN": "狐乐器3",
+                        "zh-CN": "狐乐器2",
                         "en-US": "FOX Music 3",
-                        "ja-JP": "きつね楽器3"
+                        "ja-JP": "きつね楽器2"
                     }
                 },
                 {
                     "name": "f-063",
                     "path": "f-063.mp3",
                     "description": {
-                        "zh-CN": "狐乐器4-Witch Doctor",
-                        "en-US": "FOX Music 4-Witch Doctor",
-                        "ja-JP": "きつね楽器4-Witch Doctor"
+                        "zh-CN": "Witch Doctor",
+                        "en-US": "Witch Doctor",
+                        "ja-JP": "Witch Doctor"
+                    }
+                },
+                {
+                    "name": "f-065",
+                    "path": "f-065.mp3",
+                    "description": {
+                        "zh-CN": "吹雪(舰C的ED)",
+                        "en-US": "Fubuki(KanColle's ED)",
+                        "ja-JP": "吹雪(艦これED)"
+                    }
+                },
+                {
+                    "name": "f-066",
+                    "path": "f-066.mp3",
+                    "description": {
+                        "zh-CN": "蓝蓝路",
+                        "en-US": "lanlanlu-",
+                        "ja-JP": "ランランルー"
+                    }
+                },
+                {
+                    "name": "f-067",
+                    "path": "f-067.mp3",
+                    "description": {
+                        "zh-CN": "啦啦啦烤面包",
+                        "en-US": "Lalala,kopepan",
+                        "ja-JP": "ららら、こぺぱん"
                     }
                 }
             ]
