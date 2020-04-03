@@ -43,7 +43,7 @@
                 </div>
                 <div class="pull-left">
                     <div>{{$t("info.audioStaff")}}</div>
-                    <div>copperion 2020 <span style="color: rgba(0, 0, 0, 0.1)">Powered By Meowsound Idols</span></div>
+                    <div>Lonely_ion 2020 <span style="color: rgba(0, 0, 0, 0.1)">Powered By Meowsound Idols</span></div>
                 </div>
             </div>
         </footer>

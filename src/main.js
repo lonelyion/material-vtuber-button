@@ -53,16 +53,16 @@ let emzh_CN = Object.assign(zh_CN, addZh_CN);
 let emen_US = Object.assign(en_US, adden_US);
 let emja_JP = Object.assign(ja_JP, addja_JP);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
-Vue.use(VueI18n)
+Vue.use(VueI18n);
 Vue.use(GlobalConst);
 
 const messages = {
   'en-US': emen_US,
   'zh-CN': emzh_CN,
   'ja-JP': emja_JP
-}
+};
 
 let locale = 'zh-CN';
 if(/ja/i.test(navigator.language)){
@@ -75,11 +75,11 @@ else if(/en/i.test(navigator.language)){
 const i18n = new VueI18n({
   locale,
   messages
-})
+});
 
 
 new Vue({
   router,
   i18n,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');

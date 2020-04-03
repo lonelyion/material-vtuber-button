@@ -3,7 +3,7 @@ const zh_CN = {
         title: "狐按钮",
         info: "信息",
         null: "空",
-        audioStaff: "音频剪辑: 孤单铜离子 & 狐狸的玉米地 & 吹雪的猫咪茶铺",
+        audioStaff: "音频剪辑: 孤单离子 & 狐狸的玉米地 & 吹雪的猫咪茶铺",
         toGithub: "请在Github参与翻译、增补音频或提出建议",
         notOfficial: "本站为爱好者作品，和hololive官方没有关联",
         overlapTips: "重叠播放无法暂停，而且会创建大量线程，玩够了最好刷新一下"
@@ -25,5 +25,5 @@ const zh_CN = {
         'en-US': "English",
         'ja-JP': "日本語"
     }
-}
+};
 export default zh_CN;
