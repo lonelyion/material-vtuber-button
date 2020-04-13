@@ -224,6 +224,15 @@
                         "en-US": "Scrared by horror game(ATTENTION LOUD)",
                         "ja-JP": "ホラゲーに驚いたフブキちゃん(音量は大きいですよ)"
                     }
+                },
+                {
+                    "name": "f-070",
+                    "path": "f-070.mp3",
+                    "description": {
+                        "zh-CN": "狂笑",
+                        "en-US": "Hahahahahaha",
+                        "ja-JP": "気持ちいいなあ!なきり!(大笑いする)"
+                    }
                 }
             ]
         },
@@ -357,7 +366,7 @@
                 "path": "f-058.mp3",
                 "description": {
                     "zh-CN": "(小黑)鼓起干劲来啊笨蛋",
-                    "en-US": "(Koro-Chan)Come on!Baka",
+                    "en-US": "(Kuro-Chan)Come on!Baka",
                     "ja-JP": "(黒様)元気出してよ、ばか"
                 }
             },
@@ -377,6 +386,42 @@
                     "zh-CN": "大家，白上的算术教室开始了哟",
                     "en-US": "It's the beginning of Shirakami's math class!",
                     "ja-JP": "みんなー!白上のさんすう教室はじまるよー！"
+                }
+            },
+            {
+                "name": "f-069",
+                "path": "f-069.mp3",
+                "description": {
+                    "zh-CN": "不要啊",
+                    "en-US": "No, refuse",
+                    "ja-JP": "やだなあ"
+                }
+            },
+            {
+                "name": "f-072",
+                "path": "f-072.mp3",
+                "description": {
+                    "zh-CN": "(小黑)工作加油",
+                    "en-US": "(Kuro-Chan)Work hard",
+                    "ja-JP": "(黒様)仕事頑張で"
+                }
+            },
+            {
+                "name": "f-073",
+                "path": "f-073.mp3",
+                "description": {
+                    "zh-CN": "我等这一刻很久了！",
+                    "en-US": "I've waited long time for the moment!",
+                    "ja-JP": "これを待てるだよ"
+                }
+            },
+            {
+                "name": "f-074",
+                "path": "f-074.mp3",
+                "description": {
+                    "zh-CN": "(小黑)这个是什么?好吃吗?",
+                    "en-US": "(Kuro-Chan)What's this? Taste good?",
+                    "ja-JP": "(黒様)なにそれ?おいしですか?"
                 }
             }
           ]
@@ -441,6 +486,15 @@
                     "zh-CN": "Bilibili的大家 新年快乐(中文)",
                     "en-US": "Everyone in Bilibili happy new year(Chinese)",
                     "ja-JP": "ビリビリの皆さん!新年あけましておめでとう!(中国語)"
+                }
+            },
+            {
+                "name": "f-077",
+                "path": "f-077.mp3",
+                "description": {
+                    "zh-CN": "大家早上好！",
+                    "en-US": "Good morning",
+                    "ja-JP": "皆さん　おはようございます"
                 }
             }
           ]
@@ -551,6 +605,15 @@
                     "en-US": "Good night~",
                     "ja-JP": "おやすみなさい"
                 }
+            },
+            {
+                "name": "f-071",
+                "path": "f-071.mp3",
+                "description": {
+                    "zh-CN": "(小黑)喝可乐吗？",
+                    "en-US": "(Kuro-Chan)Drink cola?",
+                    "ja-JP": "(黒様)コーラ飲みますか"
+                }
             }
           ]
         },
@@ -623,6 +686,24 @@
                         "zh-CN": "啦啦啦烤面包",
                         "en-US": "Lalala,kopepan",
                         "ja-JP": "ららら、こぺぱん"
+                    }
+                },
+                {
+                    "name": "f-075",
+                    "path": "f-075.mp3",
+                    "description": {
+                        "zh-CN": "First Of The Year",
+                        "en-US": "First Of The Year",
+                        "ja-JP": "First Of The Year"
+                    }
+                },
+                {
+                    "name": "f-076",
+                    "path": "f-076.mp3",
+                    "description": {
+                        "zh-CN": "开心树朋友的OP",
+                        "en-US": "OP of Happy Trees Friends",
+                        "ja-JP": "ハッピー・ツリー・フレンズ OP"
                     }
                 }
             ]
