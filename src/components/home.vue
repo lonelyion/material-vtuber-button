@@ -50,6 +50,10 @@
     color: #fff;
     background-color: rgb(146, 188, 228);
     border-color: rgb(246, 221, 101);
+    max-width: 100%;
+    word-wrap: break-word !important;
+    word-break: break-all !important;
+    white-space: normal !important;
 }
 .checkbox {
     display: inline-block;
@@ -121,7 +125,7 @@ class HomePage extends Vue {
             default:
                 return 0;
         }
-    } 
+    }
 }
 export default HomePage;
 </script>
