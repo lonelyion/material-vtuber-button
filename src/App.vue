@@ -10,7 +10,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <router-link class="navbar-brand" to="/">{{ $t("info.title") }}</router-link>
+                    <router-link class="navbar-brand" to="/">
+                        <div style="display: inline; vertical-align:middle;">
+                            <img src="/fav.png" height="100%" />
+                            {{ $t("info.title") }}
+                        </div>
+                    </router-link>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-navbar-collapse">
