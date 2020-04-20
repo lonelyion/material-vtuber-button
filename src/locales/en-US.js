@@ -4,7 +4,7 @@ const en_US = {
         info: "Information",
         null: "Empty",
         audioStaff: "Audio Clip: Lonely_Ion & Fubuki's Corn Field & Cat Teashop",
-        toGithub: "Please participate in translation, add audio or make suggestions on Github:",
+        toGithub: "Please participate in translation, add audio or make suggestions on GitHub:",
         notOfficial: "This site is a fan work and is not associated with the hololive official.",
         overlapTips: "Overlap play cann't be paused and it creates many threads so it's better to refresh occasionally."
     },

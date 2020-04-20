@@ -12,7 +12,7 @@
                     </button>
                     <router-link class="navbar-brand" to="/">{{ $t("info.title") }}</router-link>
                 </div>
-                
+
                 <div class="collapse navbar-collapse" id="bs-navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg?sub_confirm=1" target="_blank"><img src="resources/youtube_social_icon_red.png" height="18"/></a></li>
@@ -37,11 +37,11 @@
         </div>
         <footer class="footer">
             <div class="container-fluid footer-content">
-                <div class="pull-right">
-                    <div class="text-right"><a href="https://github.com/copperion/fubuki-button" target="_blank">{{$t("info.toGithub")}} <img src="https://img.shields.io/github/stars/copperion/fubuki-button.svg?style=social"/></a></div>
-                    <div class="text-right">{{$t("info.notOfficial")}}</div>
+                <div>
+                    <div><a href="https://github.com/copperion/fubuki-button" target="_blank">{{$t("info.toGithub")}} <img src="https://img.shields.io/github/stars/copperion/fubuki-button.svg?style=social"/></a></div>
+                    <div>{{$t("info.notOfficial")}}</div>
                 </div>
-                <div class="pull-left">
+                <div>
                     <div>{{$t("info.audioStaff")}}</div>
                     <div>Lonely_ion 2020 <span style="color: rgba(0, 0, 0, 0.1)">Powered By Meowsound Idols</span></div>
                 </div>
@@ -66,7 +66,9 @@ body{
 }
 .footer-content {
     padding-top: 10px;
+    padding-bottom: 10px;
     color: #666;
+    text-align: center;
 }
 .text-right{
     text-align: right;
@@ -89,7 +91,7 @@ class App extends Vue {
         return this.$i18n.locale;
     }
     created(){
-        // eslint-disable-next-line 
+        // eslint-disable-next-line
         console.log("Produced by MoewSound Idols");
         this.$i18n.locale = localStorage.getItem("lang") || this.$i18n.locale;
     }
