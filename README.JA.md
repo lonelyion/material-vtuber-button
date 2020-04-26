@@ -1,16 +1,18 @@
-# 狐按钮 - 白上吹雪语音按钮
+# フブキボタン - 白上フブキの音声ボタン
 
-狐按钮 [点击此处访问 https://sfubuki.moe](https://sfubuki.moe)
+フブキボタン [ここをクリック https://sfubuki.moe](https://sfubuki.moe)
 
 [![Build Status](https://github.com/copperion/fubuki-button/workflows/FBK-BTN-CI/badge.svg)](https://github.com/copperion/fubuki-button/actions)
 
-README: **中文** | [日本語](./README.JA.md) | [English](./README.EN.md)
+README: **[中文](./README.md)** | 日本語 | **[English](./README.EN.md)**
+
+> **すみません、この文書を日本語に訳せません。通訳を手伝ってくれると助かります。**
 
 相关链接:
 
-* [白上吹雪的YouTube频道](https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg)
-* [白上吹雪的Bilibili频道](https://space.bilibili.com/332704117)
-* [白上吹雪的Twitter](https://twitter.com/shirakamifubuki)
+* [白上フブキのYouTubeチャンネル](https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg)
+* [白上フブキのBilibiliチャンネル](https://space.bilibili.com/332704117)
+* [白上フブキのTwitter](https://twitter.com/shirakamifubuki)
 
 ## 参与完善本项目
 
