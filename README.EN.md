@@ -4,7 +4,7 @@ Fubuki Button [Click here to visit https://sfubuki.moe](https://sfubuki.moe)
 
 [![Build Status](https://github.com/copperion/fubuki-button/workflows/FBK-BTN-CI/badge.svg)](https://github.com/copperion/fubuki-button/actions)
 
-README: **[中文](./README.md)** | [日本語](./README.JA.md) | English
+README: [中文](./README.md) | [日本語](./README.JA.md) | **English**
 
 相关链接:
 

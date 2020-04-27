@@ -25,7 +25,14 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{$t("lang." + currentLang)}} <span class="caret"></span></a>
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+                               aria-haspopup="true" aria-expanded="false">
+                                <div class="box">
+                                    <img src="resources/language-black.svg" style="width:20px;" />
+                                    <span>{{$t("lang." + currentLang)}} </span>
+                                    <span class="caret"></span>
+                                </div>        
+                            </a>
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:;" @click="chlang('zh-CN')">{{$t("lang.zh-CN")}}</a></li>
                                 <li><a href="javascript:;" @click="chlang('en-US')">{{$t("lang.en-US")}}</a></li>
@@ -73,10 +80,13 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     color: #666;
-    text-align: center;
+    text-align: center; 
 }
 .text-right{
     text-align: right;
+}
+.box {
+    display: flex; align-items: center;
 }
 </style>
 

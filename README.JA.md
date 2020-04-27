@@ -4,7 +4,7 @@
 
 [![Build Status](https://github.com/copperion/fubuki-button/workflows/FBK-BTN-CI/badge.svg)](https://github.com/copperion/fubuki-button/actions)
 
-README: **[中文](./README.md)** | 日本語 | **[English](./README.EN.md)**
+README: [中文](./README.md) | **日本語** | [English](./README.EN.md)
 
 > **すみません、この文書を日本語に訳せません。通訳を手伝ってくれると助かります。**
 
