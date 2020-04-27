@@ -51,7 +51,7 @@
         <footer class="footer">
             <div class="container-fluid footer-content">
                 <div>
-                    <div><a href="https://github.com/copperion/fubuki-button" target="_blank">{{$t("info.toGithub")}} <img src="https://img.shields.io/github/stars/copperion/fubuki-button.svg?style=social"/></a></div>
+                    <div><a href="https://github.com/lonelyion/fubuki-button" target="_blank">{{$t("info.toGithub")}} <img src="https://img.shields.io/github/stars/lonelyion/fubuki-button.svg?style=social"/></a></div>
                     <div>{{$t("info.notOfficial")}}</div>
                 </div>
                 <div>
