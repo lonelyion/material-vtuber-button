@@ -27,6 +27,7 @@
                 </button>
             </div>
         </div>
+        <div class="cate-header">{{ $t("comment.comment") }}</div>
     </div>
 </template>
 
@@ -67,6 +68,7 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
 import VoiceList from '../voices.json'
+
 
 @Component
 class HomePage extends Vue {

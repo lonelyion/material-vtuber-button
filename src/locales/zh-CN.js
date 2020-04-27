@@ -1,4 +1,10 @@
 const zh_CN = {
+    comment: {
+        here: "评论在此",
+        comment: "评论",
+        nick: '*昵称',
+        mail: '*邮箱',
+    },
     info: {
         title: "狐按钮",
         info: "信息",
@@ -6,7 +12,7 @@ const zh_CN = {
         audioStaff: "音频剪辑: 孤单离子 & 狐狸的玉米地 & 吹雪的猫咪茶铺",
         toGithub: "请在GitHub参与翻译、增补音频或提出建议",
         notOfficial: "本站为爱好者作品，和hololive官方没有关联",
-        overlapTips: "重叠播放无法暂停，而且会创建大量线程，玩够了最好刷新一下"
+        overlapTips: "重叠播放无法暂停，而且会创建大量线程，玩够了最好刷新一下",
     },
     action: {
         toggleNavbar: "切换导航栏",

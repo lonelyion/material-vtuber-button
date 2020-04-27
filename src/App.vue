@@ -46,6 +46,7 @@
         </nav>
         <div class="container-fluid main-content">
             <router-view></router-view>
+            <div id="vcomments" style="width:95%;margin:0 auto;"></div>
         </div>
         <footer class="footer">
             <div class="container-fluid footer-content">
@@ -94,6 +95,8 @@ body{
 import Vue from 'vue'
 import Component from 'vue-class-component'
 import Modal from './components/modal.vue'
+import Valine from 'valine';
+import eMap from './util/emoji.js'
 //import fetchpost from './util/fetchpost'
 
 @Component({
@@ -110,12 +113,42 @@ class App extends Vue {
         console.log("Produced by MoewSound Idols");
         this.$i18n.locale = localStorage.getItem("lang") || this.$i18n.locale;
     }
+    initComment() {
+        var short_lang = '';
+        switch(this.$i18n.locale) {
+            case 'zh-CN':
+                short_lang = 'zh-CN'; break;
+            case 'en-US':
+                short_lang = 'en'; break;
+            case 'ja-JP':
+                short_lang = 'ja'; break;
+        }
+
+        var valine = new Valine();
+        valine.init({
+            el:'#vcomments',
+            appId: 'XSITg2dneuN0dACwQYA6yRzc-gzGzoHsz',
+            appKey: 'xybKLxTKA45UgefGOS7Lqvam',
+            placeholder: this.$t("comment.here"),
+            lang: short_lang,
+            emojiCDN: 'https://valinecdn.bili33.top/',
+            emojiMaps: eMap,
+            avatar: 'hide'
+        })
+    }
     chlang(v){
         this.$i18n.locale = v;
         localStorage.setItem("lang", v);
+        this.initComment();
     }
+    mounted(){
+        this.initComment();
+    }
+    
 }
-
 export default App;
+
+
+
 </script>
 

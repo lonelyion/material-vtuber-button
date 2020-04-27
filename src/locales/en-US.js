@@ -1,4 +1,10 @@
 const en_US = {
+    comment: {
+        here: "Leave Comment Here",
+        comment: "Comments",
+        nick: '*Nickname',
+        mail: '*Email'
+    },
     info: {
         title: "Fubuki Button",
         info: "Information",
@@ -6,7 +12,9 @@ const en_US = {
         audioStaff: "Audio Clip: Lonely_Ion & Fubuki's Corn Field & Cat Teashop",
         toGithub: "Please participate in translation, add audio or make suggestions on GitHub:",
         notOfficial: "This site is a fan work and is not associated with the hololive official.",
-        overlapTips: "Overlap play cann't be paused and it creates many threads so it's better to refresh occasionally."
+        overlapTips: "Overlap play cann't be paused and it creates many threads so it's better to refresh occasionally.",
+        commentHere: "Leave your comments here!",
+        comment: "Comments"
     },
     action: {
         toggleNavbar: "Toggle navigation bar",

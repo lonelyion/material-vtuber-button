@@ -15,6 +15,7 @@
     "jsencrypt": "^3.0.0-rc.1",
     "popper.js": "^1.16.0",
     "sass": "^1.24.5",
+    "valine": "^1.4.14",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.1",
     "vue-i18n": "^8.15.3",

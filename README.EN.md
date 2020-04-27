@@ -6,7 +6,7 @@ Fubuki Button [Click here to visit https://sfubuki.moe](https://sfubuki.moe)
 
 README: [中文](./README.md) | [日本語](./README.JA.md) | **English**
 
-相关链接:
+Related Links:
 
 * [Shirakami Fubuki's Youtube Channel](https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg)
 * [Shirakami Fubuki's Bilibili Channel](https://space.bilibili.com/332704117)
