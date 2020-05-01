@@ -133,6 +133,51 @@
                         "en-US": "ko~ko~da~yo~",
                         "ja-JP": "こ～こ～だ～よ～☆"
                     }
+                },
+                {
+                    "name": "f-084",
+                    "path": "f-084.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)[吓人]被吓到了吗",
+                        "en-US": "(Kindergarten FBK)Are you scared？",
+                        "ja-JP": "(ちびっ狐)へへ、びくりした？"
+                    }
+                },
+                {
+                    "name": "f-085",
+                    "path": "f-085.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)啊嗯...kon...晚上好狐",
+                        "en-US": "(Kindergarten FBK)Ah...Emmm...kon...good evening~",
+                        "ja-JP": "(ちびっ狐)あーん、こん、こんばん狐"
+                    }
+                },
+                {
+                    "name": "f-086",
+                    "path": "f-086.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)会给我做么?给我做xN!帕菲给我做!喜欢",
+                        "en-US": "(Kindergarten FBK)Make puffy for me!",
+                        "ja-JP": "(ちびっ狐)つくてくれますか？つくてつくて！ぱーふぇ！つくて！"
+                    }
+                },
+                {
+                    "name": "f-087",
+                    "path": "f-087.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)帕菲 想吃帕菲",
+                        "en-US": "(Kindergarten FBK)Puffy, I wanna eat puffy",
+                        "ja-JP": "(ちびっ狐)ぱーふぇ！ぱーふぇ食べたい"
+                    }
+                },
+                {
+                    "name": "f-088",
+                    "path": "f-088.mp3",
+                    "description": {
+                        "zh-CN": "(幼小黑)我...我的名字是黑上吹...",
+                        "en-US": "(Kindergarten Kuro-Chan)My...my name is Kurokami Fu...",
+                        "ja-JP": "（ちびっ黒様)わ...わたしの名前は黒上フ..."
+                    }
                 }
             ]
         },
@@ -232,6 +277,24 @@
                         "zh-CN": "狂笑",
                         "en-US": "Hahahahahaha",
                         "ja-JP": "気持ちいいなあ!なきり!(大笑いする)"
+                    }
+                },
+                {
+                    "name": "f-089",
+                    "path": "f-089.mp3",
+                    "description": {
+                        "zh-CN": "啊等等xN停一停xN我操作不了了啊等等",
+                        "en-US": "WAIT!STOP!I CAN'T MOVE IT!",
+                        "ja-JP": "あああ！待っで！！！操作ができない！にゃ！"
+                    }
+                },
+                {
+                    "name": "f-091",
+                    "path": "f-091.mp3",
+                    "description": {
+                        "zh-CN": "哇这个怎么 啊真是笨蛋xN",
+                        "en-US": "What's going on! Ah how stupid!",
+                        "ja-JP": "わー！？これ！ばがだれ！ばが！"
                     }
                 }
             ]
@@ -423,6 +486,60 @@
                     "en-US": "(Kuro-Chan)What's this? Taste good?",
                     "ja-JP": "(黒様)なにそれ?おいしですか?"
                 }
+            },
+            {
+                "name": "f-078",
+                "path": "f-078.mp3",
+                "description": {
+                    "zh-CN": "(小黑)那真是太好了！哼你们的鼓膜都给我消失吧",
+                    "en-US": "(Kuro-Chan)That's great! Your eardrums go vanished!",
+                    "ja-JP": "(黒様)それはよかった。鼓膜全部消えてくれ！"
+                }
+            },
+            {
+                "name": "f-079",
+                "path": "f-079.mp3",
+                "description": {
+                    "zh-CN": "(小黑)你们都给我当作没听到",
+                    "en-US": "(Kuro-Chan)You all pretend you didn't hear it.",
+                    "ja-JP": "(黒様)聞かなかったことにしろう！"
+                }
+            },
+            {
+                "name": "f-080",
+                "path": "f-080.mp3",
+                "description": {
+                    "zh-CN": "(小黑)忘却光线!",
+                    "en-US": "(Kuro-Chan)Memory erasing beam!",
+                    "ja-JP": "(黒様)忘れるビーム！"
+                }
+            },
+            {
+                "name": "f-081",
+                "path": "f-081.mp3",
+                "description": {
+                    "zh-CN": "(油库里白上)明天和今天也请 慢慢来吧",
+                    "en-US": "Take it easy tomorrow and today",
+                    "ja-JP": "(ゆっくり白上)明日も今日もゆっくりしてね"
+                }
+            },
+            {
+                "name": "f-082",
+                "path": "f-082.mp3",
+                "description": {
+                    "zh-CN": "(油库里白上)谢谢吧唧吧唧吧唧吧唧吧唧蟹蟹",
+                    "en-US": "Thank you. Clap clap clap clap. Thanks.",
+                    "ja-JP": "(ゆっくり白上)ありがとう、ばちばちxN、ありがとう"
+                }
+            },
+            {
+                "name": "f-083",
+                "path": "f-083.mp3",
+                "description": {
+                    "zh-CN": "(油库里白上)这↑里↑是Hololive",
+                    "en-US": "This↑ is↑ hololve",
+                    "ja-JP": "こ↑こ↑ ホロライブです"
+                }
             }
           ]
         },
@@ -613,6 +730,15 @@
                     "zh-CN": "(小黑)喝可乐吗？",
                     "en-US": "(Kuro-Chan)Drink cola?",
                     "ja-JP": "(黒様)コーラ飲みますか"
+                }
+            },
+            {
+                "name": "f-090",
+                "path": "f-090.mp3",
+                "description": {
+                    "zh-CN": "抛售柠檬小狐狸-BV12K411L7dE",
+                    "en-US": "All of u, can't beat me!",
+                    "ja-JP": "“みなには、わたしに勝てない！”"
                 }
             }
           ]
