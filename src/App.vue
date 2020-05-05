@@ -20,8 +20,11 @@
 
                 <div class="collapse navbar-collapse" id="bs-navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg?sub_confirm=1" target="_blank"><img src="resources/youtube_social_icon_red.png" height="18"/></a></li>
-                        <li><a href="https://twitter.com/shirakamifubuki" target="_blank"><img src="resources/Twitter_Social_Icon_Circle_Color.png" height="18"/></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg?sub_confirm=1" target="_blank"><img src="resources/youtube-fill.svg" height="20"/></a></li>
+                        <li><a href="https://twitter.com/shirakamifubuki" target="_blank"><img src="resources/twitter-fill.svg" height="18"/></a></li>
+                        <li><a href="https://space.bilibili.com/332704117" target="_blank"><img src="resources/bilibili-fill.svg" height="20"/></a></li>
+                        <li style="width:5px;height:5px;"><a href="#" class="btn disabled"><img height="10"/></a></li>
+                        <li><a href="https://github.com/lonelyion/fubuki-button-pwa/releases/download/v1.0/fubuki-button-app-release.apk" target="_blank"><img src="resources/android-fill.svg" height="20"/></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
