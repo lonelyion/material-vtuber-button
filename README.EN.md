@@ -48,11 +48,11 @@ To deploy a local development environment, first install the latest version of N
 
 1. Clone the code.
 
-2. Go to the code directory and run `npm install`.
+2. Go to the code directory and run `yarn`.
 
-3. Run `npm run serve`. During the code modification process, this local development server can immediately reflect the results of the modification.
+3. Run `yarn serve`. During the code modification process, this local development server can immediately reflect the results of the modification.
 
-4. To compile the files for deployment, run `npm run build`, which will generate the `dist` directory. This site is completely static, you can directly deploy the entire `dist` directory.
+4. To compile the files for deployment, run `yarn build`, which will generate the `dist` directory. This site is completely static, you can directly deploy the entire `dist` directory.
 
 To contribute your code to this project, you don't have to compile locally. After passing the test in the development server and pushing it to Github, you can directly require a Pull Request to this project.
 

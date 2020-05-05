@@ -16,9 +16,9 @@ jobs:
       with:
         node-version: '12.x'
     - name: Run Install
-      run: npm install
+      run: yarn
     - name: Run Build
-      run: npm run build
+      run: yarn build
         
     - name: Deploy to Coding.net branch
       working-directory: dist
