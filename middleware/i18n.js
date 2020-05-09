@@ -11,11 +11,12 @@ export default function ({ isHMR, app, store, route, params, error, redirect }) 
   }
 
   if (!locale){
-    const cookies = Cookie.set('locale', defaultLocale).split('; ').map(stringCookie => stringCookie.split('='))
-    const cookie = cookies.find(cookie => cookie[0] === 'locale')
+    const cookies = Cookie.set('locale', defaultLocale)
+        .split('; ').map(stringCookie => stringCookie.split('='));
+    const cookie = cookies.find(cookie => cookie[0] === 'locale');
     if (cookie)
-      locale = cookie[1]
+      locale = cookie[1];
   }
-  store.commit('SET_LANG', locale)
-  app.i18n.locale = store.state.locale
+  store.commit('SET_LANG', locale);
+  app.i18n.locale = store.state.locale;
 }

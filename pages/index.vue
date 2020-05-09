@@ -108,7 +108,7 @@ export default {
     }
   },
   async mounted() {
-    let holo = await this.$axios.$get('https://storage.googleapis.com/vthell-data/live.json');
+    let holo = await this.$axios.$get('/api/live.json');
     this.lives = holo.UCdn5BQ06XqgXoAxIhbqw5Rg;
   }
 }

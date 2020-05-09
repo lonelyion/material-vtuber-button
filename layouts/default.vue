@@ -115,6 +115,7 @@
 
 <script>
 export default {
+
   methods: {
     switch_dark() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;

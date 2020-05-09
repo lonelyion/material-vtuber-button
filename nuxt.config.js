@@ -52,6 +52,12 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/axios'
   ],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api/': { target: 'https://storage.googleapis.com/vthell-data/', pathRewrite: {'^/api/': ''} }
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
