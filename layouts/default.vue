@@ -115,19 +115,20 @@
 
 <script>
 export default {
-
+  mounted() {
+    console.log('mounted: ', this.$store.state.dark);
+    this.$vuetify.theme.dark = this.$store.state.dark;
+  },
   methods: {
     switch_dark() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      this.$store.commit("SET_DARK", this.$vuetify.theme.dark);
     },
     switch_lang(lang) {
       console.log('switching to ' + lang);
       this.$store.commit("SET_LANG", lang);
       this.$i18n.locale = lang;
     }
-  },
-  computed: {
-
   },
   data () {
     return {

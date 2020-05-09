@@ -13,6 +13,7 @@
       <v-card v-if="lives">
         <v-card-title>直播动态</v-card-title>
         <v-card-text>
+          <v-progress-circular indeterminate class="accent--text" v-if="lives_loading" />
           <div v-for="live in lives">
             <div v-if="live.title.length">
               <span v-if="live.type === 'upcoming'">计划{{ format_time(live.startTime) }}</span>
@@ -80,12 +81,13 @@ export default {
       overlap: false,
       random: false,
       groups: voice_lists.groups,
-      lives: []
+      lives: [],
+      lives_loading: true
     }
   },
   methods: {
     format_time(stamp) {
-      return moment.unix(stamp).format('YYYY/MM/DD HH:mm');
+      return moment.unix(stamp).format('YYYY/M/DD HH:mm');
     },
     play(item) {
       if(!this.overlap) {
@@ -108,8 +110,9 @@ export default {
     }
   },
   async mounted() {
-    let holo = await this.$axios.$get('/api/live.json');
+    let holo = await this.$axios.$get('https://cors-ion.herokuapp.com/https://storage.googleapis.com/vthell-data/live.json');
     this.lives = holo.UCdn5BQ06XqgXoAxIhbqw5Rg;
+    this.lives_loading = false;
   }
 }
 </script>
