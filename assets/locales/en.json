@@ -1,0 +1,16 @@
+{
+  "site": {
+    "title": "Fubuki Button",
+    "index": "Home",
+    "about": "About",
+    "switch_dark_mode": "Switch Dark Mode",
+    "switch_language": "Switch Language"
+  },
+  "control": {
+    "self": "Player Control",
+    "pick_one": "Randomly Pick One",
+    "stop": "Stop Playing",
+    "enable_overlap": "Enable Overlap",
+    "enable_random": "Enable Random Mode"
+  }
+}

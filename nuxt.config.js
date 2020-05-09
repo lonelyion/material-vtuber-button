@@ -34,8 +34,11 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    //{ src: '@plugins/icon', ssr: false }
+    '@plugins/i18n'
   ],
+  router: {
+    middleware: 'i18n'
+  },
   /*
   ** Nuxt.js dev-modules
   */
@@ -47,7 +50,7 @@ export default {
   */
   modules: [
     '@nuxtjs/pwa',
-
+    '@nuxtjs/axios'
   ],
   /*
   ** vuetify module configuration
