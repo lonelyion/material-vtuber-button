@@ -5,7 +5,7 @@
             "categoryDescription": {
                 "zh-CN": "萌",
                 "en-US": "Moe",
-                "ja-JP": "もえ"
+                "ja-JP": "萌え"
             },
             "voiceList": [
                 {
@@ -32,7 +32,7 @@
                     "description": {
                         "zh-CN": "布依布依布依(模仿)",
                         "en-US": "bui-bui-bui(imitate)",
-                        "ja-JP": "イブの真似"
+                        "ja-JP": "イーブイの真似"
                     }
                 },
                 {
@@ -77,7 +77,7 @@
                     "description": {
                         "zh-CN": "(哈欠)好想睡觉啊",
                         "en-US": "(yawn)I wanna sleep",
-                        "ja-JP": "(あくび)眠りたい"
+                        "ja-JP": "(あくび)眠たいな"
                     }
                 },
                 {
@@ -95,7 +95,7 @@
                     "description": {
                         "zh-CN": "咕努努",
                         "en-US": "Gununu",
-                        "ja-JP": "ぐるるるるるる"
+                        "ja-JP": "ぐぬぬぬぬ"
                     }
                 },
                 {
@@ -158,7 +158,7 @@
                     "description": {
                         "zh-CN": "(幼狐)会给我做么?给我做xN!帕菲给我做!喜欢",
                         "en-US": "(Kindergarten FBK)Make puffy for me!",
-                        "ja-JP": "(ちびっ狐)つくてくれますか？つくてつくて！ぱーふぇ！つくて！"
+                        "ja-JP": "(ちびっ狐)つくってくれますか？つくってつくって！ぱーふぇ！つくって！"
                     }
                 },
                 {
@@ -167,7 +167,7 @@
                     "description": {
                         "zh-CN": "(幼狐)帕菲 想吃帕菲",
                         "en-US": "(Kindergarten FBK)Puffy, I wanna eat puffy",
-                        "ja-JP": "(ちびっ狐)ぱーふぇ！ぱーふぇ食べたい"
+                        "ja-JP": "(ちびっ狐)ぱーふぇ！ぱふぇ食べたい"
                     }
                 },
                 {
@@ -195,7 +195,7 @@
                     "description": {
                         "zh-CN": "kon-nya-nya-kon~",
                         "en-US": "kon-nya-nya-kon~",
-                        "ja-JP": "kon-nya-nya-kon~"
+                        "ja-JP": "こ～んにゃにゃこ～ん~"
                     }
                 },
                 {
@@ -349,7 +349,7 @@
                 "description": {
                     "zh-CN": "我...我...最喜欢...大家了!嗯!我爱你!",
                     "en-US": "I...I like all of u most! Yes! I Love U!",
-                    "ja-JP": "みなんのことは大好き!!あいしている!"
+                    "ja-JP": "みなさんのことは大好き!!あいしている!"
                 }
             },
             {
