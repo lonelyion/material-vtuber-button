@@ -6,70 +6,66 @@
 
 README: [中文](./README.md) | **日本語** | [English](./README.EN.md)
 
-> **すみません、この文書を日本語に訳せません。通訳を手伝ってくれると助かります。**
-
-相关链接:
+関連リンク:
 
 * [白上フブキのYouTubeチャンネル](https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg)
 * [白上フブキのBilibiliチャンネル](https://space.bilibili.com/332704117)
 * [白上フブキのTwitter](https://twitter.com/shirakamifubuki)
 
-## 参与完善本项目
+## このプロジェクトへの貢献
 
-音频添加请求请发[Issues](https://github.com/copperion/fubuki-button/issues)，附上要提交的音频与音频分类
+音声ファイルをアップロードして[Issues](https://github.com/copperion/fubuki-button/issues)を立ててください。
 
-或Fork本项目进行修改，完成修改后在本项目中发起一个Pull Request。
+またはforkをし、変更または修正をした後、Pull Requestを送ってください。
 
-### 添加或修改音频
+### 追加または修正
 
-**简述**：所有的音频信息都存储在[src/voices.json](src/voices.json)中，要添加或修改音频，你需要对应的修改这个文件。
+**説明**：すべての音声データのメタデータは[src/voices.json](src/voices.json)に追加または修正をしてください。
 
-音频一律为mp3格式，存储在[public/voices](public/voices)中，默认用128Kbps码率压制。对应的URL为`voices/`。
+音声データはmp3のビットレート128Kbpsで統一し、[public/voices](public/voices)に保存してください。。対応するURLは`voices/`に入れてください。。
 
-添加的新音频请先进行音量标准化。本分支使用Adobe Audition使用匹配响度功能进行标准化，目标响度：-24LUFS，容差:2LU，最高实际峰值电平：-2dBTP.
+新規に追加する音声はMP3GainGUIを使用してボリュームの標準化を行ってください。このプロジェクトはAdobe Auditionの"Match loudness"の機能を使用してパラメーターを，目標値：-24LUFS，許容誤差:2LU，最大ピークレベル：-2dBTPにしてください。
 
-由于本站采用强缓存策略，除`index.html`外，文件名一致的文件，即使修改也**永远**不会被客户端刷新。因此新添加的音频，无论是新增还是修改，文件名都**必须**和之前任何文件名都不同。
+このサイトは`index.html`を除いて強力なキャッシュを使用しているため、同じファイル名のファイルは，変更されてもクライアントによって**更新されません**。そのため新しい音声ファイルは，**必ず**過去を含め現在のファイル名と同じものであってはなりません。
 
-如果是修改音频，请在修改之后删除原音频文件。
+音声を変更する場合は変更後に変更前のファイルを削除してください。
 
-### 参与翻译
+### 翻訳に参加する
 
-请帮助进行英文和日语的翻译！
+翻訳してくれる日本人と英語話者を求めています！
 
-主程序翻译在 [src/locales](src/locales) 中的三个以语言名命名的js文件中。
+メインプログラムの言語不ディレクトリ [src/locales](src/locales) 内に3つの.jsファイルがあります。
 
-语音的翻译在 [src/voices.json](src/voices.json) 中。
+音声の言語ファイルは [src/voices.json](src/voices.json) 内にあります。
 
-### 参与网页开发
+変更はプログラムに有効な翻訳です。
 
-请参考[部署本地开发环境](#部署本地开发环境)一节。
+## ローカル環境での使用
 
-## 部署本地开发环境
+このサイトは Vue + jQuery + Bootstrap 3 を使用しています。
 
-本站使用 Vue + jQuery + Bootstrap 3 开发。
+ローカルでの開発環境の設置はまず最新バージョンをインストールし、以下のステップに従って進めます。：
 
-要部署本地开发环境，请先安装最新版的node。然后按照如下步骤操作：
+1. Clone。
 
-1. Clone代码到本地。
+2. Codeディクトリーへ行き`yarn`を実行。
 
-2. 进入代码目录，运行`yarn`。
+3. `yarnserve`を実行すると，コード変更プロセス中に、このローカル開発サーバーは変更の結果をすぐに反映できます。。
 
-3. 运行本地开发服务器`yarnserve`，在代码修改过程中，本地开发服务器可以即时反映修改的结果。
+4. ファイルをコンパイルするために`yarn build`を実行すると，`dist`ディクトリーが生成されます。このサイトは静的であるため`dist`ディクトリー全体をデプロイできます。
 
-4. 要编译可供部署的文件，请运行`yarn build`，这会生成`dist`目录。本站为全静态，将整个`dist`目录部署即可。
-
-若要为本项目贡献你的代码，你不必在本地编译。在开发服务器中测试通过并推送至Github后，直接给本项目提交Pull Request即可。
+このプロジェクトに貢献するためにローカル環境でコンパイルする必要はありません。テストをした後GithubにPushするとすぐにPull Requestを送ることができます。
 
 ## LICENCE
 
-程序部分： MIT
+プログラム： MIT
 
-音频部分: 引用 [Hololive 二次创作条款](https://www.hololive.tv/terms).
+音声: 引用 [Hololive 二次創作規約](https://www.hololive.tv/terms).
 
-本项目为爱好者作品，和hololive官方没有关联
+このプロジェクトはファンによるもので、Hololive公式は一切関係ありません
 
-## 特别鸣谢
+## 特別協力
 
-This project is supported by MeowSound Idols.
+このプロジェクトは MeowSound Idols 支援されています.
 
-本项目基于 [Aqua button](https://github.com/zyzsdy/aqua-button) 进行了修改.
+このプロジェクトは [Aqua button](https://github.com/zyzsdy/aqua-button) を基に作成しています.
