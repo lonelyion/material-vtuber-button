@@ -12,7 +12,7 @@ const ja_JP = {
         audioStaff: "オーディオクリップ: 孤独のイオン & フブキのこーん畑 & CatTeaShop",
         toGithub: "GitHubで翻訳に参加、音声を追加および提案をしてください",
         notOfficial: "このサイトはファン作品であり、公式とは関係ありません",
-        overlapTips: "声重なる再生モードは手動で停止できません。大量のスレッドを作成するので、後リフレッシュしてください",
+        overlapTips: "音声を重ねる再生モードは手動で停止できません。大量のスレッドを作成するので、後リフレッシュしてください",
     },
     action: {
         toggleNavbar: "ナビゲーションバーを切り替える",
@@ -20,10 +20,10 @@ const ja_JP = {
         copy: "コピー",
         control: "コントロール",
         stopvoice: "再生停止",
-        randomplay: "ランダム",
-        overlap: "声重なる可能",
-        autoplay: "とまらない",
-        playing: "現在再生：",
+        randomplay: "ランダム再生",
+        overlap: "音声を重ねる",
+        autoplay: "自動再生",
+        playing: "現在再生している音声：",
         noplay: "再生なし"
     },
     lang: {
