@@ -139,7 +139,7 @@
                     "path": "f-084.mp3",
                     "description": {
                         "zh-CN": "(幼狐)[吓人]被吓到了吗",
-                        "en-US": "(Kindergarten FBK)Are you scared？",
+                        "en-US": "(Little FBK)Are you scared？",
                         "ja-JP": "(ちびっ狐)へへ、びくりした？"
                     }
                 },
@@ -148,7 +148,7 @@
                     "path": "f-085.mp3",
                     "description": {
                         "zh-CN": "(幼狐)啊嗯...kon...晚上好狐",
-                        "en-US": "(Kindergarten FBK)Ah...Emmm...kon...good evening~",
+                        "en-US": "(Little FBK)Ah...Emmm...kon...good evening~",
                         "ja-JP": "(ちびっ狐)あーん、こん、こんばん狐"
                     }
                 },
@@ -157,7 +157,7 @@
                     "path": "f-086.mp3",
                     "description": {
                         "zh-CN": "(幼狐)会给我做么?给我做xN!帕菲给我做!喜欢",
-                        "en-US": "(Kindergarten FBK)Make puffy for me!",
+                        "en-US": "(Little FBK)Make puffy for me!",
                         "ja-JP": "(ちびっ狐)つくってくれますか？つくってつくって！ぱーふぇ！つくって！"
                     }
                 },
@@ -166,7 +166,7 @@
                     "path": "f-087.mp3",
                     "description": {
                         "zh-CN": "(幼狐)帕菲 想吃帕菲",
-                        "en-US": "(Kindergarten FBK)Puffy, I wanna eat puffy",
+                        "en-US": "(Little FBK)Puffy, I wanna eat puffy",
                         "ja-JP": "(ちびっ狐)ぱーふぇ！ぱふぇ食べたい"
                     }
                 },
@@ -175,8 +175,89 @@
                     "path": "f-088.mp3",
                     "description": {
                         "zh-CN": "(幼小黑)我...我的名字是黑上吹...",
-                        "en-US": "(Kindergarten Kuro-Chan)My...my name is Kurokami Fu...",
+                        "en-US": "(Little Kuro-Chan)My...my name is Kurokami Fu...",
                         "ja-JP": "（ちびっ黒様)わ...わたしの名前は黒上フ..."
+                    }
+                },
+                {
+                    "name": "f-092",
+                    "path": "f-092.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)(憨笑)洋葱~~~",
+                        "en-US": "(Little FBK)(Smirk)onion~~~",
+                        "ja-JP": "(ちびっ狐)へへへ、たまねぎい～～～"
+                    }
+                },
+                {
+                    "name": "f-093",
+                    "path": "f-093.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)1 2 3 4 5 6 7 8 9",
+                        "en-US": "(Little FBK)1 2 3 4 5 6 7 8 9",
+                        "ja-JP": "(ちびっ狐)1 2 3 4 5 6 7 8 9"
+                    }
+                },
+                {
+                    "name": "f-094",
+                    "path": "f-094.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)Mio姐姐的 做的饭还有温柔的声音都很喜欢!还有!松蓬蓬的头发和尾巴 还有还有tiger都很喜欢!",
+                        "en-US": "(Little FBK)Yelling about loving sister Mio",
+                        "ja-JP": "(ちびっ狐)ミオ姉さんの作ったご飯とか、優しい声とか！あと！ゆるふわの髪としっぽと、タイガーも好きです！"
+                    }
+                },
+                {
+                    "name": "f-095",
+                    "path": "f-095.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)嗷呜~嗷呜!",
+                        "en-US": "(Little FBK)Woo~Woo~",
+                        "ja-JP": "(ちびっ狐)がおう　がおう"
+                    }
+                },
+                {
+                    "name": "f-096",
+                    "path": "f-096.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)被夸了(憨笑)谢谢",
+                        "en-US": "(Little FBK)I've been praised. Thank you very much",
+                        "ja-JP": "(ちびっ狐)褒められた　へへ　ありがとうございます"
+                    }
+                },
+                {
+                    "name": "f-097",
+                    "path": "f-097.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)龟~派~气~波~功~",
+                        "en-US": "(Little FBK)KA-ME-HA-ME---HA!",
+                        "ja-JP": "(ちびっ狐)か　め　は　め　は"
+                    }
+                },
+                {
+                    "name": "f-098",
+                    "path": "f-098.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)好痛 麦克撞到额头了 额头被撞了!",
+                        "en-US": "(Little FBK)Mic hit my forehead!That hurt!",
+                        "ja-JP": "(ちびっ狐)痛っ、マイクが額に当たって額にぶつかった！"
+                    }
+                },
+                {
+                    "name": "f-100",
+                    "path": "f-100.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)忘却光线!",
+                        "en-US": "(Little FBK)Memory erasing beam!",
+                        "ja-JP": "(ちびっ狐)忘れるビーム！"
+                    }
+                },
+                {
+                    "name": "f-102",
+                    "path": "f-102.mp3",
+                    "description": {
+                        "zh-CN": "(幼狐)我最喜欢哥哥姐姐们了",
+                        "en-US": "(Little FBK)I like sisters and brothers most!",
+                        "ja-JP": "おにちゃん、おねちゃん、大好き！"
                     }
                 }
             ]
@@ -295,6 +376,24 @@
                         "zh-CN": "哇这个怎么 啊真是笨蛋xN",
                         "en-US": "What's going on! Ah how stupid!",
                         "ja-JP": "わー！？これ！ばがだれ！ばが！"
+                    }
+                },
+                {
+                    "name": "f-103",
+                    "path": "f-103.mp3",
+                    "description": {
+                        "zh-CN": "啃仙贝",
+                        "en-US": "Eating Something",
+                        "ja-JP": "ヤケ食いキツネ"
+                    }
+                },
+                {
+                    "name": "f-104",
+                    "path": "f-104.mp3",
+                    "description": {
+                        "zh-CN": "嘎嘣脆~嘎嘣脆哦~",
+                        "en-US": "bali~bali~",
+                        "ja-JP": "ばりばりばりばり"
                     }
                 }
             ]
@@ -540,6 +639,24 @@
                     "en-US": "This↑ is↑ hololve",
                     "ja-JP": "こ↑こ↑ ホロライブです"
                 }
+            },
+            {
+                "name": "f-107",
+                "path": "f-107.mp3",
+                "description": {
+                    "zh-CN": "才不H呢",
+                    "en-US": "It's not H!",
+                    "ja-JP": "えっちじゃないです！"
+                }
+            },
+            {
+                "name": "f-105",
+                "path": "f-105.mp3",
+                "description": {
+                    "zh-CN": "冬眠的小狐狸~",
+                    "en-US": "Wintering fox~",
+                    "ja-JP": "冬ごもり狐~"
+                }
             }
           ]
         },
@@ -612,6 +729,15 @@
                     "zh-CN": "大家早上好！",
                     "en-US": "Good morning",
                     "ja-JP": "皆さん　おはようございます"
+                }
+            },
+            {
+                "name": "f-101",
+                "path": "f-101.mp3",
+                "description": {
+                    "zh-CN": "(幼狐)我是吹雪哦 大家都叫我吹雪酱 请多指教",
+                    "en-US": "(Little FBK)I'm Fubuki. They call me Fubu Chan~",
+                    "ja-JP": "(ちびっ狐)フブキです、フブちゃで呼ばれでます、よろしく"
                 }
             }
           ]
@@ -740,6 +866,15 @@
                     "en-US": "All of u, can't beat me!",
                     "ja-JP": "“みなには、わたしに勝てない！”"
                 }
+            },
+            {
+                "name": "f-106",
+                "path": "f-106.mp3",
+                "description": {
+                    "zh-CN": "啊好难，害羞 害羞",
+                    "en-US": "Ah, it's difficult.How shy.",
+                    "ja-JP": "あぁ、難しい、恥ずかし、恥ずかしよ"
+                }
             }
           ]
         },
@@ -858,6 +993,15 @@
                     "zh-CN": "AMT-阿夸麻吉天使",
                     "en-US": "AMT-Aqua is angel",
                     "ja-JP": "AMT-あくあまじ天使"
+                }
+            },
+            {
+                "name": "f-099",
+                "path": "f-099.mp3",
+                "description": {
+                    "zh-CN": "(幼狐)彗酱!彗酱今天也很可爱哦!",
+                    "en-US": "(Little FBK)Suisei Chan is so cute today!",
+                    "ja-JP": "(ちびっ狐)すいちゃん！すいちゃん今日もかわいいよ"
                 }
             },
             {
