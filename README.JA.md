@@ -22,7 +22,7 @@ README: [中文](./README.md) | **日本語** | [English](./README.EN.md)
 
 **説明**：すべての音声データのメタデータは[src/voices.json](src/voices.json)に追加または修正をしてください。
 
-音声データはmp3のビットレート128Kbpsで統一し、[public/voices](public/voices)に保存してください。。対応するURLは`voices/`に入れてください。。
+音声データはmp3のビットレート128Kbpsで統一し、[public/voices](public/voices)に保存してください。対応するURLは`voices/`に入れてください。
 
 新規に追加する音声はMP3GainGUIを使用してボリュームの標準化を行ってください。このプロジェクトはAdobe Auditionの"Match loudness"の機能を使用してパラメーターを，目標値：-24LUFS，許容誤差:2LU，最大ピークレベル：-2dBTPにしてください。
 
@@ -34,7 +34,7 @@ README: [中文](./README.md) | **日本語** | [English](./README.EN.md)
 
 翻訳してくれる日本人と英語話者を求めています！
 
-メインプログラムの言語不ディレクトリ [src/locales](src/locales) 内に3つの.jsファイルがあります。
+メインプログラムの言語ディレクトリ [src/locales](src/locales) 内に3つの.jsファイルがあります。
 
 音声の言語ファイルは [src/voices.json](src/voices.json) 内にあります。
 
@@ -50,7 +50,7 @@ README: [中文](./README.md) | **日本語** | [English](./README.EN.md)
 
 2. Codeディクトリーへ行き`yarn`を実行。
 
-3. `yarnserve`を実行すると，コード変更プロセス中に、このローカル開発サーバーは変更の結果をすぐに反映できます。。
+3. `yarnserve`を実行すると，コード変更プロセス中に、このローカル開発サーバーは変更の結果をすぐに反映できます。
 
 4. ファイルをコンパイルするために`yarn build`を実行すると，`dist`ディクトリーが生成されます。このサイトは静的であるため`dist`ディクトリー全体をデプロイできます。
 
@@ -66,6 +66,6 @@ README: [中文](./README.md) | **日本語** | [English](./README.EN.md)
 
 ## 特別協力
 
-このプロジェクトは MeowSound Idols 支援されています.
+このプロジェクトは MeowSound Idols にサポートされています.
 
 このプロジェクトは [Aqua button](https://github.com/zyzsdy/aqua-button) を基に作成しています.
