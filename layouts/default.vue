@@ -19,8 +19,8 @@
         <v-list-item
           v-for="(item, i) in nav_items"
           :key="i"
-          :[item.link_type]="item.to"
-          :target="item.link_type === 'href' ? '_blank' : ''"
+          :href="item.to"
+          target="_blank"
           router
           exact
           dense
