@@ -16,6 +16,5 @@ export const mutations = {
   SET_DARK(state, dark) {
       state.dark = dark;
       Cookie.set('dark', state.dark);
-      console.log('dark changed: ', state.dark);
   }
 }

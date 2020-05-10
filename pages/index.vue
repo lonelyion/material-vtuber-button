@@ -11,14 +11,18 @@
       md6
     >
       <v-card v-if="lives">
-        <v-card-title>直播动态</v-card-title>
+        <v-card-title>
+          <v-icon class="primary--text" style="margin-right: 8px">mdi-clock-outline</v-icon>
+          直播动态
+        </v-card-title>
         <v-card-text>
           <v-progress-circular indeterminate class="accent--text" v-if="lives_loading" />
-          <div v-for="live in lives">
+          <div v-for="live in lives" :key="live.startTime">
             <div v-if="live.title.length">
               <span v-if="live.type === 'upcoming'">计划{{ format_time(live.startTime) }}</span>
-              <span v-if="live.type === 'live'">正在直播</span>
-              <a :href="'https://www.youtube.com/watch?v=' + live.id" target="_blank">{{ live.title }}</a>
+              <span v-if="live.type === 'live'" class="warning--text">正在直播</span>
+              <a :href="'https://www.youtube.com/watch?v=' + live.id" target="_blank"
+                  style="text-decoration: none;" :class="live.type === 'live' ? 'error--text' : ''">{{ live.title }}</a>
             </div>
           </div>
         </v-card-text>
@@ -31,10 +35,10 @@
         <v-card-text>
           <v-btn class="accent ma-1 pa-1">{{ $t('control.pick_one') }}</v-btn>
           <v-btn class="accent ma-1 pa-1">{{ $t('control.stop') }}</v-btn>
-          <v-btn class="accent ma-1 pa-1" @click="overlap = !overlap">
+          <v-btn class="accent ma-1 pa-1" @click="overlap = !overlap" :disabled="random">
             <v-icon>{{ overlap ? 'mdi-check' : 'mdi-close' }}</v-icon>{{ $t('control.enable_overlap') }}
           </v-btn>
-          <v-btn class="accent ma-1 pa-1" @click="random = !random">
+          <v-btn class="accent ma-1 pa-1" @click="random = !random" :disabled="overlap">
             <v-icon>{{ random ? 'mdi-check' : 'mdi-close' }}</v-icon>{{ $t('control.enable_random') }}
           </v-btn>
         </v-card-text>
@@ -53,7 +57,7 @@
           </v-btn>
         </v-card-text>
       </v-card>
-      <audio id="single_play" @ended="ended()" />
+      <audio id="single_play" @ended="play_ended()" />
     </v-flex>
   </v-layout>
 </template>
@@ -90,14 +94,22 @@ export default {
       return moment.unix(stamp).format('YYYY/M/DD HH:mm');
     },
     play(item) {
+      item.loading = true;
       if(!this.overlap) {
         let sp = document.getElementById('single_play');
         sp.pause();
         sp.src = '/voices/' + item.path;
-        sp.play();
+        sp.addEventListener('canplay', function() {
+          sp.play();
+          item.loading = false;
+        })
       } else {
         let audio = new Audio('/voices/' + item.path);
         audio.play();
+        audio.addEventListener('canplay', function() {
+          audio.play();
+          item.loading = false;
+        })
       }
     },
     progress(audio, item) {
@@ -105,13 +117,26 @@ export default {
         item.progress = audio.currentTime / audio.duration;
       }, 500);
     },
-    ended() {
-
+    play_ended() {
+      if(this.random) {
+        console.log('entered into ended()')
+        let random_list = this.groups[this.getRandomInt(this.groups.length)];
+        this.play(random_list.voice_list[this.getRandomInt(random_list.voice_list.length)]);
+      }
+    },
+    getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
     }
   },
   async mounted() {
-    let holo = await this.$axios.$get('https://cors-ion.herokuapp.com/https://storage.googleapis.com/vthell-data/live.json');
-    this.lives = holo.UCdn5BQ06XqgXoAxIhbqw5Rg;
+    let holo = await this.$axios.$get('https://cors.lonelyion.workers.dev/?https://storage.googleapis.com/vthell-data/live.json');
+    let fbk_lives = holo.UCdn5BQ06XqgXoAxIhbqw5Rg;
+    fbk_lives.forEach(function(item, index, object) {
+      if(!item.title.length) {
+        object.splice(index, 1);
+      }
+    })
+    this.lives = fbk_lives;
     this.lives_loading = false;
   }
 }

@@ -14,7 +14,6 @@ export default function ({ isHMR, app, store, route, params, error, redirect }) 
   if (!locale){
     const cookies = Cookie.set('locale', defaultLocale)
         .split('; ').map(stringCookie => stringCookie.split('='));
-    console.log('middleware: cookies = ', cookies);
     const cookie = cookies.find(cookie => cookie[0] === 'locale');
     if (cookie)
       locale = cookie[1];
@@ -31,4 +30,6 @@ export default function ({ isHMR, app, store, route, params, error, redirect }) 
     Cookie.set('dark', dark_mode);
   }
   store.commit("SET_DARK", dark_mode);
+
+  console.log('middleware: cookies = ', Cookie.get());
 }

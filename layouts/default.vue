@@ -116,8 +116,7 @@
 <script>
 export default {
   mounted() {
-    console.log('mounted: ', this.$store.state.dark);
-    this.$vuetify.theme.dark = this.$store.state.dark;
+    this.$vuetify.theme.dark = (this.$store.state.dark === 'true');
   },
   methods: {
     switch_dark() {
