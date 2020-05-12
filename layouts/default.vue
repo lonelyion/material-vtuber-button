@@ -88,7 +88,7 @@
         :fixed="false"
       >
         <div>
-          <div style="">
+          <div>
             <span style="vertical-align: middle;">&copy; {{ new Date().getFullYear() }} Lonely_ion / 孤单离子</span>
             <v-btn icon href="https://github.com/lonelyion" target="_blank"
                    style="vertical-align: middle;">
@@ -96,10 +96,7 @@
             </v-btn>
           </div>
           <div>
-            <span>特别感谢：</span>
-          </div>
-          <div>
-            <p>本站为爱好者作品，和Hololive官方没有关联，更多信息请查看"
+            <p>本站为爱好者作品，和Hololive官方没有关联，STAFF名单以及项目参与方式请查看"
               <nuxt-link to="/about" style="text-decoration: none;">关于</nuxt-link>"页面</p>
           </div>
         </div>
@@ -108,30 +105,17 @@
   </v-app>
 </template>
 
-<style>
-  .footer-content {
+<style lang="scss">
+  .v-application {
+    font-family: $body-font-family, sans-serif !important;
   }
 </style>
 
 <script>
 export default {
-  mounted() {
-    this.$vuetify.theme.dark = (this.$store.state.dark === 'true');
-  },
-  methods: {
-    switch_dark() {
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-      this.$store.commit("SET_DARK", this.$vuetify.theme.dark);
-    },
-    switch_lang(lang) {
-      console.log('switching to ' + lang);
-      this.$store.commit("SET_LANG", lang);
-      this.$i18n.locale = lang;
-    }
-  },
   data () {
     return {
-      drawer: true,
+      drawer: false,
       fixed: false,
       nav_items: [
         {
@@ -150,6 +134,23 @@ export default {
           to: 'https://space.bilibili.com/332704117',
         }
       ]
+    }
+  },
+  mounted() {
+    this.$vuetify.theme.dark = (this.$store.state.dark === 'true');
+    if(window.innerWidth >= 1024) {
+      this.drawer = true;
+    }
+  },
+  methods: {
+    switch_dark() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      this.$store.commit("SET_DARK", this.$vuetify.theme.dark);
+    },
+    switch_lang(lang) {
+      console.log('switching to ' + lang);
+      this.$store.commit("SET_LANG", lang);
+      this.$i18n.locale = lang;
     }
   }
 }

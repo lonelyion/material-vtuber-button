@@ -33,14 +33,18 @@
           {{ $t('control.self') }}
         </v-card-title>
         <v-card-text>
-          <v-btn class="accent ma-1 pa-1">{{ $t('control.pick_one') }}</v-btn>
-          <v-btn class="accent ma-1 pa-1">{{ $t('control.stop') }}</v-btn>
-          <v-btn class="accent ma-1 pa-1" @click="overlap = !overlap" :disabled="random">
-            <v-icon>{{ overlap ? 'mdi-check' : 'mdi-close' }}</v-icon>{{ $t('control.enable_overlap') }}
-          </v-btn>
-          <v-btn class="accent ma-1 pa-1" @click="random = !random" :disabled="overlap">
-            <v-icon>{{ random ? 'mdi-check' : 'mdi-close' }}</v-icon>{{ $t('control.enable_random') }}
-          </v-btn>
+          <div>
+            <div>
+              <v-btn class="accent ma-1 pa-1" @click="get_random_voice()">{{ $t('control.pick_one') }}</v-btn>
+              <v-btn class="accent ma-1 pa-1" >{{ $t('control.stop') }}</v-btn>
+              <v-btn class="accent ma-1 pa-1" @click="overlap = !overlap" :disabled="random">
+                <v-icon>{{ overlap ? 'mdi-check' : 'mdi-close' }}</v-icon>{{ $t('control.enable_overlap') }}
+              </v-btn>
+              <v-btn class="accent ma-1 pa-1" @click="random = !random" :disabled="overlap">
+                <v-icon>{{ random ? 'mdi-check' : 'mdi-close' }}</v-icon>{{ $t('control.enable_random') }}
+              </v-btn>
+            </div>
+          </div>
         </v-card-text>
       </v-card>
       <v-card v-for="group in groups" :key="group.name">
@@ -72,6 +76,8 @@
     word-wrap: break-word !important;
     word-break: break-all !important;
     white-space: normal !important;
+    text-transform:none !important;
+    font-weight: 400;
   }
 </style>
 
@@ -119,13 +125,18 @@ export default {
     },
     play_ended() {
       if(this.random) {
-        console.log('entered into ended()')
-        let random_list = this.groups[this.getRandomInt(this.groups.length)];
-        this.play(random_list.voice_list[this.getRandomInt(random_list.voice_list.length)]);
+        this.get_random_voice();
       }
     },
-    getRandomInt(max) {
+    get_random_int(max) {
       return Math.floor(Math.random() * Math.floor(max));
+    },
+    get_random_voice() {
+      let random_list = this.groups[this.get_random_int(this.groups.length)];
+      this.play(random_list.voice_list[this.get_random_int(random_list.voice_list.length)]);
+    },
+    stop_all() {
+
     }
   },
   async mounted() {
