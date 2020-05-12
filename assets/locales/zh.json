@@ -1,0 +1,16 @@
+{
+  "site": {
+    "title": "狐按钮",
+    "index": "主页",
+    "about": "关于",
+    "switch_dark_mode": "夜间模式开关",
+    "switch_language": "切换语言"
+  },
+  "control": {
+    "self": "玉米控制台",
+    "pick_one": "帮我选一个",
+    "stop": "停止",
+    "enable_overlap": "允许重叠播放",
+    "enable_random": "自动随机播放"
+  }
+}
