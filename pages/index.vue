@@ -1,46 +1,47 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-    app
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
+  <v-layout column justify-center align-center app>
+    <v-flex xs12 sm8 md6>
       <v-card v-if="lives">
         <v-card-title>
-          <v-icon class="primary--text" style="margin-right: 8px">mdi-clock-outline</v-icon>
+          <v-icon class="primary--text" style="margin-right: 8px">
+            mdi-clock-outline
+          </v-icon>
           直播动态
         </v-card-title>
         <v-card-text>
-          <v-progress-circular indeterminate class="accent--text" v-if="lives_loading" />
+          <v-progress-circular v-if="lives_loading" indeterminate class="accent--text" />
           <div v-for="live in lives" :key="live.startTime">
             <div v-if="live.title.length">
               <span v-if="live.type === 'upcoming'">计划{{ format_time(live.startTime) }}</span>
               <span v-if="live.type === 'live'" class="warning--text">正在直播</span>
-              <a :href="'https://www.youtube.com/watch?v=' + live.id" target="_blank"
-                  style="text-decoration: none;" :class="live.type === 'live' ? 'error--text' : ''">{{ live.title }}</a>
+              <a
+                :href="'https://www.youtube.com/watch?v=' + live.id"
+                target="_blank"
+                style="text-decoration: none;"
+                :class="live.type === 'live' ? 'error--text' : ''"
+              >{{ live.title }}</a>
             </div>
           </div>
         </v-card-text>
       </v-card>
       <v-card>
         <v-card-title>
-          <img src="/favicon.ico" style="width: 24px; margin-right: 8px" alt="icon"/>
+          <img src="/favicon.ico" style="width: 24px; margin-right: 8px" alt="icon" >
           {{ $t('control.self') }}
         </v-card-title>
         <v-card-text>
           <div>
             <div>
-              <v-btn class="accent ma-1 pa-1" @click="get_random_voice()">{{ $t('control.pick_one') }}</v-btn>
-              <v-btn class="accent ma-1 pa-1" >{{ $t('control.stop') }}</v-btn>
-              <v-btn class="accent ma-1 pa-1" @click="overlap = !overlap" :disabled="random">
+              <v-btn class="accent ma-1 pa-1" @click="get_random_voice()">
+                {{ $t('control.pick_one') }}
+              </v-btn>
+              <v-btn class="accent ma-1 pa-1">
+                {{ $t('control.stop') }}
+              </v-btn>
+              <v-btn class="accent ma-1 pa-1" :disabled="random" @click="overlap = !overlap">
                 <v-icon>{{ overlap ? 'mdi-check' : 'mdi-close' }}</v-icon>{{ $t('control.enable_overlap') }}
               </v-btn>
-              <v-btn class="accent ma-1 pa-1" @click="random = !random" :disabled="overlap">
+              <v-btn class="accent ma-1 pa-1" :disabled="overlap" @click="random = !random">
                 <v-icon>{{ random ? 'mdi-check' : 'mdi-close' }}</v-icon>{{ $t('control.enable_random') }}
               </v-btn>
             </div>
@@ -52,11 +53,15 @@
           {{ group.group_description[$i18n.locale] }}
         </v-card-title>
         <v-card-text>
-          <v-btn v-for="item in group.voice_list" :key="item.name"
-                 @click="play(item)"
-                 :loading="item.loading"
-                 class="accent ma-1 pa-2 voice-button"
-                 height="max-content" min-height="36px">
+          <v-btn
+            v-for="item in group.voice_list"
+            :key="item.name"
+            :loading="item.loading"
+            class="accent ma-1 pa-2 voice-button"
+            height="max-content"
+            min-height="36px"
+            @click="play(item)"
+          >
             {{ item.description[$i18n.locale] }}
           </v-btn>
         </v-card-text>
@@ -67,18 +72,18 @@
 </template>
 
 <style>
-  .v-card {
-    margin: 8px auto;
-  }
-  .voice-button {
-    display: inline-block;
-    max-width: 100%;
-    word-wrap: break-word !important;
-    word-break: break-all !important;
-    white-space: normal !important;
-    text-transform:none !important;
-    font-weight: 400;
-  }
+.v-card {
+  margin: 8px auto;
+}
+.voice-button {
+  display: inline-block;
+  max-width: 100%;
+  word-wrap: break-word !important;
+  word-break: break-all !important;
+  white-space: normal !important;
+  text-transform: none !important;
+  font-weight: 400;
+}
 </style>
 
 <script>
@@ -93,7 +98,26 @@ export default {
       groups: voice_lists.groups,
       lives: [],
       lives_loading: true
-    }
+    };
+  },
+  async mounted() {
+    let holo = await this.$axios.$get(
+      'https://cors.lonelyion.workers.dev/?https://storage.googleapis.com/vthell-data/live.json'
+    );
+    let fbk_lives = holo.UCdn5BQ06XqgXoAxIhbqw5Rg;
+    fbk_lives.forEach(function(item, index, object) {
+      if (!item.title.length) {
+        object.splice(index, 1);
+      }
+      if (item.type === 'live') {
+        item.startTime = 0;
+      }
+    });
+    this.lives = fbk_lives;
+    this.lives.sort(function(a, b) {
+      return a.startTime > b.startTime ? 1 : -1;
+    });
+    this.lives_loading = false;
   },
   methods: {
     format_time(stamp) {
@@ -101,21 +125,21 @@ export default {
     },
     play(item) {
       item.loading = true;
-      if(!this.overlap) {
+      if (!this.overlap) {
         let sp = document.getElementById('single_play');
         sp.pause();
         sp.src = '/voices/' + item.path;
         sp.addEventListener('canplay', function() {
           sp.play();
           item.loading = false;
-        })
+        });
       } else {
         let audio = new Audio('/voices/' + item.path);
         audio.play();
         audio.addEventListener('canplay', function() {
           audio.play();
           item.loading = false;
-        })
+        });
       }
     },
     progress(audio, item) {
@@ -124,7 +148,7 @@ export default {
       }, 500);
     },
     play_ended() {
-      if(this.random) {
+      if (this.random) {
         this.get_random_voice();
       }
     },
@@ -135,26 +159,7 @@ export default {
       let random_list = this.groups[this.get_random_int(this.groups.length)];
       this.play(random_list.voice_list[this.get_random_int(random_list.voice_list.length)]);
     },
-    stop_all() {
-
-    }
-  },
-  async mounted() {
-    let holo = await this.$axios.$get('https://cors.lonelyion.workers.dev/?https://storage.googleapis.com/vthell-data/live.json');
-    let fbk_lives = holo.UCdn5BQ06XqgXoAxIhbqw5Rg;
-    fbk_lives.forEach(function(item, index, object) {
-      if(!item.title.length) {
-        object.splice(index, 1);
-      }
-      if(item.type === 'live') {
-        item.startTime = 0;
-      }
-    })
-    this.lives = fbk_lives;
-    this.lives.sort(function(a, b) {
-      return a.startTime > b.startTime ? 1 : -1;
-    });
-    this.lives_loading = false;
+    stop_all() {}
   }
-}
+};
 </script>

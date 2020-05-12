@@ -1,18 +1,18 @@
 export const state = () => ({
   locales: ['en', 'zh'],
   locale: 'zh',
-  dark: false,
-})
+  dark: false
+});
 
 export const mutations = {
-  SET_LANG (state, locale) {
+  SET_LANG(state, locale) {
     if (state.locales.includes(locale)) {
       state.locale = locale;
       localStorage.setItem('locale', state.locale);
     }
   },
   SET_DARK(state, dark) {
-      state.dark = dark;
-      localStorage.setItem('dark', state.dark);
+    state.dark = dark;
+    localStorage.setItem('dark', state.dark);
   }
-}
+};

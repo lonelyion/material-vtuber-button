@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import VueI18n from 'vue-i18n'
+import Vue from 'vue';
+import VueI18n from 'vue-i18n';
 
 Vue.use(VueI18n);
 
-export default ({app, store}) => {
+export default ({ app, store }) => {
   app.i18n = new VueI18n({
     locale: store.state.locale,
     fallbackLocale: 'zh',
@@ -12,4 +12,4 @@ export default ({app, store}) => {
       zh: require('~/assets/locales/zh.json')
     }
   });
-}
+};
