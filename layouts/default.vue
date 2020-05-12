@@ -21,7 +21,7 @@
       </v-list>
       <v-divider />
       <v-list>
-        <v-list-item dense to="/settings" router exact>
+        <v-list-item dense to="/about" router exact>
           <v-list-item-action>
             <v-icon>mdi-code-tags</v-icon>
           </v-list-item-action>
@@ -77,7 +77,8 @@
               本站为爱好者作品，和Hololive官方没有关联，STAFF名单以及项目参与方式请查看"
               <nuxt-link to="/about" style="text-decoration: none;">
                 关于
-              </nuxt-link>"页面
+              </nuxt-link>
+              页面
             </p>
           </div>
         </div>

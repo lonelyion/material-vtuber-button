@@ -18,6 +18,7 @@ module.exports = {
   plugins: ['vue', 'prettier'],
   // 自定义规则
   rules: {
+    'vue/html-self-closing': 'off',
     'no-console': 'off',
     'vue/max-attributes-per-line': 'off',
     'prettier/prettier': ['error']

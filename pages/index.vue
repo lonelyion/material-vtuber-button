@@ -19,14 +19,16 @@
                 target="_blank"
                 style="text-decoration: none;"
                 :class="live.type === 'live' ? 'error--text' : ''"
-              >{{ live.title }}</a>
+              >
+                {{ live.title }}\
+              </a>
             </div>
           </div>
         </v-card-text>
       </v-card>
       <v-card>
         <v-card-title>
-          <img src="/favicon.ico" style="width: 24px; margin-right: 8px" alt="icon" >
+          <img src="/favicon.ico" style="width: 24px; margin-right: 8px" alt="icon" />
           {{ $t('control.self') }}
         </v-card-title>
         <v-card-text>
@@ -39,10 +41,12 @@
                 {{ $t('control.stop') }}
               </v-btn>
               <v-btn class="accent ma-1 pa-1" :disabled="random" @click="overlap = !overlap">
-                <v-icon>{{ overlap ? 'mdi-check' : 'mdi-close' }}</v-icon>{{ $t('control.enable_overlap') }}
+                <v-icon>{{ overlap ? 'mdi-check' : 'mdi-close' }}</v-icon>
+                {{ $t('control.enable_overlap') }}
               </v-btn>
               <v-btn class="accent ma-1 pa-1" :disabled="overlap" @click="random = !random">
-                <v-icon>{{ random ? 'mdi-check' : 'mdi-close' }}</v-icon>{{ $t('control.enable_random') }}
+                <v-icon>{{ random ? 'mdi-check' : 'mdi-close' }}</v-icon>
+                {{ $t('control.enable_random') }}
               </v-btn>
             </div>
           </div>
@@ -133,12 +137,17 @@ export default {
           sp.play();
           item.loading = false;
         });
+        this.$bus.$on('abort_play', () => {
+          sp.pause();
+        });
       } else {
         let audio = new Audio('/voices/' + item.path);
-        audio.play();
         audio.addEventListener('canplay', function() {
           audio.play();
           item.loading = false;
+        });
+        this.$bus.$on('abort_play', () => {
+          audio.pause();
         });
       }
     },
@@ -159,7 +168,10 @@ export default {
       let random_list = this.groups[this.get_random_int(this.groups.length)];
       this.play(random_list.voice_list[this.get_random_int(random_list.voice_list.length)]);
     },
-    stop_all() {}
+    stop_all() {
+      console.log('stop-all');
+      this.$bus.$emit('abort_play');
+    }
   }
 };
 </script>
