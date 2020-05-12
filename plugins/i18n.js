@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import VoiceList from '~/assets/voices.json'
 
 Vue.use(VueI18n);
 

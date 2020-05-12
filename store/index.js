@@ -4,17 +4,15 @@ export const state = () => ({
   dark: false,
 })
 
-
-const Cookie = require('js-cookie');
 export const mutations = {
   SET_LANG (state, locale) {
     if (state.locales.includes(locale)) {
       state.locale = locale;
-      Cookie.set('locale', state.locale);
+      localStorage.setItem('locale', state.locale);
     }
   },
   SET_DARK(state, dark) {
       state.dark = dark;
-      Cookie.set('dark', state.dark);
+      localStorage.setItem('dark', state.dark);
   }
 }

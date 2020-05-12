@@ -1,35 +1,29 @@
-export default function ({ isHMR, app, store, route, params, error, redirect }) {
-  //if (isHMR) return;
-
-  const Cookie = require('js-cookie');
-
+export default function ({ isHMR, app, store }) {
+  if (isHMR) return;
   //Locale
-  const defaultLocale = app.i18n.fallbackLocale;
-  let locale = null;
-  const cookie_locale = Cookie.get('locale');
-  if (cookie_locale) {
-    locale = cookie_locale;
+  let defaultLocale = app.i18n.fallbackLocale;
+  const browserLocale = ((navigator.language.replace('-', '_')).toLowerCase()).split('_')[0];
+  if(app.i18n.availableLocales.includes(browserLocale)) {
+    defaultLocale = browserLocale;
   }
-
-  if (!locale){
-    const cookies = Cookie.set('locale', defaultLocale)
-        .split('; ').map(stringCookie => stringCookie.split('='));
-    const cookie = cookies.find(cookie => cookie[0] === 'locale');
-    if (cookie)
-      locale = cookie[1];
+  let locale = null;
+  const stored_locale = localStorage.getItem('locale');
+  if (stored_locale) {
+    locale = stored_locale;
+  } else {
+    locale = defaultLocale;
+    localStorage.setItem('locale', locale);
   }
   store.commit('SET_LANG', locale);
   app.i18n.locale = store.state.locale;
 
   //Dark
   let dark_mode = false;
-  const cookie_dark = Cookie.get('dark');
+  const cookie_dark = localStorage.getItem('dark');
   if(cookie_dark) {
     dark_mode = cookie_dark;
   } else {
-    Cookie.set('dark', dark_mode);
+    localStorage.setItem('dark', dark_mode);
   }
   store.commit("SET_DARK", dark_mode);
-
-  console.log('middleware: cookies = ', Cookie.get());
 }

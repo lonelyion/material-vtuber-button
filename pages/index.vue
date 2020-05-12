@@ -146,8 +146,14 @@ export default {
       if(!item.title.length) {
         object.splice(index, 1);
       }
+      if(item.type === 'live') {
+        item.startTime = 0;
+      }
     })
     this.lives = fbk_lives;
+    this.lives.sort(function(a, b) {
+      return a.startTime > b.startTime ? 1 : -1;
+    });
     this.lives_loading = false;
   }
 }
