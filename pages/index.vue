@@ -3,7 +3,7 @@
     <v-flex xs12 sm8 md6>
       <v-card v-if="lives">
         <v-card-title>
-          <v-icon class="primary--text" style="margin-right: 8px">
+          <v-icon class="primary--text" style="margin-right: 8px;">
             mdi-clock-outline
           </v-icon>
           直播动态
@@ -28,7 +28,7 @@
       </v-card>
       <v-card>
         <v-card-title>
-          <img src="/favicon.ico" style="width: 24px; margin-right: 8px" alt="icon" />
+          <img src="/favicon.ico" style="width: 24px; margin-right: 8px;" alt="icon" />
           {{ $t('control.self') }}
         </v-card-title>
         <v-card-text>
@@ -37,7 +37,7 @@
               <v-btn class="accent ma-1 pa-1" @click="get_random_voice()">
                 {{ $t('control.pick_one') }}
               </v-btn>
-              <v-btn class="accent ma-1 pa-1">
+              <v-btn class="accent ma-1 pa-1" @click="stop_all()">
                 {{ $t('control.stop') }}
               </v-btn>
               <v-btn class="accent ma-1 pa-1" :disabled="random" @click="overlap = !overlap">
@@ -105,6 +105,8 @@ export default {
     };
   },
   async mounted() {
+    // This prevents unnecessary errors when Media Session API is not available.
+
     let holo = await this.$axios.$get(
       'https://cors.lonelyion.workers.dev/?https://storage.googleapis.com/vthell-data/live.json'
     );
@@ -135,19 +137,39 @@ export default {
         sp.src = '/voices/' + item.path;
         sp.addEventListener('canplay', function() {
           sp.play();
+          if ('mediaSession' in navigator) {
+            const metadata = {
+              title: item.description['ja'],
+              artist: 'Sirakami Fubuki',
+              album: '狐按钮(^・ω・^§)',
+              artwork: [{ src: '/media-cover.jpg', sizes: '128x128', type: 'image/png' }]
+            };
+            navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
+          }
           item.loading = false;
         });
         this.$bus.$on('abort_play', () => {
           sp.pause();
+          delete this.sp;
         });
       } else {
         let audio = new Audio('/voices/' + item.path);
+        if ('mediaSession' in navigator) {
+          const metadata = {
+            title: '多重狐狸',
+            artist: 'Sirakami Fubuki',
+            album: '狐按钮(^・ω・^§)',
+            artwork: [{ src: '/media-cover.jpg', sizes: '128x128', type: 'image/png' }]
+          };
+          navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
+        }
         audio.addEventListener('canplay', function() {
           audio.play();
           item.loading = false;
         });
         this.$bus.$on('abort_play', () => {
           audio.pause();
+          delete this.audio;
         });
       }
     },
