@@ -34,7 +34,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@plugins/i18n'
+    '@plugins/i18n',
+    '@plugins/eventBus.js'
   ],
   router: {
     middleware: 'ui_config'
