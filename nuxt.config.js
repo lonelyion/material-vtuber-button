@@ -41,11 +41,17 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa', '@nuxtjs/axios'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/axios', '@nuxtjs/markdownit'],
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
    */
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: ['markdown-it-div', 'markdown-it-attrs']
+  },
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
