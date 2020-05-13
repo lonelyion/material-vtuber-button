@@ -1,0 +1,28 @@
+{
+  "site": {
+    "title": "フブキボタン",
+    "index": "ホームページ",
+    "about": "について",
+    "switch_dark_mode": "ナイトモードスイッチ",
+    "switch_language": "言語を切り替える",
+    "footer": {
+      "lonely_ion": "孤独のイオン",
+      "oruyanke": "おるやんけ組",
+      "content": "このサイトはファン作品であり、公式とは関係ありません。STAFFリストとプロジェクト参加方式は「について」ページをご覧ください。"
+    }
+  },
+  "live": {
+    "activity": "ライブ ストリーム",
+    "schedule": "予定",
+    "on_air": "ライブ配信中"
+  },
+  "control": {
+    "self": "コントロール",
+    "pick_one": "ランダム再生",
+    "stop": "再生停止",
+    "enable_overlap": "音声を重ねる",
+    "enable_random": "自動ランダム再生",
+    "full_name": "白上フブキ",
+    "overlap_title": "多くのフブキの音声"
+  }
+}

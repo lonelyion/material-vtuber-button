@@ -4,13 +4,25 @@
     "index": "Home",
     "about": "About",
     "switch_dark_mode": "Switch Dark Mode",
-    "switch_language": "Switch Language"
+    "switch_language": "Switch Language",
+    "footer": {
+      "lonely_ion": "Lonely_ion",
+      "oruyanke": "Oruyanke Team",
+      "content": "This site is a fan work and is not associated with the Hololive official. For staff and more information, please see \"About\" page."
+    }
+  },
+  "live": {
+    "activity": "Live Board",
+    "schedule": "Scheduled at ",
+    "on_air": "LIVE NOW"
   },
   "control": {
     "self": "Player Control",
     "pick_one": "Randomly Pick One",
     "stop": "Stop Playing",
     "enable_overlap": "Enable Overlap",
-    "enable_random": "Enable Random Mode"
+    "enable_random": "Enable Random Mode",
+    "full_name": "Shirakami Fubuki",
+    "overlap_title": "Multiple Fubuki Voices"
   }
 }

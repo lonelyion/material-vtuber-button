@@ -42,17 +42,25 @@
             <v-icon>mdi-brightness-2</v-icon>
           </v-btn>
         </template>
-        <span>夜间模式开关</span>
+        <span>{{ $t('site.switch_dark_mode') }}</span>
       </v-tooltip>
       <v-menu offset-y>
-        <template v-slot:activator="{ on }">
-          <v-btn icon class="white--text" v-on="on">
-            <v-icon>mdi-translate</v-icon>
-          </v-btn>
+        <template v-slot:activator="{ on: menu }">
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on: tooltip }">
+              <v-btn icon class="white--text" v-on="{ ...tooltip, ...menu }">
+                <v-icon>mdi-translate</v-icon>
+              </v-btn>
+            </template>
+            <span>{{ $t('site.switch_language') }}</span>
+          </v-tooltip>
         </template>
         <v-list>
           <v-list-item @click="switch_lang('zh')">
             <v-list-item-title>简体中文</v-list-item-title>
+          </v-list-item>
+          <v-list-item @click="switch_lang('ja')">
+            <v-list-item-title>日本語</v-list-item-title>
           </v-list-item>
           <v-list-item @click="switch_lang('en')">
             <v-list-item-title>English</v-list-item-title>
@@ -66,20 +74,30 @@
       </v-container>
       <v-footer :fixed="false">
         <div>
-          <div>
-            <span style="vertical-align: middle;">&copy; {{ new Date().getFullYear() }} Lonely_ion / 孤单离子</span>
-            <v-btn icon href="https://github.com/lonelyion" target="_blank" style="vertical-align: middle;">
+          <div style="vertical-align: middle;">
+            <span>&copy; {{ new Date().getFullYear() }} </span>
+            <span>
+              <a href="https://github.com/lonelyion" target="_blank" style="text-decoration: none;">
+                {{ $t('site.footer.lonely_ion') }}
+              </a>
+            </span>
+            <span>
+              &
+              <a href="https://github.com/oruyanke" target="_blank" style="text-decoration: none;">
+                {{ $t('site.footer.oruyanke') }}
+              </a>
+            </span>
+            <v-btn
+              icon
+              href="https://github.com/oruyanke/fubuki-button"
+              target="_blank"
+              style="vertical-align: middle;"
+            >
               <v-icon>mdi-github</v-icon>
             </v-btn>
           </div>
           <div>
-            <p>
-              本站为爱好者作品，和Hololive官方没有关联，STAFF名单以及项目参与方式请查看"
-              <nuxt-link to="/about" style="text-decoration: none;">
-                关于
-              </nuxt-link>
-              页面
-            </p>
+            <p>{{ $t('site.footer.content') }}</p>
           </div>
         </div>
       </v-footer>

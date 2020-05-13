@@ -4,13 +4,25 @@
     "index": "主页",
     "about": "关于",
     "switch_dark_mode": "夜间模式开关",
-    "switch_language": "切换语言"
+    "switch_language": "切换语言",
+    "footer": {
+      "lonely_ion": "孤单离子",
+      "oruyanke": "狐笋组",
+      "content": "本站为爱好者作品，和Hololive官方没有关联，STAFF名单以及项目参与方式请查看\"关于\"页面"
+    }
+  },
+  "live": {
+    "activity": "直播动态",
+    "schedule": "计划",
+    "on_air": "正在直播"
   },
   "control": {
     "self": "玉米控制台",
     "pick_one": "帮我选一个",
     "stop": "停止",
     "enable_overlap": "允许重叠播放",
-    "enable_random": "自动随机播放"
+    "enable_random": "自动随机播放",
+    "full_name": "白上吹雪",
+    "overlap_title": "多重狐狸"
   }
 }

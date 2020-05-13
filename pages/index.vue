@@ -1,26 +1,26 @@
 <template>
   <v-layout column justify-center align-center app>
     <v-flex xs12 sm8 md6>
-      <v-card v-if="lives">
+      <v-card v-if="lives.length !== 0">
         <v-card-title>
           <v-icon class="primary--text" style="margin-right: 8px;">
             mdi-clock-outline
           </v-icon>
-          直播动态
+          {{ $t('live.activity') }}
         </v-card-title>
         <v-card-text>
           <v-progress-circular v-if="lives_loading" indeterminate class="accent--text" />
           <div v-for="live in lives" :key="live.startTime">
             <div v-if="live.title.length">
-              <span v-if="live.type === 'upcoming'">计划{{ format_time(live.startTime) }}</span>
-              <span v-if="live.type === 'live'" class="warning--text">正在直播</span>
+              <span v-if="live.type === 'upcoming'">{{ $t('live.schedule') + format_time(live.startTime) }}</span>
+              <span v-if="live.type === 'live'" class="warning--text">{{ $t('live.on_air') }}</span>
               <a
                 :href="'https://www.youtube.com/watch?v=' + live.id"
                 target="_blank"
                 style="text-decoration: none;"
                 :class="live.type === 'live' ? 'error--text' : ''"
               >
-                {{ live.title }}\
+                {{ live.title }}
               </a>
             </div>
           </div>
@@ -60,7 +60,6 @@
           <v-btn
             v-for="item in group.voice_list"
             :key="item.name"
-            :loading="item.loading"
             class="accent ma-1 pa-2 voice-button"
             height="max-content"
             min-height="36px"
@@ -130,7 +129,6 @@ export default {
       return moment.unix(stamp).format('YYYY/M/DD HH:mm');
     },
     play(item) {
-      item.loading = true;
       if (!this.overlap) {
         let sp = document.getElementById('single_play');
         sp.pause();
@@ -139,14 +137,13 @@ export default {
           sp.play();
           if ('mediaSession' in navigator) {
             const metadata = {
-              title: item.description['ja'],
-              artist: 'Sirakami Fubuki',
-              album: '狐按钮(^・ω・^§)',
+              title: item.description[this.$i18n.locale],
+              artist: this.$t('control.full_name'),
+              album: this.$t('site.title') + '(^・ω・^§)',
               artwork: [{ src: '/media-cover.jpg', sizes: '128x128', type: 'image/png' }]
             };
             navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
           }
-          item.loading = false;
         });
         this.$bus.$on('abort_play', () => {
           sp.pause();
@@ -156,16 +153,15 @@ export default {
         let audio = new Audio('/voices/' + item.path);
         if ('mediaSession' in navigator) {
           const metadata = {
-            title: '多重狐狸',
-            artist: 'Sirakami Fubuki',
-            album: '狐按钮(^・ω・^§)',
+            title: this.$t('control.overlap_title'),
+            artist: this.$t('control.full_name'),
+            album: this.$t('site.title') + '(^・ω・^§)',
             artwork: [{ src: '/media-cover.jpg', sizes: '128x128', type: 'image/png' }]
           };
           navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
         }
         audio.addEventListener('canplay', function() {
           audio.play();
-          item.loading = false;
         });
         this.$bus.$on('abort_play', () => {
           audio.pause();
@@ -194,6 +190,11 @@ export default {
       console.log('stop-all');
       this.$bus.$emit('abort_play');
     }
+  },
+  head() {
+    return {
+      title: this.$t('site.title') + '(^・ω・^§)ﾉ'
+    };
   }
 };
 </script>
