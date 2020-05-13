@@ -18,8 +18,8 @@ export default function({ isHMR, app, store }) {
     locale = defaultLocale;
     localStorage.setItem('locale', locale);
   }
-  app.i18n.locale = store.state.locale;
   store.commit('SET_LANG', locale);
+  app.i18n.locale = store.state.locale;
 
   //Dark
   let dark_mode = false;
