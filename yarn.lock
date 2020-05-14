@@ -4894,6 +4894,16 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+markdown-it-attrs@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.npmjs.org/markdown-it-attrs/-/markdown-it-attrs-3.0.2.tgz#55a466b2b60d755b2a77288dff175e741fc1143d"
+  integrity sha512-q45vdXU9TSWaHgFkWEFM97YHEoCmOyG9csLLdv3oVC6ARjT77u4wfng9rRtSOMb5UpxzT7zTX5GBbwm15H40dw==
+
+markdown-it-div@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/markdown-it-div/-/markdown-it-div-1.1.0.tgz#779c07a2313a36e59afd54c39907f9bc87c1ab20"
+  integrity sha512-Vz1T8cPG4sRofn5VlwiGMpy7AyhizbBZcFmvVDf/mlDgF7Mt6QqjPhc/nLlLYB3EANkJfO4kym7R6SZ7RhGvCQ==
+
 markdown-it@^8.3.1:
   version "8.4.2"
   resolved "https://registry.npm.taobao.org/markdown-it/download/markdown-it-8.4.2.tgz#386f98998dc15a37722aa7722084f4020bdd9b54"

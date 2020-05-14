@@ -4,27 +4,32 @@
       <v-card>
         <v-card-text>
           <div v-html="about_md"></div>
-          <!-- <img src="/v.png" alt="Vuetify.js" class="mb-5" /> -->
-          <!-- <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote> -->
         </v-card-text>
       </v-card>
     </v-flex>
   </v-layout>
 </template>
 <script>
-import about_md from '../README.md';
+import about_zh from '../README.md';
+import about_en from '../README.EN.md';
+import about_ja from '../README.JA.md';
 export default {
   computed: {
     about_md() {
-      return about_md;
+      switch (this.$i18n.locale) {
+        case 'ja':
+          return about_ja;
+        case 'en':
+          return about_en;
+        default:
+          return about_zh;
+      }
     }
+  },
+  head() {
+    return {
+      title: this.$t('site.about') + ' - ' + this.$t('site.title')
+    };
   }
 };
 </script>

@@ -19,6 +19,7 @@ module.exports = {
   // 自定义规则
   rules: {
     'vue/html-self-closing': 'off',
+    'vue/no-v-html': 'off',
     'no-console': 'off',
     'vue/max-attributes-per-line': 'off',
     'prettier/prettier': ['error']

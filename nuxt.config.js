@@ -10,12 +10,21 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    title: 'フブキボタン',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      {
+        hid: 'description',
+        name: 'description',
+        content: '白上吹雪语音按钮 白上フブキの音声ボタン Voice button for Shirakami Fubuki'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'フブキボタン,FUBUKI BUTTON,狐按钮,hololive,Shirakami Fubuki,白上フブキ,吹雪,小狐狸,屑狐狸,喵喵狐,语音按钮,ボイスボタン'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
