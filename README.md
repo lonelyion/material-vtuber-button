@@ -1,10 +1,15 @@
-# 狐按钮 - 白上吹雪语音按钮
+# 狐按钮 / FUBUKI-BUTTON
 
-狐按钮 [点击此处访问 https://sfubuki.moe](https://sfubuki.moe)
+![Version](https://img.shields.io/github/package-json/v/lonelyion/fubuki-button)
+![Build](https://img.shields.io/github/workflow/status/lonelyion/fubuki-button/FBK-BTN-NG-CI)
+![Last Commit](https://img.shields.io/github/last-commit/lonelyion/fubuki-button)
+![Starts](https://img.shields.io/github/stars/lonelyion/fubuki-button)
 
-[![Build Status](https://github.com/copperion/fubuki-button/workflows/FBK-BTN-CI/badge.svg)](https://github.com/copperion/fubuki-button/actions)
+README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/master/README.JA.md) | [English](https://github.com/oruyanke/fubuki-button/blob/master/README.EN.md)
 
-README: **中文** | [日本語](./README.JA.md) | [English](./README.EN.md)
+> 全新的白上吹雪语音按钮，目标是打造一个整合白上吹雪各个方面的应援项目
+
+项目地址： https://sfubuki.moe
 
 相关链接:
 
@@ -12,62 +17,64 @@ README: **中文** | [日本語](./README.JA.md) | [English](./README.EN.md)
 - [白上吹雪的 Bilibili 频道](https://space.bilibili.com/332704117)
 - [白上吹雪的 Twitter](https://twitter.com/shirakamifubuki)
 
+## 计划中的特性
+
+- 吹雪表情包合集/搜索
+- 直播/活动等的聚合日历
+- Youtube/Bilibili数据可视化
+
 ## 参与完善本项目
 
-音频添加请求请发[Issues](https://github.com/copperion/fubuki-button/issues)，附上要提交的音频与音频分类
+如果您不知道如何直接参与GitHub开发，可以直接将素材或意见建议发送到[voice@sfubuki.moe](mailto:voice@sfubuki.moe)，带上标题、内容以及您的ID（Bilibili、Twitter等均可），贡献者名单将会有您的名字。
 
-或 Fork 本项目进行修改，完成修改后在本项目中发起一个 Pull Request。
+当然您也可以发在 [Issues](https://github.com/copperion/fubuki-button/issues)，同样也请带上标题和内容。
+
+如果您可以进行开发，那么请Fork本项目进行修改，完成修改后在本项目中发起一个Pull Request，详细说明如下：
 
 ### 添加或修改音频
 
-**简述**：所有的音频信息都存储在[src/voices.json](src/voices.json)中，要添加或修改音频，你需要对应的修改这个文件。
+音频文件为mp3格式，码率128Kbps，储存在`static/voices/`目录下，对应的URL为`/voices/`。
 
-音频一律为 mp3 格式，存储在[public/voices](public/voices)中，默认用 128Kbps 码率压制。对应的 URL 为`voices/`。
+所有的音频信息都存储在`assets/voices.json`中，要添加或修改音频，你同样需要修改这个文件中对应的内容。
 
-添加的新音频请先进行音量标准化。本分支使用 Adobe Audition 使用匹配响度功能进行标准化，目标响度：-24LUFS，容差:2LU，最高实际峰值电平：-2dBTP.
-
-由于本站采用强缓存策略，除`index.html`外，文件名一致的文件，即使修改也**永远**不会被客户端刷新。因此新添加的音频，无论是新增还是修改，文件名都**必须**和之前任何文件名都不同。
-
-如果是修改音频，请在修改之后删除原音频文件。
+如果需要对现有音频进行修改，建议将原音频文件删除，重新命名一个新文件，这样可以避免浏览器缓存问题。
 
 ### 参与翻译
 
-请帮助进行英文和日语的翻译！
+请帮助进行日语和英语的翻译！
 
-主程序翻译在 [src/locales](src/locales) 中的三个以语言名命名的 js 文件中。
-
-语音的翻译在 [src/voices.json](src/voices.json) 中。
+网页的翻译在`assets/locales/`中的以三个语音命名的json文件中，音频信息的翻译在`assets/voices.json`中对应的字段。
 
 ### 参与网页开发
 
-请参考[部署本地开发环境](#部署本地开发环境)一节。
+本项目使用Vue + NuxtJS + Vuetify框架进行开发，要部署本地开发环境，请先安装最新版的Node与Yarn包管理器。
 
-## 部署本地开发环境
+1. Fork 并 Clone 代码到本地
+2. 进入代码目录，运行`yarn`以安装依赖项目
+3. 开启本地开发服务器，运行`yarn dev`，这将会在`localhost:3000`启动，在代码修改过程中，本地开发服务器可以即时反映修改的结果。
+4. 要编译可供部署的文件，请运行`yarn generate`，这将会在`dist`目录下生成可以直接部署到静态网站托管（GitHub Pages等）的文件。
 
-本站使用 Vue + jQuery + Bootstrap 3 开发。
+## 贡献者
 
-要部署本地开发环境，请先安装最新版的 node。然后按照如下步骤操作：
+开发：
 
-1. Clone 代码到本地。
+- [孤单离子](https://github.com/lonelyion)
+- [Morxi]](https://github.com/Morxi)
 
-2. 进入代码目录，运行`yarn`。
+音频剪辑：
 
-3. 运行本地开发服务器`yarn serve`，在代码修改过程中，本地开发服务器可以即时反映修改的结果。
+- [孤单离子](https://github.com/lonelyion)
 
-4. 要编译可供部署的文件，请运行`yarn build`，这会生成`dist`目录。本站为全静态，将整个`dist`目录部署即可。
+特别感谢：
 
-若要为本项目贡献你的代码，你不必在本地编译。在开发服务器中测试通过并推送至 Github 后，直接给本项目提交 Pull Request 即可。
+- [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
+- [狐狸的玉米地](https://space.bilibili.com/474495056)
+- [亡音ちゃん](https://space.bilibili.com/2613724)
 
-## LICENCE
+## 协议
 
-程序部分： MIT
+音频部分: [Hololive 二次创作条款](https://www.hololive.tv/terms)(只有日语).
 
-音频部分: 引用 [Hololive 二次创作条款](https://www.hololive.tv/terms).
+其他部分：[MIT License](https://github.com/oruyanke/fubuki-button/blob/master/LICENSE)
 
-本项目为爱好者作品，和 hololive 官方没有关联
-
-## 特别鸣谢
-
-This project is supported by MeowSound Idols.
-
-本项目基于 [Aqua button](https://github.com/zyzsdy/aqua-button) 进行了修改.
+本项目为爱好者作品，和 Hololive 官方没有关联

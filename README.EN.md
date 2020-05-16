@@ -1,10 +1,15 @@
 # Fubuki-Button - Shirakami Fubuki's Voice Button
 
-Fubuki Button [Click here to visit https://sfubuki.moe](https://sfubuki.moe)
+![Version](https://img.shields.io/github/package-json/v/lonelyion/fubuki-button)
+![Build](https://img.shields.io/github/workflow/status/lonelyion/fubuki-button/FBK-BTN-NG-CI)
+![Last Commit](https://img.shields.io/github/last-commit/lonelyion/fubuki-button)
+![Starts](https://img.shields.io/github/stars/lonelyion/fubuki-button)
 
-[![Build Status](https://github.com/copperion/fubuki-button/workflows/FBK-BTN-CI/badge.svg)](https://github.com/copperion/fubuki-button/actions)
+README: [中文]([./README.md](https://github.com/oruyanke/fubuki-button/blob/master/README.md)) | [日本語]([./README.JA.md](https://github.com/oruyanke/fubuki-button/blob/master/README.JA.md)) | **English**
 
-README: [中文](./README.md) | [日本語](./README.JA.md) | **English**
+> Brand new voice buttons for Shirakami Fubuki, we are aimming at building a comprehensive project related to Shirakami Fubuki.
+
+Project Homepage: https://sfubuki.moe
 
 Related Links:
 
@@ -12,60 +17,72 @@ Related Links:
 * [Shirakami Fubuki's Bilibili Channel](https://space.bilibili.com/332704117)
 * [Shirakami Fubuki's Twitter](https://twitter.com/shirakamifubuki)
 
+## Planning to do
+
+- Memes for Fubuki
+- Calender of lives / activities
+- Data visualization of Youtube / Bilibili
+
 ## Contributing
 
-Please submit [Issues](https://github.com/copperion/fubuki-button/issues) to upload audio clips.
+If you don't know how to participate on GitHub, you can directly send voice clips or suggestions to [voice@sfubuki.moe](mailto:voice@sfubuki.moe) with title, content and your social ID(Twitter, Bilibili or so on). We will add your ID to the contributors list below.
 
-Or you can fork this project for modification, and after completing the modification, initiate a Pull Request in this project.
+Also you can submit [Issues](https://github.com/copperion/fubuki-button/issues) to upload audio clips.
+
+If you can do some programming, just fork this repository and modify it. After you have done, just open a Pull Request. For detailed information, please read below.
 
 ### Add or modify voice
 
-**Description**：All voice meta information is stored in [src/voices.json](src/voices.json).To add or modify these voices, you need to modify this file accordingly.
+Voice is always in mp3 format with 128Kbps bitrate and stored in `static/voices/`. The corresponding URL is `/voices/`.
 
-Voice is always in mp3 format with 128Kbps bitrate and stored in [public/voices](public/voices).The corresponding URL is `voices/`。
+All voice meta data is stored in `assets/voices.json`. To add or modify these voices, you need to modify this file accordingly.
 
-For new voice, please use software such as MP3GainGUI for volume standardization. This project recommond to use Adobe Audition's "Match loudness" function with parameters: Target Loudness：-24LUFS, Tolerance:2LU, Max True Peak Level:-2dBTP.
-
-Because this site uses a strong cache strategy, except for `index.html`, files with the same filename, even if modified, will **never** be refreshed by the client. Therefore, the filename of the newly voice, whatever it is new or modified, **MUST** be different from any previous filename.
-
-If you are modifying voice, delete the original file after modification.
+If you want to modify existed voice clips, I suggest deleting the origin file and name a new filename to avoid browers' cache problem.
 
 ### Participate in translation
 
 Please help us translate to English and Japanese!
 
-The language files for the main program are in three .js files named the language name in [src/locales](src/locales).
+The language files for the main program are in three json files named the language name in `assets/locales/`.
 
-The language files for voices are in [src/voices.json](src/voices.json).
-
-The corresponding modification can be recognized by the program as a valid translation.
+The language files for voices are in `assets/voices.json`.
 
 ## Deploying a local development environment
 
-This site is developed using Vue + jQuery + Bootstrap 3.
+This site is developed using Vue + NuxtJS + Vuetify.
 
-To deploy a local development environment, first install the latest version of Node. Then follow these steps:
+To deploy a local development environment, first install the latest version of Node and Yarn. Then follow these steps:
 
-1. Clone the code.
+1. Fork and clone the code.
 
-2. Go to the code directory and run `yarn`.
+2. Go to the code directory and run `yarn` to install dependencies.
 
-3. Run `yarn serve`. During the code modification process, this local development server can immediately reflect the results of the modification.
+3. Run `yarn dev` to start local developemnt server at `localhost:3000`. The local development server can immediately reflect the results of your modification.
 
-4. To compile the files for deployment, run `yarn build`, which will generate the `dist` directory. This site is completely static, you can directly deploy the entire `dist` directory.
+4. To compile the files for deployment, run `yarn generate`, which will generate the `dist` directory. This site is completely static, you can directly deploy the entire `dist` directory.
 
-To contribute your code to this project, you don't have to compile locally. After passing the test in the development server and pushing it to Github, you can directly require a Pull Request to this project.
+## Contributors
+
+Development:
+
+- [Lonely Ion](https://github.com/lonelyion)
+- [Morxi](https://github.com/Morxi)
+
+Audio Editors:
+
+- [Lonely Ion](https://github.com/lonelyion)
+
+Special Thanks to:
+
+- [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
+- [狐狸的玉米地](https://space.bilibili.com/474495056)
+- [亡音ちゃん](https://space.bilibili.com/2613724)
 
 ## LICENCE
 
-Program: MIT
+Audio: According to the [Hololive Secondary Creation Terms](https://www.hololive.tv/terms) (Japanese only).
 
-Audio: According to the [Hololive Derivative Work License](https://www.hololive.tv/terms) (Japanese only).
+Other parts: [MIT License](https://github.com/oruyanke/fubuki-button/blob/master/LICENSE)
 
-This project is a work of enthusiasts and is not related to the hololive official.
+This project is a work of enthusiasts and is not related to the Hololive official.
 
-## Special Thanks
-
-This project is supported by MeowSound Idols.
-
-This project is modified based on the [Aqua button](https://github.com/zyzsdy/aqua-button).
