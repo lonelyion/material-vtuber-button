@@ -14,7 +14,7 @@
           "description": {
             "zh": "(自我介绍)我叫白上吹雪,是只狐狸!",
             "en": "(Self-intro)I'm Shirakami Fubuki, a fox!",
-            "ja": "白上フブキの自己紹介"
+            "ja": "自己紹介"
           }
         },
         {
@@ -140,7 +140,7 @@
           "description": {
             "zh": "(幼狐)[吓人]被吓到了吗",
             "en": "(Little FBK)Are you scared？",
-            "ja": "(ちびっ狐)へへ、びくりした？"
+            "ja": "(ちびっ狐)へへ、びっくりした？"
           }
         },
         {
@@ -149,7 +149,7 @@
           "description": {
             "zh": "(幼狐)啊嗯...kon...晚上好狐",
             "en": "(Little FBK)Ah...Emmm...kon...good evening~",
-            "ja": "(ちびっ狐)あーん、こん、こんばん狐"
+            "ja": "(ちびっ狐)あーん、こん、こんばんきーつね"
           }
         },
         {
@@ -203,7 +203,7 @@
           "description": {
             "zh": "(幼狐)Mio姐姐的 做的饭还有温柔的声音都很喜欢!还有!松蓬蓬的头发和尾巴 还有还有tiger都很喜欢!",
             "en": "(Little FBK)Yelling about loving sister Mio",
-            "ja": "(ちびっ狐)ミオ姉さんの作ったご飯とか、優しい声とか！あと！ゆるふわの髪としっぽと、タイガーも好きです！"
+            "ja": "(ちびっ狐)ミオ姉さんの作ったご飯とか、優しい声とか！あと！ゆるふわの髪としっぽと、タイガも好きです！"
           }
         },
         {
@@ -212,7 +212,7 @@
           "description": {
             "zh": "(幼狐)嗷呜~嗷呜!",
             "en": "(Little FBK)Woo~Woo~",
-            "ja": "(ちびっ狐)がおう　がおう"
+            "ja": "(ちびっ狐)がおー　がおー"
           }
         },
         {
@@ -230,7 +230,7 @@
           "description": {
             "zh": "(幼狐)龟~派~气~波~功~",
             "en": "(Little FBK)KA-ME-HA-ME---HA!",
-            "ja": "(ちびっ狐)か　め　は　め　は"
+            "ja": "(ちびっ狐)かーめーはーめーはー"
           }
         },
         {
@@ -239,7 +239,7 @@
           "description": {
             "zh": "(幼狐)好痛 麦克撞到额头了 额头被撞了!",
             "en": "(Little FBK)Mic hit my forehead!That hurt!",
-            "ja": "(ちびっ狐)痛っ、マイクが額に当たって額にぶつかった！"
+            "ja": "(ちびっ狐)痛っ、マイクが額にぶつかった！"
           }
         },
         {
@@ -248,7 +248,7 @@
           "description": {
             "zh": "(幼狐)忘却光线!",
             "en": "(Little FBK)Memory erasing beam!",
-            "ja": "(ちびっ狐)忘れるビーム！"
+            "ja": "(ちびっ狐)忘れろビーム！"
           }
         },
         {
@@ -257,7 +257,7 @@
           "description": {
             "zh": "(幼狐)我最喜欢哥哥姐姐们了",
             "en": "(Little FBK)I like sisters and brothers most!",
-            "ja": "おにちゃん、おねちゃん、大好き！"
+            "ja": "おにーちゃん、おねーちゃん、大好き！"
           }
         }
       ]
@@ -294,7 +294,7 @@
           "description": {
             "zh": "嗯~konkonkonkon汪汪~汪汪konkon狐~",
             "en": "en~konkonkonkon-fox",
-            "ja": "うん～こんこん～こんこん狐!"
+            "ja": "うん～こんこん～こんこんきーつね!"
           }
         },
         {
@@ -348,7 +348,7 @@
           "description": {
             "zh": "恐怖游戏破功狐(音量注意,心脏病患者慎入)",
             "en": "Scrared by horror game(ATTENTION LOUD)",
-            "ja": "ホラゲーに驚いたフブキちゃん(音量は大きいですよ)"
+            "ja": "ホラゲーに驚いたフブキちゃん(音量注意)"
           }
         },
         {
@@ -357,7 +357,7 @@
           "description": {
             "zh": "狂笑",
             "en": "Hahahahahaha",
-            "ja": "気持ちいいなあ!なきり!(大笑いする)"
+            "ja": "気持ちいいなあ!なきり!(大笑い)"
           }
         },
         {
@@ -375,7 +375,7 @@
           "description": {
             "zh": "哇这个怎么 啊真是笨蛋xN",
             "en": "What's going on! Ah how stupid!",
-            "ja": "わー！？これ！ばがだれ！ばが！"
+            "ja": "わー！？これ！ばかだれ！ばか！"
           }
         },
         {
@@ -466,7 +466,7 @@
           "description": {
             "zh": "我不是猫咪,系狐狸(中文)",
             "en": "I'm fox no cat(Chinese)",
-            "ja": "猫ではない、狐!(中国語)"
+            "ja": "猫じゃない、狐!(中国語)"
           }
         },
         {
@@ -484,7 +484,7 @@
           "description": {
             "zh": "这是什么东西呢？能吃么",
             "en": "What's this? Can I eat?",
-            "ja": "これはなんですか？食べるの？"
+            "ja": "これはなんですか？食べれるの？"
           }
         },
         {
@@ -511,7 +511,7 @@
           "description": {
             "zh": "等着你哦,指挥官",
             "en": "Waiting for U, Commander",
-            "ja": "待てますよ~指揮官～"
+            "ja": "待ってますよ~指揮官～"
           }
         },
         {
@@ -565,7 +565,7 @@
           "description": {
             "zh": "(小黑)工作加油",
             "en": "(Kuro-Chan)Work hard",
-            "ja": "(黒様)仕事頑張で"
+            "ja": "(黒様)仕事頑張って"
           }
         },
         {
@@ -574,7 +574,7 @@
           "description": {
             "zh": "我等这一刻很久了！",
             "en": "I've waited long time for the moment!",
-            "ja": "これを待てるだよ"
+            "ja": "これを待ってるだよ"
           }
         },
         {
@@ -583,7 +583,7 @@
           "description": {
             "zh": "(小黑)这个是什么?好吃吗?",
             "en": "(Kuro-Chan)What's this? Taste good?",
-            "ja": "(黒様)なにそれ?おいしですか?"
+            "ja": "(黒様)なにそれ?おいしいの?"
           }
         },
         {
@@ -601,7 +601,7 @@
           "description": {
             "zh": "(小黑)你们都给我当作没听到",
             "en": "(Kuro-Chan)You all pretend you didn't hear it.",
-            "ja": "(黒様)聞かなかったことにしろう！"
+            "ja": "(黒様)聞かなかったことにしろ！"
           }
         },
         {
@@ -610,7 +610,7 @@
           "description": {
             "zh": "(小黑)忘却光线!",
             "en": "(Kuro-Chan)Memory erasing beam!",
-            "ja": "(黒様)忘れるビーム！"
+            "ja": "(黒様)忘れろビーム！"
           }
         },
         {
@@ -628,7 +628,7 @@
           "description": {
             "zh": "(油库里白上)谢谢吧唧吧唧吧唧吧唧吧唧蟹蟹",
             "en": "Thank you. Clap clap clap clap. Thanks.",
-            "ja": "(ゆっくり白上)ありがとう、ばちばちxN、ありがとう"
+            "ja": "(ゆっくり白上)ありがとう(ばちばちぱちぱち)ありがとう"
           }
         },
         {
@@ -655,7 +655,7 @@
           "description": {
             "zh": "冬眠的小狐狸~",
             "en": "Wintering fox~",
-            "ja": "冬ごもり狐~"
+            "ja": "冬ごもりきーつね～"
           }
         }
       ]
@@ -674,7 +674,7 @@
           "description": {
             "zh": "大家晚好狐",
             "en": "Everybody good evening!",
-            "ja": "こんばん狐!"
+            "ja": "こんばんきーつね!"
           }
         },
         {
@@ -737,7 +737,7 @@
           "description": {
             "zh": "(幼狐)我是吹雪哦 大家都叫我吹雪酱 请多指教",
             "en": "(Little FBK)I'm Fubuki. They call me Fubu Chan~",
-            "ja": "(ちびっ狐)フブキです、フブちゃで呼ばれでます、よろしく"
+            "ja": "(ちびっ狐)フブキです、フブちゃって呼ばれてます！"
           }
         }
       ]
@@ -765,7 +765,7 @@
           "description": {
             "zh": "啊好可爱!哇哇哇!",
             "en": "Ah so cute! Wow!",
-            "ja": "あ!かわいい!わい!"
+            "ja": "あ!かわいい!"
           }
         },
         {
@@ -810,7 +810,7 @@
           "description": {
             "zh": "u-mua(双声道kiss)",
             "en": "u-mua(Kiss)",
-            "ja": "u-mua(なげキス)"
+            "ja": "んーまっ!(なげキス)"
           }
         },
         {
