@@ -5,7 +5,7 @@
       "group_description": {
         "zh": "萌",
         "en": "Moe",
-        "ja": "もえ"
+        "ja": "萌え"
       },
       "voice_list": [
         {
@@ -32,7 +32,7 @@
           "description": {
             "zh": "布依布依布依(模仿)",
             "en": "bui-bui-bui(imitate)",
-            "ja": "イブの真似"
+            "ja": "イーブイの真似"
           }
         },
         {
@@ -77,7 +77,7 @@
           "description": {
             "zh": "(哈欠)好想睡觉啊",
             "en": "(yawn)I wanna sleep",
-            "ja": "(あくび)眠りたい"
+            "ja": "(あくび)眠たいな"
           }
         },
         {
@@ -95,7 +95,7 @@
           "description": {
             "zh": "咕努努",
             "en": "Gununu",
-            "ja": "ぐるるるるるる"
+            "ja": "ぐぬぬぬぬ"
           }
         },
         {
@@ -139,7 +139,7 @@
           "path": "f-084.mp3",
           "description": {
             "zh": "(幼狐)[吓人]被吓到了吗",
-            "en": "(Kindergarten FBK)Are you scared？",
+            "en": "(Little FBK)Are you scared？",
             "ja": "(ちびっ狐)へへ、びくりした？"
           }
         },
@@ -148,7 +148,7 @@
           "path": "f-085.mp3",
           "description": {
             "zh": "(幼狐)啊嗯...kon...晚上好狐",
-            "en": "(Kindergarten FBK)Ah...Emmm...kon...good evening~",
+            "en": "(Little FBK)Ah...Emmm...kon...good evening~",
             "ja": "(ちびっ狐)あーん、こん、こんばん狐"
           }
         },
@@ -157,8 +157,8 @@
           "path": "f-086.mp3",
           "description": {
             "zh": "(幼狐)会给我做么?给我做xN!帕菲给我做!喜欢",
-            "en": "(Kindergarten FBK)Make puffy for me!",
-            "ja": "(ちびっ狐)つくてくれますか？つくてつくて！ぱーふぇ！つくて！"
+            "en": "(Little FBK)Make puffy for me!",
+            "ja": "(ちびっ狐)つくってくれますか？つくってつくって！ぱーふぇ！つくって！"
           }
         },
         {
@@ -166,8 +166,8 @@
           "path": "f-087.mp3",
           "description": {
             "zh": "(幼狐)帕菲 想吃帕菲",
-            "en": "(Kindergarten FBK)Puffy, I wanna eat puffy",
-            "ja": "(ちびっ狐)ぱーふぇ！ぱーふぇ食べたい"
+            "en": "(Little FBK)Puffy, I wanna eat puffy",
+            "ja": "(ちびっ狐)ぱーふぇ！ぱふぇ食べたい"
           }
         },
         {
@@ -175,8 +175,89 @@
           "path": "f-088.mp3",
           "description": {
             "zh": "(幼小黑)我...我的名字是黑上吹...",
-            "en": "(Kindergarten Kuro-Chan)My...my name is Kurokami Fu...",
+            "en": "(Little Kuro-Chan)My...my name is Kurokami Fu...",
             "ja": "（ちびっ黒様)わ...わたしの名前は黒上フ..."
+          }
+        },
+        {
+          "name": "f-092",
+          "path": "f-092.mp3",
+          "description": {
+            "zh": "(幼狐)(憨笑)洋葱~~~",
+            "en": "(Little FBK)(Smirk)onion~~~",
+            "ja": "(ちびっ狐)へへへ、たまねぎい～～～"
+          }
+        },
+        {
+          "name": "f-093",
+          "path": "f-093.mp3",
+          "description": {
+            "zh": "(幼狐)1 2 3 4 5 6 7 8 9",
+            "en": "(Little FBK)1 2 3 4 5 6 7 8 9",
+            "ja": "(ちびっ狐)1 2 3 4 5 6 7 8 9"
+          }
+        },
+        {
+          "name": "f-094",
+          "path": "f-094.mp3",
+          "description": {
+            "zh": "(幼狐)Mio姐姐的 做的饭还有温柔的声音都很喜欢!还有!松蓬蓬的头发和尾巴 还有还有tiger都很喜欢!",
+            "en": "(Little FBK)Yelling about loving sister Mio",
+            "ja": "(ちびっ狐)ミオ姉さんの作ったご飯とか、優しい声とか！あと！ゆるふわの髪としっぽと、タイガーも好きです！"
+          }
+        },
+        {
+          "name": "f-095",
+          "path": "f-095.mp3",
+          "description": {
+            "zh": "(幼狐)嗷呜~嗷呜!",
+            "en": "(Little FBK)Woo~Woo~",
+            "ja": "(ちびっ狐)がおう　がおう"
+          }
+        },
+        {
+          "name": "f-096",
+          "path": "f-096.mp3",
+          "description": {
+            "zh": "(幼狐)被夸了(憨笑)谢谢",
+            "en": "(Little FBK)I've been praised. Thank you very much",
+            "ja": "(ちびっ狐)褒められた　へへ　ありがとうございます"
+          }
+        },
+        {
+          "name": "f-097",
+          "path": "f-097.mp3",
+          "description": {
+            "zh": "(幼狐)龟~派~气~波~功~",
+            "en": "(Little FBK)KA-ME-HA-ME---HA!",
+            "ja": "(ちびっ狐)か　め　は　め　は"
+          }
+        },
+        {
+          "name": "f-098",
+          "path": "f-098.mp3",
+          "description": {
+            "zh": "(幼狐)好痛 麦克撞到额头了 额头被撞了!",
+            "en": "(Little FBK)Mic hit my forehead!That hurt!",
+            "ja": "(ちびっ狐)痛っ、マイクが額に当たって額にぶつかった！"
+          }
+        },
+        {
+          "name": "f-100",
+          "path": "f-100.mp3",
+          "description": {
+            "zh": "(幼狐)忘却光线!",
+            "en": "(Little FBK)Memory erasing beam!",
+            "ja": "(ちびっ狐)忘れるビーム！"
+          }
+        },
+        {
+          "name": "f-102",
+          "path": "f-102.mp3",
+          "description": {
+            "zh": "(幼狐)我最喜欢哥哥姐姐们了",
+            "en": "(Little FBK)I like sisters and brothers most!",
+            "ja": "おにちゃん、おねちゃん、大好き！"
           }
         }
       ]
@@ -195,7 +276,7 @@
           "description": {
             "zh": "kon-nya-nya-kon~",
             "en": "kon-nya-nya-kon~",
-            "ja": "kon-nya-nya-kon~"
+            "ja": "こ～んにゃにゃこ～ん~"
           }
         },
         {
@@ -296,6 +377,24 @@
             "en": "What's going on! Ah how stupid!",
             "ja": "わー！？これ！ばがだれ！ばが！"
           }
+        },
+        {
+          "name": "f-103",
+          "path": "f-103.mp3",
+          "description": {
+            "zh": "啃仙贝",
+            "en": "Eating Something",
+            "ja": "ヤケ食いキツネ"
+          }
+        },
+        {
+          "name": "f-104",
+          "path": "f-104.mp3",
+          "description": {
+            "zh": "嘎嘣脆~嘎嘣脆哦~",
+            "en": "bali~bali~",
+            "ja": "ばりばりばりばり"
+          }
         }
       ]
     },
@@ -349,7 +448,7 @@
           "description": {
             "zh": "我...我...最喜欢...大家了!嗯!我爱你!",
             "en": "I...I like all of u most! Yes! I Love U!",
-            "ja": "みなんのことは大好き!!あいしている!"
+            "ja": "みなさんのことは大好き!!あいしている!"
           }
         },
         {
@@ -540,6 +639,24 @@
             "en": "This↑ is↑ hololve",
             "ja": "こ↑こ↑ ホロライブです"
           }
+        },
+        {
+          "name": "f-107",
+          "path": "f-107.mp3",
+          "description": {
+            "zh": "才不H呢",
+            "en": "It's not H!",
+            "ja": "えっちじゃないです！"
+          }
+        },
+        {
+          "name": "f-105",
+          "path": "f-105.mp3",
+          "description": {
+            "zh": "冬眠的小狐狸~",
+            "en": "Wintering fox~",
+            "ja": "冬ごもり狐~"
+          }
         }
       ]
     },
@@ -612,6 +729,15 @@
             "zh": "大家早上好！",
             "en": "Good morning",
             "ja": "皆さん　おはようございます"
+          }
+        },
+        {
+          "name": "f-101",
+          "path": "f-101.mp3",
+          "description": {
+            "zh": "(幼狐)我是吹雪哦 大家都叫我吹雪酱 请多指教",
+            "en": "(Little FBK)I'm Fubuki. They call me Fubu Chan~",
+            "ja": "(ちびっ狐)フブキです、フブちゃで呼ばれでます、よろしく"
           }
         }
       ]
@@ -740,6 +866,15 @@
             "en": "All of u, can't beat me!",
             "ja": "“みなには、わたしに勝てない！”"
           }
+        },
+        {
+          "name": "f-106",
+          "path": "f-106.mp3",
+          "description": {
+            "zh": "啊好难，害羞 害羞",
+            "en": "Ah, it's difficult.How shy.",
+            "ja": "あぁ、難しい、恥ずかし、恥ずかしよ"
+          }
         }
       ]
     },
@@ -858,6 +993,15 @@
             "zh": "AMT-阿夸麻吉天使",
             "en": "AMT-Aqua is angel",
             "ja": "AMT-あくあまじ天使"
+          }
+        },
+        {
+          "name": "f-099",
+          "path": "f-099.mp3",
+          "description": {
+            "zh": "(幼狐)彗酱!彗酱今天也很可爱哦!",
+            "en": "(Little FBK)Suisei Chan is so cute today!",
+            "ja": "(ちびっ狐)すいちゃん！すいちゃん今日もかわいいよ"
           }
         },
         {
