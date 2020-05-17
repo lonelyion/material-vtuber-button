@@ -25,6 +25,7 @@
     "vue-i18n": "^8.17.4"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.2.3",
     "@nuxtjs/vuetify": "^1.0.0",
     "babel-eslint": "^10.1.0",
     "css-loader": "^3.5.3",
