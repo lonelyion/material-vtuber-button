@@ -19,9 +19,9 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 
 ## 计划中的特性
 
+- 生放送とイベントのスケジュール
 - 吹雪表情包合集/搜索
-- 直播/活动等的聚合日历
-- Youtube/Bilibili数据可视化
+- YouTube/Bilibili数据可视化
 
 ## 参与完善本项目
 
@@ -59,11 +59,12 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 开发：
 
 - [孤单离子](https://github.com/lonelyion)
-- [Morxi]](https://github.com/Morxi)
+- [Morxi](https://github.com/Morxi)
 
 音频剪辑：
 
 - [孤单离子](https://github.com/lonelyion)
+- hanyuu
 
 特别感谢：
 

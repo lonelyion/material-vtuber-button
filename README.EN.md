@@ -19,8 +19,8 @@ Related Links:
 
 ## Planning to do
 
-- Memes for Fubuki
 - Calender of lives / activities
+- Memes for Fubuki
 - Data visualization of Youtube / Bilibili
 
 ## Contributing
@@ -64,16 +64,14 @@ To deploy a local development environment, first install the latest version of N
 ## Contributors
 
 Development:
-
 - [Lonely Ion](https://github.com/lonelyion)
 - [Morxi](https://github.com/Morxi)
 
 Audio Editors:
-
 - [Lonely Ion](https://github.com/lonelyion)
+- hanyuu
 
 Special Thanks to:
-
 - [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
 - [狐狸的玉米地](https://space.bilibili.com/474495056)
 - [亡音ちゃん](https://space.bilibili.com/2613724)

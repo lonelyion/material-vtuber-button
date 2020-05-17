@@ -58,7 +58,7 @@ export default {
   markdownit: {
     preset: 'default',
     linkify: true,
-    breaks: true,
+    breaks: false,
     use: ['markdown-it-div', 'markdown-it-attrs']
   },
   vuetify: {
