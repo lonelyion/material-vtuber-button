@@ -24,7 +24,19 @@ export default {
         name: 'keywords',
         content:
           'フブキボタン,FUBUKI BUTTON,狐按钮,hololive,Shirakami Fubuki,白上フブキ,吹雪,小狐狸,屑狐狸,喵喵狐,语音按钮,ボイスボタン'
-      }
+      },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'フブキボタン' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://sfubuki.moe' },
+      { hid: 'og:title', property: 'og:title', content: 'フブキボタン' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: '新しい白上フブキのボイスボタン。私たちの目標は白上フブキの総合的なファンサイトを作ることです。'
+      },
+      { hid: 'og:image', property: 'og:image', content: 'https://sfubuki.moe/img/og_common.jpg' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@lonely_ion' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },

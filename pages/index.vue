@@ -193,18 +193,7 @@ export default {
   },
   head() {
     return {
-      title: this.$t('site.title') + '(^・ω・^§)ﾉ',
-      meta: [
-        { hid: 'description', name: 'description', content: this.$t('site.description') },
-        { hid: 'og:site_name', property: 'og:site_name', content: this.$t('site.title') },
-        { hid: 'og:type', property: 'og:type', content: 'website' },
-        { hid: 'og:url', property: 'og:url', content: 'https://sfubuki.moe' },
-        { hid: 'og:title', property: 'og:title', content: this.$t('site.title') },
-        { hid: 'og:description', property: 'og:description', content: this.$t('site.description') },
-        { hid: 'og:image', property: 'og:image', content: 'https://sfubuki.moe/img/og_common.jpg' },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: '@lonely_ion' }
-      ]
+      title: this.$t('site.title') + '(^・ω・^§)ﾉ'
     };
   }
 };
