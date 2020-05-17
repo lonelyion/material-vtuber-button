@@ -1,6 +1,7 @@
 {
   "site": {
     "title": "狐按钮",
+    "description": "全新的白上吹雪语音按钮，目标是打造一个整合白上吹雪各个方面的应援项目",
     "index": "主页",
     "about": "关于",
     "switch_dark_mode": "夜间模式开关",

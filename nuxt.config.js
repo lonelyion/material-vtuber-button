@@ -17,7 +17,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: '白上吹雪语音按钮 白上フブキの音声ボタン Voice button for Shirakami Fubuki'
+        content: '白上フブキの音声ボタン 白上吹雪语音按钮 Voice button for Shirakami Fubuki'
       },
       {
         hid: 'keywords',
@@ -39,7 +39,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@plugins/i18n', '@plugins/eventBus.js'],
+  plugins: [
+    { src: '@plugins/i18n', ssr: false },
+    { src: '@plugins/eventBus.js', ssr: false }
+  ],
   router: {
     middleware: 'ui_config'
   },
