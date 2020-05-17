@@ -1,4 +1,4 @@
-# フブキボタン - 白上フブキの音声ボタン
+# フブキボタン - 白上フブキのボイスボタン
 
 ![Version](https://img.shields.io/github/package-json/v/lonelyion/fubuki-button)
 ![Build](https://img.shields.io/github/workflow/status/lonelyion/fubuki-button/FBK-BTN-NG-CI)
@@ -7,9 +7,9 @@
 
 README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md) | **日本語** | [English](https://github.com/oruyanke/fubuki-button/blob/master/README.EN.md)
 
-> 新しい白上フブキの音声ボタン。私たちの目標は白上フブキの総合応援サイトを作ることです。
+> 新しい白上フブキのボイスボタン。私たちの目標は白上フブキの総合的なファンサイトを作ることです。
 
-ここをクリック https://sfubuki.moe
+ホームページ https://sfubuki.moe
 
 関連リンク:
 
@@ -19,46 +19,44 @@ README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md
 
 ## 計画中の機能
 
-- 生放送とイベントのスケジュール
+- 生放送や動画のカレンダーを表示
 - フブキのスタンプ/ミーム
-- YouTube/Bilibiliデータ可視化
+- YouTube/Bilibiliのデータを表示
 
-## このプロジェクトへの貢献
+## このプロジェクトへの貢献(コントリビュート)
 
-GitHub開発に直接参加する方法が分からないなら、素材や意見を直接電子メールに送ることができます([voice@sfubuki.moe](mailto:voice@sfubuki.moe))。タイトル、内容及びID（Bilibili、Twitterなどでも可）を表示してください。貢献者リストに名前があります。
+GitHubの開発に直接参加する方法が分からない場合は、素材や意見を直接以下のメールアドレスに送信してください。([voice@sfubuki.moe](mailto:voice@sfubuki.moe))。またメールの中にタイトル、内容及びあなたのID（Bilibili、Twitterやその他）を記述してください。そうすることで私達は下のコントリビューターリストにあなたの名前を掲載することができます。
 
-もちろん、あなたも[Issues](https://github.com/copperion/fubuki-button/issues)に送ってもいいです。同じようにタイトルと内容を書いてください。
+もしくは素材や意見をGitHubの[Issues](https://github.com/copperion/fubuki-button/issues)ページに送ることもできます。メールの場合と同じようにタイトルと内容を記述してください。
 
-開発できる場合は、プロジェクトをフォークして変更してください。変更が完了したら、プロジェクトでプルリクエストを開始します。詳細な手順は次のとおりです。
+もしGitHubでの開発方法を知っている場合は、プロジェクトをフォークして変更してください。変更が完了したら、プルリクエストしてください。各項目の編集に関しては以下に記述されています。
 
-### 追加または修正
+### 音声の追加または修正
 
 音声データはmp3のビットレート128Kbpsで統一し、`static/voices/`に保存してください。対応するURLは`/voices/`に入れてください。
 
 すべての音声データのメタデータは`assets/voices.json`に追加または修正をしてください。
 
-音声を変更する場合は変更後に変更前のファイルを削除してください。そのため新しい音声ファイルは，必ず過去を含め現在のファイル名と同じものであってはなりません。
+音声を変更する場合は変更後に変更前のファイルを削除してください。音声ファイルは，必ず過去を含め現在のファイル名と同じものであってはなりません。
 
-### 翻訳に参加する
+### 翻訳
 
-翻訳してくれる日本人と英語話者を求めています！
+日本語と英語への翻訳が必要です！
 
-メインプログラムの言語ディレクトリ `assets/locales/` 内に3つの.jsonファイルがあります。
+ボタンなどのテキストの翻訳は `assets/locales/` 内に各言語に対応した3つの.jsonファイルがあります。
 
-音声の言語ファイルは `aseets/voices.json` 内にあります。
+音声のタイトルテキストファイルは `aseets/voices.json` 内にあります。
 
-変更はプログラムに有効な翻訳です。
+## ローカルでのデプロイ
 
-## ローカル環境での使用
+このサイトは Vue + NuxtJS + Vuetify を使用しています。ローカル開発環境をデプロイするには、最新版のNodeとYarnパッケージマネージャをインストールしてください。
 
-このサイトは Vue + NuxtJS + Vuetify を使用しています。現地開発環境を展開するには、最新版のNodeとYarnパッケージマネージャをインストールしてください。
-
-1. ForkとClone本倉庫。
+1. Codeをフォークもしくはクローン。
 2. Codeディクトリーへ行きyarnを実行。
-3. `yarn dev`を実行すると，コード変更プロセス中に、このローカル開発サーバーは変更の結果をすぐに反映できます。
+3. ローカル開発サーバのために`yarn dev`を `localhost:3000` 実行する。こうすることで変更をすぐにローカルサーバーで確認することができます。
 4. ファイルをコンパイルするために`yarn generate`を実行すると，`dist`ディクトリーが生成されます。このサイトは静的であるため`dist`ディクトリー全体をデプロイできます。
 
-## 貢献者
+## コントリビューター
 
 開発:
 
