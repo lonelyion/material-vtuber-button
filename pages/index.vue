@@ -109,27 +109,37 @@ export default {
     };
   },
   async mounted() {
-    // This prevents unnecessary errors when Media Session API is not available.
-
-    let holo = await this.$axios.$get(
-      'https://cors.lonelyion.workers.dev/?https://storage.googleapis.com/vthell-data/live.json'
-    );
-    let fbk_lives = holo.UCdn5BQ06XqgXoAxIhbqw5Rg;
-    fbk_lives.forEach(function(item, index, object) {
-      if (!item.title.length) {
-        object.splice(index, 1);
-      }
-      if (item.type === 'live') {
-        item.startTime = 0;
-      }
-    });
-    this.lives = fbk_lives;
-    this.lives.sort(function(a, b) {
-      return a.startTime > b.startTime ? 1 : -1;
-    });
-    this.lives_loading = false;
+    await this.fetch_live_data();
   },
   methods: {
+    async fetch_live_data() {
+      let fetched = await this.$axios.$get('https://api.jetri.co/live');
+      let fbk_lives = [];
+      const channel_id = 'UCdn5BQ06XqgXoAxIhbqw5Rg';
+      fetched.live.forEach(function(item) {
+        if (item.channel === channel_id) {
+          fbk_lives.push(item);
+        }
+      });
+      fetched.upcoming.forEach(function(item) {
+        if (item.channel === channel_id) {
+          fbk_lives.push(item);
+        }
+      });
+      fbk_lives.forEach(function(item, index, object) {
+        if (!item.title.length) {
+          object.splice(index, 1);
+        }
+        if (item.type === 'live') {
+          item.startTime = 0;
+        }
+      });
+      this.lives = fbk_lives;
+      this.lives.sort(function(a, b) {
+        return a.startTime > b.startTime ? 1 : -1;
+      });
+      this.lives_loading = false;
+    },
     format_time(stamp) {
       return moment.unix(stamp).format('YYYY/M/DD HH:mm');
     },
