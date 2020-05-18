@@ -3,7 +3,7 @@
     <v-flex xs12 sm8 md6>
       <v-card v-if="lives.length !== 0">
         <v-card-title>
-          <v-icon class="primary--text" style="margin-right: 8px;">
+          <v-icon class="primary--text" :class="dark_text" style="margin-right: 8px;">
             mdi-clock-outline
           </v-icon>
           {{ $t('live.activity') }}
@@ -11,7 +11,7 @@
         <v-card-text>
           <v-progress-circular v-if="lives_loading" indeterminate class="accent--text" />
           <div v-for="live in lives" :key="live.startTime">
-            <div v-if="live.title.length">
+            <div v-if="live.title.length" :class="dark_text">
               <span v-if="live.type === 'upcoming'">{{ $t('live.schedule') + format_time(live.startTime) }}</span>
               <span v-if="live.type === 'live'" class="warning--text">{{ $t('live.on_air') }}</span>
               <a
@@ -34,17 +34,17 @@
         <v-card-text>
           <div>
             <div>
-              <v-btn class="accent ma-1 pa-1" @click="get_random_voice()">
+              <v-btn class="accent ma-1 pa-1" :class="dark_text" @click="get_random_voice()">
                 {{ $t('control.pick_one') }}
               </v-btn>
-              <v-btn class="accent ma-1 pa-1" @click="stop_all()">
+              <v-btn class="accent ma-1 pa-1" :class="dark_text" @click="stop_all()">
                 {{ $t('control.stop') }}
               </v-btn>
-              <v-btn class="accent ma-1 pa-1" :disabled="random" @click="overlap = !overlap">
+              <v-btn class="accent ma-1 pa-1" :class="dark_text" :disabled="random" @click="overlap = !overlap">
                 <v-icon>{{ overlap ? 'mdi-check' : 'mdi-close' }}</v-icon>
                 {{ $t('control.enable_overlap') }}
               </v-btn>
-              <v-btn class="accent ma-1 pa-1" :disabled="overlap" @click="random = !random">
+              <v-btn class="accent ma-1 pa-1" :class="dark_text" :disabled="overlap" @click="random = !random">
                 <v-icon>{{ random ? 'mdi-check' : 'mdi-close' }}</v-icon>
                 {{ $t('control.enable_random') }}
               </v-btn>
@@ -53,7 +53,7 @@
         </v-card-text>
       </v-card>
       <v-card v-for="group in groups" :key="group.name">
-        <v-card-title class="headline">
+        <v-card-title class="headline" :class="dark_text">
           {{ group.group_description[$i18n.locale] }}
         </v-card-title>
         <v-card-text>
@@ -61,6 +61,7 @@
             v-for="item in group.voice_list"
             :key="item.name"
             class="accent ma-1 pa-2 voice-button"
+            :class="dark_text"
             height="max-content"
             min-height="36px"
             @click="play(item)"
@@ -100,7 +101,11 @@ export default {
       random: false,
       groups: voice_lists.groups,
       lives: [],
-      lives_loading: true
+      lives_loading: true,
+      dark_text: {
+        'grey--text': this.$vuetify.theme.dark,
+        'text--lighten-2': this.$vuetify.theme.dark
+      }
     };
   },
   async mounted() {
