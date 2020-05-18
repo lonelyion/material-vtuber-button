@@ -59,7 +59,7 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 开发：
 
 - [孤单离子](https://github.com/lonelyion)
-- [Morxi](https://github.com/Morxi)
+- [Asrui Morus](https://github.com/Morxi)
 
 音频剪辑：
 
@@ -71,6 +71,8 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 - [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
 - [狐狸的玉米地](https://space.bilibili.com/474495056)
 - [亡音ちゃん](https://space.bilibili.com/2613724)
+- [Dakumasu](https://github.com/dakuamsu)
+- [Yourein](https://github.com/Yourein)
 
 ## 协议
 

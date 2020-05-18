@@ -65,7 +65,7 @@ To deploy a local development environment, first install the latest version of N
 
 Development:
 - [Lonely Ion](https://github.com/lonelyion)
-- [Morxi](https://github.com/Morxi)
+- [Asrui Morus](https://github.com/Morxi)
 
 Audio Editors:
 - [Lonely Ion](https://github.com/lonelyion)
@@ -75,6 +75,8 @@ Special Thanks to:
 - [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
 - [狐狸的玉米地](https://space.bilibili.com/474495056)
 - [亡音ちゃん](https://space.bilibili.com/2613724)
+- [Dakumasu](https://github.com/dakuamsu)
+- [Yourein](https://github.com/Yourein)
 
 ## LICENCE
 

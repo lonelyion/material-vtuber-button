@@ -61,7 +61,7 @@ GitHubの開発に直接参加する方法が分からない場合は、素材�
 開発:
 
 - [孤独のイオン](https://github.com/lonelyion)
-- [Morxi](https://github.com/Morxi)
+- [Asrui Morus](https://github.com/Morxi)
 
 オーディオクリップ：
 
@@ -73,6 +73,8 @@ GitHubの開発に直接参加する方法が分からない場合は、素材�
 - [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
 - [狐狸的玉米地](https://space.bilibili.com/474495056)
 - [亡音ちゃん](https://space.bilibili.com/2613724)
+- [Dakumasu](https://github.com/dakuamsu)
+- [Yourein](https://github.com/Yourein)
 
 ## LICENCE
 
