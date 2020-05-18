@@ -1,5 +1,49 @@
 <template>
   <v-layout column justify-center align-center app>
+    <v-speed-dial v-model="fab" bottom right fixed direction="top" open-on-hover transition="scale-transition">
+      <template v-slot:activator>
+        <v-btn slot="activator" v-model="fab" color="blue darken-2" dark fab hover>
+          <v-icon v-if="fab">
+            mdi-close
+          </v-icon>
+          <v-icon v-else>
+            mdi-play
+          </v-icon>
+        </v-btn>
+      </template>
+      <v-tooltip :value="fab_tooltips" left>
+        <template v-slot:activator="{ on }">
+          <v-btn fab dark small color="green" v-on="on">
+            <v-icon>mdi-view-parallel</v-icon>
+          </v-btn>
+        </template>
+        <span>{{ $t('control.enable_overlap') }}</span>
+      </v-tooltip>
+      <v-tooltip :value="fab_tooltips" left>
+        <template v-slot:activator="{ on }">
+          <v-btn fab dark small color="green" v-on="on">
+            <v-icon>mdi-shuffle</v-icon>
+          </v-btn>
+        </template>
+        <span>{{ $t('control.enable_random') }}</span>
+      </v-tooltip>
+      <v-tooltip :value="fab_tooltips" left>
+        <template v-slot:activator="{ on }">
+          <v-btn fab dark small color="indigo" v-on="on">
+            <v-icon>mdi-stop</v-icon>
+          </v-btn>
+        </template>
+        <span>{{ $t('control.stop') }}</span>
+      </v-tooltip>
+      <v-tooltip :value="fab_tooltips" left>
+        <template v-slot:activator="{ on }">
+          <v-btn fab dark small color="red" v-on="on">
+            <v-icon>mdi-selection-ellipse-arrow-inside</v-icon>
+          </v-btn>
+        </template>
+        <span>{{ $t('control.pick_one') }}</span>
+      </v-tooltip>
+    </v-speed-dial>
     <v-flex xs12 sm8 md6>
       <v-card v-if="lives.length !== 0">
         <v-card-title>
@@ -105,8 +149,21 @@ export default {
       dark_text: {
         'grey--text': this.$vuetify.theme.dark,
         'text--lighten-2': this.$vuetify.theme.dark
-      }
+      },
+      fab: false,
+      fab_tooltips: false,
+      fab_tooltips_disabled: false
     };
+  },
+  watch: {
+    fab(val) {
+      console.log('watch fab ', val);
+      this.fab_tooltips = false;
+      if (val)
+        setTimeout(() => {
+          this.fab_tooltips = true;
+        }, 500);
+    }
   },
   async mounted() {
     await this.fetch_live_data();

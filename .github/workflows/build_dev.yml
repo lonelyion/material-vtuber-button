@@ -3,7 +3,7 @@ name: FBK-BTN-NG-CI
 on:
   push:
     branches:
-      - master
+      - dev
 
 jobs:
   build:
@@ -28,4 +28,4 @@ jobs:
           git config user.email "copperion@outlook.com"
           git add --all .
           git commit -m "Deploy from GitHub: $GITHUB_SHA"
-          git push --force --quiet "https://CcoRMLeNqi:${{ secrets.CODING_TOKEN }}@e.coding.net/copperion/fubuki-button.git" master:master
+          git push --force --quiet "https://CcoRMLeNqi:${{ secrets.CODING_TOKEN }}@e.coding.net/copperion/fubuki-button-dev.git" master:master
