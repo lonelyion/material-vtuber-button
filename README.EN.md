@@ -73,7 +73,6 @@ Audio Editors:
 
 Special Thanks to:
 - Bilibili [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
-- Bilibili [狐狸的玉米地](https://space.bilibili.com/474495056)
 - Bilibili [亡音ちゃん](https://space.bilibili.com/2613724)
 - GitHub [Dakumasu](https://github.com/dakuamsu)
 - GitHub [Yourein](https://github.com/Yourein)
