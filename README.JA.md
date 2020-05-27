@@ -19,6 +19,7 @@ README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md
 
 ## 計画中の機能
 
+- fubukitap([mikutap](https://aidn.jp/mikutap/) に類似)
 - 生放送や動画のカレンダーを表示
 - フブキのスタンプ/ミーム
 - YouTube/Bilibiliのデータを表示
@@ -27,7 +28,7 @@ README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md
 
 GitHubの開発に直接参加する方法が分からない場合は、素材や意見を直接以下のメールアドレスに送信してください。([voice@sfubuki.moe](mailto:voice@sfubuki.moe))。またメールの中にタイトル、内容及びあなたのID（Bilibili、Twitterやその他）を記述してください。そうすることで私達は下のコントリビューターリストにあなたの名前を掲載することができます。
 
-もしくは素材や意見をGitHubの[Issues](https://github.com/copperion/fubuki-button/issues)ページに送ることもできます。メールの場合と同じようにタイトルと内容を記述してください。
+もしくは素材や意見をGitHubの[Issues](https://github.com/copperion/fubuki-button/issues) ページに送ることもできます。メールの場合と同じようにタイトルと内容を記述してください。
 
 もしGitHubでの開発方法を知っている場合は、プロジェクトをフォークして変更してください。変更が完了したら、プルリクエストしてください。各項目の編集に関しては以下に記述されています。
 
@@ -86,3 +87,13 @@ GitHubの開発に直接参加する方法が分からない場合は、素材�
 音声: [Hololive 二次创作条款](https://www.hololive.tv/terms)
 
 このプロジェクトはファンによるもので、Hololive公式は一切関係ありません
+
+## サポート
+
+### BroswerStack
+
+Proudly using BrowserStack.
+
+[![](https://i.loli.net/2017/09/27/59cbc16b0f8b4.png)](https://www.browserstack.com/)
+
+> **BrowserStack** is a cloud-based cross-browser testing tool that enables developers to test their websites across various browsers on different operating systems and mobile devices, without requiring users to install virtual machines, devices or emulators.

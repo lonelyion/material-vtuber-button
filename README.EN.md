@@ -19,6 +19,7 @@ Related Links:
 
 ## Planning to do
 
+- fubukitap(Similar to [mikutap](https://aidn.jp/mikutap/))
 - Calender of lives / activities
 - Memes for Fubuki
 - Data visualization of Youtube / Bilibili
@@ -85,4 +86,14 @@ Audio: According to the [Hololive Secondary Creation Terms](https://www.hololive
 Other parts: [MIT License](https://github.com/oruyanke/fubuki-button/blob/master/LICENSE)
 
 This project is a work of enthusiasts and is not related to the Hololive official.
+
+## 支持
+
+### BroswerStack
+
+Proudly using BrowserStack.
+
+[![](https://i.loli.net/2017/09/27/59cbc16b0f8b4.png)](https://www.browserstack.com/)
+
+> **BrowserStack** is a cloud-based cross-browser testing tool that enables developers to test their websites across various browsers on different operating systems and mobile devices, without requiring users to install virtual machines, devices or emulators.
 
