@@ -49,12 +49,15 @@ GitHubの開発に直接参加する方法が分からない場合は、素材�
 
 ## ローカルでのデプロイ
 
-このサイトは Vue + NuxtJS + Vuetify を使用しています。ローカル開発環境をデプロイするには、最新版のNodeとYarnパッケージマネージャをインストールしてください。
+ローカル開発環境をデプロイする
+このサイトはVue + NuxtJS + Vuetifyを使用して開発しています。
 
-1. Codeをフォークもしくはクローン。
-2. Codeディクトリーへ行きyarnを実行。
-3. ローカル開発サーバのために`yarn dev`を `localhost:3000` 実行する。こうすることで変更をすぐにローカルサーバーで確認することができます。
-4. ファイルをコンパイルするために`yarn generate`を実行すると，`dist`ディクトリーが生成されます。このサイトは静的であるため`dist`ディクトリー全体をデプロイできます。
+ローカル開発環境をデプロイするためには、まず最新版のNodeとYarnをインストールしてください。その後、以下の手順に従ってください。
+
+ 1. コードをforkしてクローンする。
+ 2. コードディレクトリに移動し、yarnを実行して依存関係をインストールする。
+ 3. `yarn dev`を実行し、`localhost:3000`でローカル開発サーバーを起動する。ローカル開発サーバーでは、変更した結果をすぐに反映させることが可能です。
+ 4. デプロイ用ファイルをコンパイルするためには、`yarn generae`を実行して`dist`ディレクトリを生成してください。このサイトは完全に静的なので、distディレクトリ全体を直接デプロイすることができます。
 
 ## コントリビューター
 
@@ -70,11 +73,11 @@ GitHubの開発に直接参加する方法が分からない場合は、素材�
 
 特別協力：
 
-- [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
-- [狐狸的玉米地](https://space.bilibili.com/474495056)
-- [亡音ちゃん](https://space.bilibili.com/2613724)
-- [Dakumasu](https://github.com/dakuamsu)
-- [Yourein](https://github.com/Yourein)
+- Bilibili [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
+- Bilibili [亡音ちゃん](https://space.bilibili.com/2613724)
+- GitHub [Dakumasu](https://github.com/dakuamsu)
+- GitHub [Yourein](https://github.com/Yourein)
+- Twitter [ネコヤナ　こう](https://twitter.com/nekoy0212anagi)
 
 ## LICENCE
 

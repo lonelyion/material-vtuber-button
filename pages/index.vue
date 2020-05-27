@@ -167,6 +167,9 @@ export default {
   },
   async mounted() {
     await this.fetch_live_data();
+    let sp = document.getElementById('single_play');
+    sp.src = '';
+    sp.play();
   },
   methods: {
     async fetch_live_data() {
@@ -219,10 +222,11 @@ export default {
         });
         this.$bus.$on('abort_play', () => {
           sp.pause();
-          delete this.sp;
         });
       } else {
-        let audio = new Audio('/voices/' + item.path);
+        let audio = new Audio();
+        audio.play();
+        audio.src = '/voices/' + item.path;
         if ('mediaSession' in navigator) {
           const metadata = {
             title: this.$t('control.overlap_title'),

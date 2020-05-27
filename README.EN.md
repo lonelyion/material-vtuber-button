@@ -72,11 +72,11 @@ Audio Editors:
 - hanyuu
 
 Special Thanks to:
-- [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
-- [狐狸的玉米地](https://space.bilibili.com/474495056)
-- [亡音ちゃん](https://space.bilibili.com/2613724)
-- [Dakumasu](https://github.com/dakuamsu)
-- [Yourein](https://github.com/Yourein)
+- Bilibili [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
+- Bilibili [亡音ちゃん](https://space.bilibili.com/2613724)
+- GitHub [Dakumasu](https://github.com/dakuamsu)
+- GitHub [Yourein](https://github.com/Yourein)
+- Twitter [nekoy0212anagi](https://twitter.com/nekoy0212anagi)
 
 ## LICENCE
 

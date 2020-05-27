@@ -19,6 +19,19 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      <div v-if="current_locale === 'zh'">
+        <v-divider />
+        <v-list>
+          <v-list-item dense href="https://space.bilibili.com/487763794/article" target="_blank">
+            <v-list-item-action>
+              <v-icon>mdi-newspaper</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>白上吹雪周报</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </div>
       <v-divider />
       <v-list>
         <v-list-item dense to="/about" router exact>
@@ -135,6 +148,11 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    current_locale() {
+      return this.$i18n.locale;
+    }
   },
   mounted() {
     this.$vuetify.theme.dark = this.$store.state.dark === 'true';
