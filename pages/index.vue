@@ -206,9 +206,10 @@ export default {
     play(item) {
       if (!this.overlap) {
         let sp = document.getElementById('single_play');
-        sp.pause();
         sp.src = '/voices/' + item.path;
+        sp.load();
         sp.addEventListener('canplay', function() {
+          sp.volume = 1;
           sp.play();
           if ('mediaSession' in navigator) {
             const metadata = {
@@ -224,9 +225,8 @@ export default {
           sp.pause();
         });
       } else {
-        let audio = new Audio();
-        audio.play();
-        audio.src = '/voices/' + item.path;
+        let audio = new Audio('/voices/' + item.path);
+        audio.load();
         if ('mediaSession' in navigator) {
           const metadata = {
             title: this.$t('control.overlap_title'),
@@ -237,6 +237,7 @@ export default {
           navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
         }
         audio.addEventListener('canplay', function() {
+          audio.volume = 1;
           audio.play();
         });
         this.$bus.$on('abort_play', () => {
