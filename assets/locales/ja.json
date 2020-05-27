@@ -21,8 +21,10 @@
     "self": "コントロール",
     "pick_one": "ランダム再生",
     "stop": "再生停止",
-    "enable_overlap": "音声を重ねる",
-    "enable_random": "自動ランダム再生",
+    "enabled": "有効",
+    "disabled": "無効",
+    "overlap": "音声を重ねる",
+    "random": "自動ランダム再生",
     "full_name": "白上フブキ",
     "overlap_title": "多くのフブキの音声"
   }

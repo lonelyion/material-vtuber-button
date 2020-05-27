@@ -1,40 +1,48 @@
 <template>
   <v-layout column justify-center align-center app>
-    <v-speed-dial
-      v-model="fab"
-      bottom
-      right
-      fixed
-      direction="top"
-      open-on-hover
-      open-on-click
-      some-useless-props-with-a-long-name-in-it
-    >
+    <v-speed-dial v-model="fab" bottom right fixed direction="top" open-on-click>
       <template v-slot:activator>
-        <v-btn slot="activator" v-model="fab" color="blue darken-2" dark fab hover>
-          <v-icon v-if="fab">
-            mdi-close
-          </v-icon>
-          <v-icon v-else>
-            mdi-play
-          </v-icon>
-        </v-btn>
+        <v-tooltip left>
+          <template v-slot:activator="{ on }">
+            <v-btn slot="activator" v-model="fab" :class="speed_dial_color" dark fab hover v-on="on">
+              <v-icon v-if="fab">
+                mdi-close
+              </v-icon>
+              <v-icon v-else large>
+                mdi-play
+              </v-icon>
+            </v-btn>
+          </template>
+          <span>{{ $t('control.self') }}</span>
+        </v-tooltip>
       </template>
-      <v-btn fab small color="yellow" @click.stop="click_button('overlap button')">
-        <span class="fab-tip">{{ $t('control.enable_overlap') }}</span>
-        <v-icon>mdi-view-parallel</v-icon>
-      </v-btn>
-      <v-btn fab small color="green" @click.stop="click_button('random button')">
-        <span class="fab-tip">{{ $t('control.enable_random') }}</span>
-        <v-icon>mdi-shuffle</v-icon>
-      </v-btn>
-      <v-btn fab small color="indigo" @click.stop="click_button('stop button')">
+      <v-btn fab small :class="fab_color" @click.stop="stop_all()">
         <span class="fab-tip">{{ $t('control.stop') }}</span>
-        <v-icon>mdi-stop</v-icon>
+        <v-icon :class="fab_icon">
+          mdi-stop
+        </v-icon>
       </v-btn>
-      <v-btn fab small color="red" @click.stop="click_button('pick button')">
+      <v-btn fab small :class="fab_color" @click.stop="get_random_voice()">
         <span class="fab-tip">{{ $t('control.pick_one') }}</span>
-        <v-icon>mdi-selection-ellipse-arrow-inside</v-icon>
+        <v-icon :class="fab_icon">
+          mdi-selection-ellipse-arrow-inside
+        </v-icon>
+      </v-btn>
+      <v-btn fab small :class="fab_color" :disabled="random" @click.stop="overlap = !overlap">
+        <span class="fab-tip">
+          {{ overlap_text }}
+        </span>
+        <v-icon :class="fab_icon">
+          mdi-view-parallel
+        </v-icon>
+      </v-btn>
+      <v-btn fab small :class="fab_color" :disabled="overlap" @click.stop="random = !random">
+        <span class="fab-tip">
+          {{ random_text }}
+        </span>
+        <v-icon :class="fab_icon">
+          mdi-shuffle
+        </v-icon>
       </v-btn>
     </v-speed-dial>
     <v-flex xs12 sm8 md6>
@@ -59,32 +67,6 @@
               >
                 {{ live.title }}
               </a>
-            </div>
-          </div>
-        </v-card-text>
-      </v-card>
-      <v-card>
-        <v-card-title>
-          <img src="/favicon.ico" style="width: 24px; margin-right: 8px;" alt="icon" />
-          {{ $t('control.self') }}
-        </v-card-title>
-        <v-card-text>
-          <div>
-            <div>
-              <v-btn class="accent ma-1 pa-1" :class="dark_text" @click="get_random_voice()">
-                {{ $t('control.pick_one') }}
-              </v-btn>
-              <v-btn class="accent ma-1 pa-1" :class="dark_text" @click="stop_all()">
-                {{ $t('control.stop') }}
-              </v-btn>
-              <v-btn class="accent ma-1 pa-1" :class="dark_text" :disabled="random" @click="overlap = !overlap">
-                <v-icon>{{ overlap ? 'mdi-check' : 'mdi-close' }}</v-icon>
-                {{ $t('control.enable_overlap') }}
-              </v-btn>
-              <v-btn class="accent ma-1 pa-1" :class="dark_text" :disabled="overlap" @click="random = !random">
-                <v-icon>{{ random ? 'mdi-check' : 'mdi-close' }}</v-icon>
-                {{ $t('control.enable_random') }}
-              </v-btn>
             </div>
           </div>
         </v-card-text>
@@ -149,22 +131,38 @@ export default {
     return {
       overlap: false,
       random: false,
+      fab: false,
       groups: voice_lists.groups,
       lives: [],
-      lives_loading: true,
-      dark_text: {
-        'grey--text': this.$vuetify.theme.dark,
-        'text--lighten-2': this.$vuetify.theme.dark
-      },
-      fab: false,
-      fab_tooltips: false,
-      fab_tooltips_disabled: false,
-      test: true
+      lives_loading: true
     };
   },
   computed: {
+    dark_text: function() {
+      return {
+        'grey--text': this.$vuetify.theme.dark,
+        'text--lighten-2': this.$vuetify.theme.dark
+      };
+    },
+    fab_icon: function() {
+      return [this.$vuetify.theme.dark ? 'white--text' : 'light-blue--text'];
+    },
+    fab_color: function() {
+      return [this.$vuetify.theme.dark ? 'indigo darken-1' : 'white'];
+    },
+    speed_dial_color: function() {
+      return [this.$vuetify.theme.dark ? 'cyan darken-1' : 'cyan lighten-2'];
+    },
     current_locale() {
       return this.$i18n.locale;
+    },
+    overlap_text() {
+      return (
+        this.$t('control.overlap') + ' ' + (this.overlap ? this.$t('control.enabled') : this.$t('control.disabled'))
+      );
+    },
+    random_text() {
+      return this.$t('control.random') + ' ' + (this.random ? this.$t('control.enabled') : this.$t('control.disabled'));
     }
   },
   async mounted() {

@@ -18,11 +18,13 @@
     "on_air": "正在直播"
   },
   "control": {
-    "self": "玉米控制台",
+    "self": "播放控制",
     "pick_one": "帮我选一个",
     "stop": "停止",
-    "enable_overlap": "允许重叠播放",
-    "enable_random": "自动随机播放",
+    "enabled": "开启",
+    "disabled": "关闭",
+    "overlap": "重叠播放",
+    "random": "随机播放",
     "full_name": "白上吹雪",
     "overlap_title": "多重狐狸"
   }
