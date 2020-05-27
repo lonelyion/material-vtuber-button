@@ -98,7 +98,7 @@
       </v-card>
       <v-card v-for="group in groups" :key="group.name">
         <v-card-title class="headline" :class="dark_text">
-          {{ group.group_description[$i18n.locale] }}
+          {{ group.group_description[current_locale] }}
         </v-card-title>
         <v-card-text>
           <v-btn
@@ -110,7 +110,7 @@
             min-height="36px"
             @click="play(item)"
           >
-            {{ item.description[$i18n.locale] }}
+            {{ item.description[current_locale] }}
           </v-btn>
         </v-card-text>
       </v-card>
@@ -155,6 +155,11 @@ export default {
       fab_tooltips_disabled: false
     };
   },
+  computed: {
+    current_locale() {
+      return this.$i18n.locale;
+    }
+  },
   watch: {
     fab(val) {
       console.log('watch fab ', val);
@@ -167,9 +172,6 @@ export default {
   },
   async mounted() {
     await this.fetch_live_data();
-    let sp = document.getElementById('single_play');
-    sp.src = '';
-    sp.play();
   },
   methods: {
     async fetch_live_data() {
@@ -204,6 +206,7 @@ export default {
       return moment.unix(stamp).format('YYYY/M/DD HH:mm');
     },
     play(item) {
+      let that = this;
       if (!this.overlap) {
         let sp = document.getElementById('single_play');
         sp.src = '/voices/' + item.path;
@@ -212,13 +215,13 @@ export default {
           sp.volume = 1;
           sp.play();
           if ('mediaSession' in navigator) {
-            const metadata = {
-              title: item.description[this.$i18n.locale],
-              artist: this.$t('control.full_name'),
-              album: this.$t('site.title') + '(^・ω・^§)',
-              artwork: [{ src: '/media-cover.jpg', sizes: '128x128', type: 'image/png' }]
+            let meta = {
+              title: item.description[that.current_locale],
+              artist: that.$t('control.full_name'),
+              album: that.$t('site.title') + '(^・ω・^§)',
+              artwork: [{ src: '/img/media-cover.jpg', sizes: '128x128', type: 'image/jpeg' }]
             };
-            navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
+            navigator.mediaSession.metadata = new window.MediaMetadata(meta);
           }
         });
         this.$bus.$on('abort_play', () => {
@@ -229,10 +232,10 @@ export default {
         audio.load();
         if ('mediaSession' in navigator) {
           const metadata = {
-            title: this.$t('control.overlap_title'),
-            artist: this.$t('control.full_name'),
-            album: this.$t('site.title') + '(^・ω・^§)',
-            artwork: [{ src: '/media-cover.jpg', sizes: '128x128', type: 'image/png' }]
+            title: that.$t('control.overlap_title'),
+            artist: that.$t('control.full_name'),
+            album: that.$t('site.title') + '(^・ω・^§)',
+            artwork: [{ src: '/img/media-cover.jpg', sizes: '128x128', type: 'image/png' }]
           };
           navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
         }
@@ -266,6 +269,9 @@ export default {
     stop_all() {
       console.log('stop-all');
       this.$bus.$emit('abort_play');
+    },
+    get_trans(key) {
+      return this.$i18n.t(key);
     }
   },
   head() {
