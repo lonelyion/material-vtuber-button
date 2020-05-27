@@ -1,6 +1,15 @@
 <template>
   <v-layout column justify-center align-center app>
-    <v-speed-dial v-model="fab" bottom right fixed direction="top" open-on-hover transition="scale-transition">
+    <v-speed-dial
+      v-model="fab"
+      bottom
+      right
+      fixed
+      direction="top"
+      open-on-hover
+      open-on-click
+      some-useless-props-with-a-long-name-in-it
+    >
       <template v-slot:activator>
         <v-btn slot="activator" v-model="fab" color="blue darken-2" dark fab hover>
           <v-icon v-if="fab">
@@ -11,38 +20,22 @@
           </v-icon>
         </v-btn>
       </template>
-      <v-tooltip :value="fab_tooltips" left>
-        <template v-slot:activator="{ on }">
-          <v-btn fab dark small color="green" v-on="on">
-            <v-icon>mdi-view-parallel</v-icon>
-          </v-btn>
-        </template>
-        <span>{{ $t('control.enable_overlap') }}</span>
-      </v-tooltip>
-      <v-tooltip :value="fab_tooltips" left>
-        <template v-slot:activator="{ on }">
-          <v-btn fab dark small color="green" v-on="on">
-            <v-icon>mdi-shuffle</v-icon>
-          </v-btn>
-        </template>
-        <span>{{ $t('control.enable_random') }}</span>
-      </v-tooltip>
-      <v-tooltip :value="fab_tooltips" left>
-        <template v-slot:activator="{ on }">
-          <v-btn fab dark small color="indigo" v-on="on">
-            <v-icon>mdi-stop</v-icon>
-          </v-btn>
-        </template>
-        <span>{{ $t('control.stop') }}</span>
-      </v-tooltip>
-      <v-tooltip :value="fab_tooltips" left>
-        <template v-slot:activator="{ on }">
-          <v-btn fab dark small color="red" v-on="on">
-            <v-icon>mdi-selection-ellipse-arrow-inside</v-icon>
-          </v-btn>
-        </template>
-        <span>{{ $t('control.pick_one') }}</span>
-      </v-tooltip>
+      <v-btn fab small color="yellow">
+        <span class="fab-tip">{{ $t('control.enable_overlap') }}</span>
+        <v-icon>mdi-view-parallel</v-icon>
+      </v-btn>
+      <v-btn fab small color="green">
+        <span class="fab-tip">{{ $t('control.enable_random') }}</span>
+        <v-icon>mdi-shuffle</v-icon>
+      </v-btn>
+      <v-btn fab small color="indigo">
+        <span class="fab-tip">{{ $t('control.stop') }}</span>
+        <v-icon>mdi-stop</v-icon>
+      </v-btn>
+      <v-btn fab small color="red">
+        <span class="fab-tip">{{ $t('control.pick_one') }}</span>
+        <v-icon>mdi-selection-ellipse-arrow-inside</v-icon>
+      </v-btn>
     </v-speed-dial>
     <v-flex xs12 sm8 md6>
       <v-card v-if="lives.length !== 0">
@@ -132,6 +125,19 @@
   text-transform: none !important;
   font-weight: 400;
 }
+.fab-tip {
+  position: fixed;
+  right: 72px;
+  padding: 5px 16px;
+  background: rgba(97, 97, 97, 0.9);
+  border-radius: 4px;
+  color: #fff;
+  width: auto;
+  font-size: 14px;
+  line-height: 22px;
+  opacity: 0.9;
+  text-transform: none;
+}
 </style>
 
 <script>
@@ -152,22 +158,13 @@ export default {
       },
       fab: false,
       fab_tooltips: false,
-      fab_tooltips_disabled: false
+      fab_tooltips_disabled: false,
+      test: true
     };
   },
   computed: {
     current_locale() {
       return this.$i18n.locale;
-    }
-  },
-  watch: {
-    fab(val) {
-      console.log('watch fab ', val);
-      this.fab_tooltips = false;
-      if (val)
-        setTimeout(() => {
-          this.fab_tooltips = true;
-        }, 500);
     }
   },
   async mounted() {
