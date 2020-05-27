@@ -20,19 +20,19 @@
           </v-icon>
         </v-btn>
       </template>
-      <v-btn fab small color="yellow">
+      <v-btn fab small color="yellow" @click.stop="click_button('overlap button')">
         <span class="fab-tip">{{ $t('control.enable_overlap') }}</span>
         <v-icon>mdi-view-parallel</v-icon>
       </v-btn>
-      <v-btn fab small color="green">
+      <v-btn fab small color="green" @click.stop="click_button('random button')">
         <span class="fab-tip">{{ $t('control.enable_random') }}</span>
         <v-icon>mdi-shuffle</v-icon>
       </v-btn>
-      <v-btn fab small color="indigo">
+      <v-btn fab small color="indigo" @click.stop="click_button('stop button')">
         <span class="fab-tip">{{ $t('control.stop') }}</span>
         <v-icon>mdi-stop</v-icon>
       </v-btn>
-      <v-btn fab small color="red">
+      <v-btn fab small color="red" @click.stop="click_button('pick button')">
         <span class="fab-tip">{{ $t('control.pick_one') }}</span>
         <v-icon>mdi-selection-ellipse-arrow-inside</v-icon>
       </v-btn>
@@ -267,8 +267,8 @@ export default {
       console.log('stop-all');
       this.$bus.$emit('abort_play');
     },
-    get_trans(key) {
-      return this.$i18n.t(key);
+    click_button(message) {
+      console.log(message);
     }
   },
   head() {
