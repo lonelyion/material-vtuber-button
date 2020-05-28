@@ -36,7 +36,15 @@
           mdi-view-parallel
         </v-icon>
       </v-btn>
-      <v-btn fab small :class="fab_color" :disabled="overlap" @click.stop="random = !random">
+      <v-btn fab small :class="fab_color" :disabled="random" @click.stop="repeat = !repeat">
+        <span class="fab-tip">
+          {{ repeat_text }}
+        </span>
+        <v-icon :class="fab_icon">
+          mdi-repeat
+        </v-icon>
+      </v-btn>
+      <v-btn fab small :class="fab_color" :disabled="overlap || repeat" @click.stop="random = !random">
         <span class="fab-tip">
           {{ random_text }}
         </span>
@@ -116,9 +124,11 @@
   color: #fff;
   width: auto;
   font-size: 14px;
+  font-weight: normal;
   line-height: 22px;
   opacity: 0.9;
   text-transform: none;
+  letter-spacing: normal;
 }
 </style>
 
@@ -131,6 +141,7 @@ export default {
     return {
       overlap: false,
       random: false,
+      repeat: false,
       fab: false,
       groups: voice_lists.groups,
       lives: [],
@@ -163,6 +174,9 @@ export default {
     },
     random_text() {
       return this.$t('control.random') + ' ' + (this.random ? this.$t('control.enabled') : this.$t('control.disabled'));
+    },
+    repeat_text() {
+      return this.$t('control.repeat') + ' ' + (this.repeat ? this.$t('control.enabled') : this.$t('control.disabled'));
     }
   },
   async mounted() {
@@ -223,6 +237,7 @@ export default {
           sp.pause();
         });
       } else {
+        //重叠播放
         let audio = new Audio('/voices/' + item.path);
         audio.load();
         if ('mediaSession' in navigator) {
@@ -238,6 +253,12 @@ export default {
           audio.volume = 1;
           audio.play();
         });
+        audio.addEventListener('ended', function() {
+          //重叠播放下的循环播放实现
+          if (that.repeat) {
+            audio.play();
+          }
+        });
         this.$bus.$on('abort_play', () => {
           audio.pause();
           delete this.audio;
@@ -252,6 +273,10 @@ export default {
     play_ended() {
       if (this.random) {
         this.get_random_voice();
+      } else if (this.repeat && !this.overlap) {
+        //对于单个音频的循环播放
+        let sp = document.getElementById('single_play');
+        sp.play();
       }
     },
     get_random_int(max) {
@@ -264,9 +289,6 @@ export default {
     stop_all() {
       console.log('stop-all');
       this.$bus.$emit('abort_play');
-    },
-    click_button(message) {
-      console.log(message);
     }
   },
   head() {
