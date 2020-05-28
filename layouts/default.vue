@@ -22,12 +22,12 @@
       <div v-if="current_locale === 'zh'">
         <v-divider />
         <v-list>
-          <v-list-item dense href="https://space.bilibili.com/487763794/article" target="_blank">
+          <v-list-item v-for="item in external_cn" :key="item.to" dense :href="item.to" target="_blank">
             <v-list-item-action>
-              <v-icon>mdi-newspaper</v-icon>
+              <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title>白上吹雪周报</v-list-item-title>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -145,6 +145,18 @@ export default {
           icon: '/img/bilibili-fill.svg',
           title: 'Bilibili',
           to: 'https://space.bilibili.com/332704117'
+        }
+      ],
+      external_cn: [
+        {
+          icon: 'mdi-newspaper',
+          title: '白上吹雪周报',
+          to: 'https://space.bilibili.com/487763794/article'
+        },
+        {
+          icon: 'mdi-alpha-b-box',
+          title: 'Bilibili@狐按钮',
+          to: 'https://space.bilibili.com/314977548'
         }
       ]
     };
