@@ -1,20 +1,23 @@
 <template>
   <v-layout column justify-center align-center app>
-    <v-speed-dial v-model="fab" bottom right fixed direction="top" open-on-click>
+    <v-speed-dial
+      v-model="fab"
+      fixed
+      bottom
+      right
+      direction="top"
+      open-on-click
+      transition="slide-y-reverse-transition"
+    >
       <template v-slot:activator>
-        <v-tooltip left>
-          <template v-slot:activator="{ on }">
-            <v-btn slot="activator" v-model="fab" :class="speed_dial_color" dark fab hover v-on="on">
-              <v-icon v-if="fab">
-                mdi-close
-              </v-icon>
-              <v-icon v-else large>
-                mdi-play
-              </v-icon>
-            </v-btn>
-          </template>
-          <span>{{ $t('control.self') }}</span>
-        </v-tooltip>
+        <v-btn slot="activator" v-model="fab" :class="speed_dial_color" dark fab hover>
+          <v-icon v-if="fab">
+            mdi-close
+          </v-icon>
+          <v-icon v-else large>
+            mdi-play
+          </v-icon>
+        </v-btn>
       </template>
       <v-btn fab small :class="fab_color" @click.stop="stop_all()">
         <span class="fab-tip">{{ $t('control.stop') }}</span>
@@ -79,20 +82,6 @@
           </div>
         </v-card-text>
       </v-card>
-      <v-card v-if="$i18n.locale === 'zh' && second_anniversary">
-        <v-card-title>
-          🎉 祝吹雪二周年快乐！
-        </v-card-title>
-        <v-card-text>
-          <a href="https://www.bilibili.com/video/BV1Lz411B7wN" target="_blank" style="text-decoration: none;">
-            白上吹雪2周年纪念视频【白上吹雪字幕组】
-          </a>
-          <p>
-            "祝贺吹雪出道二周年！！这个是字幕组制作的纪念向剪辑视频。
-            感谢参与剪辑和收集素材的组员、翻译时轴、后期、画师，以及提供了种种帮助的大家"
-          </p>
-        </v-card-text>
-      </v-card>
       <v-card v-for="group in groups" :key="group.name">
         <v-card-title class="headline" :class="dark_text">
           {{ group.group_description[current_locale] }}
@@ -130,8 +119,8 @@
   font-weight: 400;
 }
 .fab-tip {
-  position: fixed;
-  right: 72px;
+  position: absolute;
+  right: 52px;
   padding: 5px 16px;
   background: rgba(97, 97, 97, 0.9);
   border-radius: 4px;
