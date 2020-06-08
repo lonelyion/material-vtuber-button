@@ -134,7 +134,7 @@ export default {
         {
           icon: '/img/youtube-fill.svg',
           title: 'Youtube',
-          to: 'https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg?sub_confirm=1'
+          to: 'https://www.youtube.com/channel/UCdn5BQ06XqgXoAxIhbqw5Rg?sub_confirmation=1'
         },
         {
           icon: '/img/twitter-fill.svg',

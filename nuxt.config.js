@@ -119,10 +119,7 @@ export default {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-
+    publicPath: process.env.NODE_ENV === 'production' ? 'https://btn.lonelyion.com/' : '/_nuxt/',
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
