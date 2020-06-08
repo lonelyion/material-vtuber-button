@@ -30,12 +30,9 @@ jobs:
       - name: Deploy to Aliyun OSS
         run: ossutil cp -rf ./dist/ oss://sfubuki/
 
-      - name: Deploy to Coding.net
-        working-directory: dist
-        run: |
-          git init
-          git config user.name "GitHub Actions Bot"
-          git config user.email "copperion@outlook.com"
-          git add --all .
-          git commit -m "Deploy from GitHub: $GITHUB_SHA"
-          git push --force --quiet "https://CcoRMLeNqi:${{ secrets.CODING_TOKEN }}@e.coding.net/copperion/fubuki-button.git" master:master
+      - name: Deploy to Pages Branch
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist
