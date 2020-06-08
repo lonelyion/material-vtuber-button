@@ -152,6 +152,11 @@ export default {
     };
   },
   computed: {
+    voice_host: function() {
+      if (process.env.NODE_ENV === 'production' && navigator.onLine && this.$i18n.locale === 'zh')
+        return 'https://btn.lonelyion.com/voices/';
+      else return '/voices/';
+    },
     dark_text: function() {
       return {
         'grey--text': this.$vuetify.theme.dark,
@@ -180,9 +185,6 @@ export default {
     },
     repeat_text() {
       return this.$t('control.repeat') + ' ' + (this.repeat ? this.$t('control.enabled') : this.$t('control.disabled'));
-    },
-    second_anniversary() {
-      return moment().isSame('2020-06-01', 'day');
     }
   },
   async mounted() {
@@ -224,7 +226,7 @@ export default {
       let that = this;
       if (!this.overlap) {
         let sp = document.getElementById('single_play');
-        sp.src = '/voices/' + item.path;
+        sp.src = this.voice_host + item.path;
         sp.load();
         sp.addEventListener('canplay', function() {
           sp.volume = 1;
@@ -244,14 +246,14 @@ export default {
         });
       } else {
         //重叠播放
-        let audio = new Audio('/voices/' + item.path);
+        let audio = new Audio(this.voice_host + item.path);
         audio.load();
         if ('mediaSession' in navigator) {
           const metadata = {
             title: that.$t('control.overlap_title'),
             artist: that.$t('control.full_name'),
             album: that.$t('site.title') + '(^・ω・^§)',
-            artwork: [{ src: '/img/media-cover.jpg', sizes: '128x128', type: 'image/png' }]
+            artwork: [{ src: '/img/media-cover.jpg', sizes: '128x128', type: 'image/jpeg' }]
           };
           navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
         }

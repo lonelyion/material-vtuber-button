@@ -28,7 +28,7 @@ jobs:
           access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
 
       - name: Deploy to Aliyun OSS
-        run: ossutil cp -rf ./dist/ oss://sfubuki/
+        run: ossutil cp -rf ./dist/ oss://sfubuki/ -u
 
       - name: Deploy to Pages Branch
         uses: JamesIves/github-pages-deploy-action@releases/v3
