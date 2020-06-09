@@ -59,21 +59,28 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 
 开发：
 
-- [孤单离子](https://github.com/lonelyion)
-- [Asrui Morus](https://github.com/Morxi)
+- GitHub [孤单离子](https://github.com/lonelyion)
+- GitHub [Asrui Morus](https://github.com/Morxi)
 
 音频剪辑：
 
-- [孤单离子](https://github.com/lonelyion)
+- Bilibili [孤单离子](https://space.bilibili.com/7564991)
+- Bilibili [清流ht](https://space.bilibili.com/22311554)
+- Bilibili [绯月天则](https://space.bilibili.com/1592713)
 - hanyuu
+
+翻译：
+
+- GitHub [Dakumasu](https://github.com/dakuamsu)
+- GitHub [Yourein](https://github.com/Yourein)
+- Twitter [nekoy0212anagi](https://twitter.com/nekoy0212anagi)
+- GitHub [Emmmer](https://github.com/ShirakamiEmmmer)
 
 特别感谢：
 
 - Bilibili [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
+- Bilibili [白上吹雪周报](https://space.bilibili.com/487763794)
 - Bilibili [亡音ちゃん](https://space.bilibili.com/2613724)
-- GitHub [Dakumasu](https://github.com/dakuamsu)
-- GitHub [Yourein](https://github.com/Yourein)
-- Twitter [nekoy0212anagi](https://twitter.com/nekoy0212anagi)
 
 ## 协议
 

@@ -69,16 +69,23 @@ GitHubの開発に直接参加する方法が分からない場合は、素材�
 
 オーディオクリップ：
 
-- [孤独のイオン](https://github.com/lonelyion)
+- Bilibili [孤单离子](https://space.bilibili.com/7564991)
+- Bilibili [清流ht](https://space.bilibili.com/22311554)
+- Bilibili [绯月天则](https://space.bilibili.com/1592713)
 - hanyuu
+
+翻訳：
+
+- GitHub [Dakumasu](https://github.com/dakuamsu)
+- GitHub [Yourein](https://github.com/Yourein)
+- Twitter [nekoy0212anagi](https://twitter.com/nekoy0212anagi)
+- GitHub [Emmmer](https://github.com/ShirakamiEmmmer)
 
 特別協力：
 
 - Bilibili [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
+- Bilibili [白上吹雪周报](https://space.bilibili.com/487763794)
 - Bilibili [亡音ちゃん](https://space.bilibili.com/2613724)
-- GitHub [Dakumasu](https://github.com/dakuamsu)
-- GitHub [Yourein](https://github.com/Yourein)
-- Twitter [ネコヤナ　こう](https://twitter.com/nekoy0212anagi)
 
 ## LICENCE
 

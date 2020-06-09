@@ -65,19 +65,28 @@ To deploy a local development environment, first install the latest version of N
 ## Contributors
 
 Development:
+
 - [Lonely Ion](https://github.com/lonelyion)
 - [Asrui Morus](https://github.com/Morxi)
 
 Audio Editors:
-- [Lonely Ion](https://github.com/lonelyion)
+
+- Bilibili [孤单离子](https://space.bilibili.com/7564991)
+- Bilibili [清流ht](https://space.bilibili.com/22311554)
+- Bilibili [绯月天则](https://space.bilibili.com/1592713)
 - hanyuu
 
-Special Thanks to:
-- Bilibili [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
-- Bilibili [亡音ちゃん](https://space.bilibili.com/2613724)
+Translation:
+
 - GitHub [Dakumasu](https://github.com/dakuamsu)
 - GitHub [Yourein](https://github.com/Yourein)
 - Twitter [nekoy0212anagi](https://twitter.com/nekoy0212anagi)
+- GitHub [Emmmer](https://github.com/ShirakamiEmmmer)
+
+Special Thanks to:
+- Bilibili [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
+- Bilibili [白上吹雪周报](https://space.bilibili.com/487763794)
+- Bilibili [亡音ちゃん](https://space.bilibili.com/2613724)
 
 ## LICENCE
 
