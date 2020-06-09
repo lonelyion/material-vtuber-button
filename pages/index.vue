@@ -105,7 +105,8 @@
   </v-layout>
 </template>
 
-<style>
+<style lang="scss">
+$nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
 .v-card {
   margin: 8px auto;
 }
@@ -117,7 +118,37 @@
   white-space: normal !important;
   text-transform: none !important;
   font-weight: 400;
+  text-align: center;
 }
+
+.voice-button span {
+  display: inline-block;
+  transition: 0.5s $nonlinear-transition;
+  text-align: center;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.voice-button span:after {
+  content: '🌽';
+  position: absolute;
+  right: -20px;
+  opacity: 0;
+  transition: 0.5s $nonlinear-transition;
+}
+
+.voice-button:hover span {
+  text-align: left;
+  padding-left: 0;
+  padding-right: 24px;
+}
+
+.voice-button:hover span:after {
+  opacity: 1;
+  right: 0;
+  text-align: center;
+}
+
 .fab-tip {
   position: absolute;
   right: 52px;
