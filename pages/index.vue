@@ -96,7 +96,9 @@
             min-height="36px"
             @click="play(item)"
           >
-            {{ item.description[current_locale] }}
+            <div class="voice-button-text">
+              {{ item.description[current_locale] }}
+            </div>
           </v-btn>
         </v-card-text>
       </v-card>
@@ -121,7 +123,7 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
   text-align: center;
 }
 
-.voice-button span {
+.voice-button div {
   display: inline-block;
   transition: 0.5s $nonlinear-transition;
   text-align: center;
@@ -129,7 +131,7 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
   padding-right: 12px;
 }
 
-.voice-button span:after {
+.voice-button div:after {
   content: '🌽';
   position: absolute;
   right: -20px;
@@ -137,13 +139,12 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
   transition: 0.5s $nonlinear-transition;
 }
 
-.voice-button:hover span {
-  text-align: left;
+.voice-button:hover div {
   padding-left: 0;
   padding-right: 24px;
 }
 
-.voice-button:hover span:after {
+.voice-button:hover div:after {
   opacity: 1;
   right: 0;
   text-align: center;
