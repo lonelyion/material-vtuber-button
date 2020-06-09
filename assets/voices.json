@@ -259,6 +259,24 @@
             "en": "(Little FBK)I like sisters and brothers most!",
             "ja": "おにーちゃん、おねーちゃん、大好き！"
           }
+        },
+        {
+          "name": "f-111",
+          "path": "f-111.mp3",
+          "description": {
+            "zh": "哭唧唧",
+            "en": "Crying",
+            "ja": "泣く"
+          }
+        },
+        {
+          "name": "f-117",
+          "path": "f-117.mp3",
+          "description": {
+            "zh": "诶？！",
+            "en": "Eh?!",
+            "ja": "あれれ？"
+          }
         }
       ]
     },
@@ -394,6 +412,42 @@
             "zh": "嘎嘣脆~嘎嘣脆哦~",
             "en": "bali~bali~",
             "ja": "ばりばりばりばり"
+          }
+        },
+        {
+          "name": "f-108",
+          "path": "f-108.mp3",
+          "description": {
+            "zh": "啊——彼方碳——",
+            "en": "Ah!Kanata Tan!",
+            "ja": "あああああーーかなたん！！！"
+          }
+        },
+        {
+          "name": "f-110",
+          "path": "f-110.mp3",
+          "description": {
+            "zh": "祭酱——",
+            "en": "Matsuri Chan~",
+            "ja": "まつりちゃんー"
+          }
+        },
+        {
+          "name": "f-113",
+          "path": "f-113.mp3",
+          "description": {
+            "zh": "哇——",
+            "en": "wow~",
+            "ja": "わあああああ"
+          }
+        },
+        {
+          "name": "f-118",
+          "path": "f-118.mp3",
+          "description": {
+            "zh": "啊咦，嗷呜~，k-on，k-on",
+            "en": "Eh~~Ah~~Kon~~Kon",
+            "ja": "えいーあうーこんーこん"
           }
         }
       ]
@@ -657,6 +711,15 @@
             "en": "Wintering fox~",
             "ja": "冬ごもりきーつね～"
           }
+        },
+        {
+          "name": "f-116",
+          "path": "f-116.mp3",
+          "description": {
+            "zh": "非常感谢（泣）",
+            "en": "Thank you very much(and cry)",
+            "ja": "ありがとうございます（泣）"
+          }
         }
       ]
     },
@@ -738,6 +801,24 @@
             "zh": "(幼狐)我是吹雪哦 大家都叫我吹雪酱 请多指教",
             "en": "(Little FBK)I'm Fubuki. They call me Fubu Chan~",
             "ja": "(ちびっ狐)フブキです、フブちゃって呼ばれてます！"
+          }
+        },
+        {
+          "name": "f-109",
+          "path": "f-109.mp3",
+          "description": {
+            "zh": "大家起床了吗 还没起床的观众们 再不起来的话 我就用尾巴去挠你们的鼻子",
+            "en": "Have u got up? If you can't get up, I will use tail to scratch your nose!",
+            "ja": "起きでますか、起きでない方は、今すぐ起きないと、尾で鼻の下おくすぐります"
+          }
+        },
+        {
+          "name": "f-112",
+          "path": "f-112.mp3",
+          "description": {
+            "zh": "你好",
+            "en": "Hello",
+            "ja": "あ、どうも、こんにちは"
           }
         }
       ]
@@ -875,6 +956,33 @@
             "en": "Ah, it's difficult.How shy.",
             "ja": "あぁ、難しい、恥ずかし、恥ずかしよ"
           }
+        },
+        {
+          "name": "f-114",
+          "path": "f-114.mp3",
+          "description": {
+            "zh": "嘤嘤嘤",
+            "en": "whine",
+            "ja": "えーんx6、一人いない、えーんx3"
+          }
+        },
+        {
+          "name": "f-115",
+          "path": "f-115.mp3",
+          "description": {
+            "zh": "什么？什么声音？",
+            "en": "What sounds?",
+            "ja": "わーー何音？"
+          }
+        },
+        {
+          "name": "f-119",
+          "path": "f-119.mp3",
+          "description": {
+            "zh": "好！来了！",
+            "en": "OK! I'm comming!",
+            "ja": "よし、こら、来たっぜ！！！"
+          }
         }
       ]
     },
@@ -965,6 +1073,15 @@
             "zh": "开心树朋友的OP",
             "en": "OP of Happy Trees Friends",
             "ja": "ハッピー・ツリー・フレンズ OP"
+          }
+        },
+        {
+          "name": "f-120",
+          "path": "f-120.mp3",
+          "description": {
+            "zh": "Astronomia FUBUKIDANCE",
+            "en": "Astronomia FUBUKIDANCE",
+            "ja": "Astronomia FUBUKIDANCE"
           }
         }
       ]
