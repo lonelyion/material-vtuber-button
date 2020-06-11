@@ -121,6 +121,7 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
   text-transform: none !important;
   font-weight: 400;
   text-align: center;
+  /*background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%) !important;*/
 }
 
 .voice-button div {

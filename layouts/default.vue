@@ -44,7 +44,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar dense elevate-on-scroll class="primary white--text" app>
+    <v-app-bar dense elevate-on-scroll class="primary white--text gradient-header" app>
       <v-app-bar-nav-icon class="white--text" @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="$t('site.title') + '(^・ω・^§)ﾉ'" />
       <v-img src="/img/oruyanke_transparent.png" style="max-width: 24px;margin-left: 6px;" />
@@ -121,6 +121,10 @@
 <style lang="scss">
 .v-application {
   font-family: $body-font-family, sans-serif !important;
+}
+
+.gradient-header {
+  background-image: linear-gradient(120deg, #1e64aa 0%, #55c8ff 100%) !important;
 }
 </style>
 
