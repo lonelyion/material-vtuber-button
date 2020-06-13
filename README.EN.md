@@ -5,7 +5,7 @@
 ![Last Commit](https://img.shields.io/github/last-commit/lonelyion/fubuki-button)
 ![Starts](https://img.shields.io/github/stars/lonelyion/fubuki-button)
 
-README: [中文]([./README.md](https://github.com/oruyanke/fubuki-button/blob/master/README.md)) | [日本語]([./README.JA.md](https://github.com/oruyanke/fubuki-button/blob/master/README.JA.md)) | **English**
+README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md) | [日本語](https://github.com/oruyanke/fubuki-button/blob/master/README.JA.md) | **English**
 
 > Brand new voice buttons for Shirakami Fubuki, we are aimming at building a comprehensive project related to Shirakami Fubuki.
 

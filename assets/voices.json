@@ -449,6 +449,24 @@
             "en": "Eh~~Ah~~Kon~~Kon",
             "ja": "えいーあうーこんーこん"
           }
+        },
+        {
+          "name": "f-121",
+          "path": "f-121.mp3",
+          "description": {
+            "zh": "呜呜呜呜&%@！¥#···救我",
+            "en": "&%@！¥#Help me!!!",
+            "ja": "ううる &%@！¥# 助けて えちゃん"
+          }
+        },
+        {
+          "name": "f-122",
+          "path": "f-122.mp3",
+          "description": {
+            "zh": "库~ 库~",
+            "en": "ku~ ku~",
+            "ja": "（吸气）くぅぅぅぅぅぅ"
+          }
         }
       ]
     },
@@ -1082,6 +1100,15 @@
             "zh": "Astronomia FUBUKIDANCE",
             "en": "Astronomia FUBUKIDANCE",
             "ja": "Astronomia FUBUKIDANCE"
+          }
+        },
+        {
+          "name": "f-123",
+          "path": "f-123.mp3",
+          "description": {
+            "zh": "意义不明boom乐器",
+            "en": "boom boom boom boom~",
+            "ja": "ぶんぶんあいやいやいやいぶんぶんぶんぶん"
           }
         }
       ]
