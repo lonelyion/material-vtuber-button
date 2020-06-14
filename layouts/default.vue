@@ -1,6 +1,15 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="drawer" :mobile-break-point="1024" class="elevation-3" fixed app>
+      <!--
+      <template v-slot:img>
+        <v-img />
+        <div
+          class="nav-darwer-overlay"
+          :class="$vuetify.theme.dark ? 'nav-darwer-overlay-dark' : 'nav-darwer-overlay-light'"
+        />
+      </template>
+      -->
       <v-list style="padding-top: 0">
         <v-list-item to="/" router exact dense>
           <v-list-item-action>
@@ -44,7 +53,13 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar dense elevate-on-scroll class="primary white--text gradient-header" app>
+    <v-app-bar
+      dense
+      elevate-on-scroll
+      class="primary white--text"
+      :class="[this.$vuetify.theme.dark ? 'gradient-header-dark' : 'gradient-header-light']"
+      app
+    >
       <v-app-bar-nav-icon class="white--text" @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="$t('site.title') + '(^・ω・^§)ﾉ'" />
       <v-img src="/img/oruyanke_transparent.png" style="max-width: 24px;margin-left: 6px;" />
@@ -119,12 +134,40 @@
 </template>
 
 <style lang="scss">
+$blur-function: blur(3px);
 .v-application {
   font-family: $body-font-family, sans-serif !important;
 }
-
-.gradient-header {
+.gradient-header-light {
   background-image: linear-gradient(120deg, #1e64aa 0%, #55c8ff 100%) !important;
+}
+.gradient-header-dark {
+  background-image: linear-gradient(120deg, #003c78 0%, #0087c8 100%) !important;
+}
+.nav-drawer-img {
+  width: auto;
+  height: 100%;
+  /*
+  -webkit-filter: $blur-function;
+  -moz-filter: $blur-function;
+  -ms-filter: $blur-function;
+  filter: $blur-function;
+   */
+}
+.nav-darwer-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+.nav-darwer-overlay-light {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.nav-darwer-overlay-dark {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 </style>
 

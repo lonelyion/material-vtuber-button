@@ -92,6 +92,7 @@
             :key="item.name"
             class="accent ma-1 pa-2 voice-button"
             :class="dark_text"
+            rounded
             height="max-content"
             min-height="36px"
             @click="play(item)"
