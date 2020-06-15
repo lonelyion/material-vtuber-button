@@ -10,7 +10,7 @@
         />
       </template>
       -->
-      <v-list style="padding-top: 0">
+      <v-list style="padding-top: 0;">
         <v-list-item to="/" router exact dense>
           <v-list-item-action>
             <v-icon>mdi-apps</v-icon>
@@ -21,7 +21,7 @@
         </v-list-item>
         <v-list-item v-for="(item, i) in nav_items" :key="i" :href="item.to" target="_blank" router exact dense>
           <v-list-item-action>
-            <v-img :src="item.icon" style="width: 24px" />
+            <v-img :src="item.icon" style="width: 24px;" />
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
@@ -62,7 +62,7 @@
     >
       <v-app-bar-nav-icon class="white--text" @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="$t('site.title') + '(^・ω・^§)ﾉ'" />
-      <v-img src="/img/oruyanke_transparent.png" style="max-width: 24px;margin-left: 6px;" />
+      <v-img src="/img/oruyanke_transparent.png" style="max-width: 24px; margin-left: 6px;" />
       <v-spacer />
       <v-tooltip bottom>
         <template v-slot:activator="{ on }">
