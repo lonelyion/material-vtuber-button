@@ -113,6 +113,11 @@ export default {
       font: {
         family: 'Noto Sans SC'
       }
+    },
+    pwa: {
+      manifest: {
+        start_url: 'https://fubuki.moe'
+      }
     }
   },
   /*

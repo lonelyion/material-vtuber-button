@@ -1,5 +1,6 @@
 <template>
   <v-layout column justify-center align-center app>
+    <dev_warn />
     <v-speed-dial
       v-model="fab"
       fixed
@@ -172,8 +173,12 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
 <script>
 import voice_lists from '~/assets/voices.json';
 import moment from 'moment';
+import dev_warn from '../components/dev_warn';
 
 export default {
+  components: {
+    dev_warn
+  },
   data() {
     return {
       overlap: false,
