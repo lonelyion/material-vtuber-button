@@ -1,5 +1,5 @@
 <template>
-  <v-dialog>
+  <v-dialog v-model="dialog">
     <v-card>
       <v-card-title class="headline">
         {{ $t('dev.title') }}
