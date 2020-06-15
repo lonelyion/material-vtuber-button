@@ -28,5 +28,10 @@
     "repeat": "Repeat Mode",
     "full_name": "Shirakami Fubuki",
     "overlap_title": "Multiple Fubuki Voices"
+  },
+  "dev": {
+    "title": "Development Mode",
+    "desc": "Dev mode may contains errors or vulnerability. We absolutely DO NOT guarantee any support and warranty. The actual new features are subject to the official version being launched.",
+    "to_stable": "Return to Official version"
   }
 }

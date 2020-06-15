@@ -1,12 +1,9 @@
-export default function({ isHMR, app, store }) {
+export default function ({ isHMR, app, store }) {
   if (isHMR) return;
   if (process.server) return;
   //Locale
   let defaultLocale = app.i18n.fallbackLocale;
-  const browserLocale = navigator.language
-    .replace('-', '_')
-    .toLowerCase()
-    .split('_')[0];
+  const browserLocale = navigator.language.replace('-', '_').toLowerCase().split('_')[0];
   if (app.i18n.availableLocales.includes(browserLocale)) {
     defaultLocale = browserLocale;
   }

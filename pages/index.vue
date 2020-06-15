@@ -1,5 +1,6 @@
 <template>
   <v-layout column justify-center align-center app>
+    <dev_warn />
     <v-speed-dial
       v-model="fab"
       fixed
@@ -172,8 +173,12 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
 <script>
 import voice_lists from '~/assets/voices.json';
 import moment from 'moment';
+import dev_warn from '../components/dev_warn';
 
 export default {
+  components: {
+    dev_warn
+  },
   data() {
     return {
       overlap: false,
@@ -186,24 +191,24 @@ export default {
     };
   },
   computed: {
-    voice_host: function() {
+    voice_host: function () {
       if (process.env.NODE_ENV === 'production' && navigator.onLine && this.$i18n.locale === 'zh')
         return 'https://btn.lonelyion.com/voices/';
       else return '/voices/';
     },
-    dark_text: function() {
+    dark_text: function () {
       return {
         'grey--text': this.$vuetify.theme.dark,
         'text--lighten-2': this.$vuetify.theme.dark
       };
     },
-    fab_icon: function() {
+    fab_icon: function () {
       return [this.$vuetify.theme.dark ? 'white--text' : 'light-blue--text'];
     },
-    fab_color: function() {
+    fab_color: function () {
       return [this.$vuetify.theme.dark ? 'indigo darken-1' : 'white'];
     },
-    speed_dial_color: function() {
+    speed_dial_color: function () {
       return [this.$vuetify.theme.dark ? 'cyan darken-1' : 'cyan lighten-2'];
     },
     current_locale() {
@@ -229,17 +234,17 @@ export default {
       let fetched = await this.$axios.$get('https://api.jetri.co/live');
       let fbk_lives = [];
       const channel_id = 'UCdn5BQ06XqgXoAxIhbqw5Rg';
-      fetched.live.forEach(function(item) {
+      fetched.live.forEach(function (item) {
         if (item.channel === channel_id) {
           fbk_lives.push(item);
         }
       });
-      fetched.upcoming.forEach(function(item) {
+      fetched.upcoming.forEach(function (item) {
         if (item.channel === channel_id) {
           fbk_lives.push(item);
         }
       });
-      fbk_lives.forEach(function(item, index, object) {
+      fbk_lives.forEach(function (item, index, object) {
         if (!item.title.length) {
           object.splice(index, 1);
         }
@@ -248,7 +253,7 @@ export default {
         }
       });
       this.lives = fbk_lives;
-      this.lives.sort(function(a, b) {
+      this.lives.sort(function (a, b) {
         return a.startTime > b.startTime ? 1 : -1;
       });
       this.lives_loading = false;
@@ -262,7 +267,7 @@ export default {
         let sp = document.getElementById('single_play');
         sp.src = this.voice_host + item.path;
         sp.load();
-        sp.addEventListener('canplay', function() {
+        sp.addEventListener('canplay', function () {
           sp.volume = 1;
           sp.play();
           if ('mediaSession' in navigator) {
@@ -291,11 +296,11 @@ export default {
           };
           navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
         }
-        audio.addEventListener('canplay', function() {
+        audio.addEventListener('canplay', function () {
           audio.volume = 1;
           audio.play();
         });
-        audio.addEventListener('ended', function() {
+        audio.addEventListener('ended', function () {
           //重叠播放下的循环播放实现
           if (that.repeat) {
             audio.play();
@@ -308,7 +313,7 @@ export default {
       }
     },
     progress(audio, item) {
-      setInterval(function() {
+      setInterval(function () {
         item.progress = audio.currentTime / audio.duration;
       }, 500);
     },

@@ -1,4 +1,6 @@
 import colors from 'vuetify/es5/util/colors';
+const production_url = process.env.NODE_ENV === 'production' ? 'https://btn.lonelyion.com/' : '/_nuxt/';
+const manifest_url = process.env.NODE_ENV === 'production' ? '/' : '/_nuxt/';
 
 export default {
   mode: 'spa',
@@ -27,18 +29,25 @@ export default {
       },
       { hid: 'og:site_name', property: 'og:site_name', content: 'フブキボタン' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: 'https://sfubuki.moe' },
+      { hid: 'og:url', property: 'og:url', content: 'https://fubuki.moe' },
       { hid: 'og:title', property: 'og:title', content: 'フブキボタン' },
       {
         hid: 'og:description',
         property: 'og:description',
         content: '新しい白上フブキのボイスボタン。私たちの目標は白上フブキの総合的なファンサイトを作ることです。'
       },
-      { hid: 'og:image', property: 'og:image', content: 'https://sfubuki.moe/img/og_common.jpg' },
+      { hid: 'og:image', property: 'og:image', content: 'https://fubuki.moe/img/og_common.jpg' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@lonely_ion' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://fonts.loli.net/css?family=Noto Sans SC:100,300,400,500,700,900&display=swap'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -73,7 +82,11 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa', '@nuxtjs/axios', '@nuxtjs/markdownit'],
+  modules: [
+    ['@nuxtjs/pwa', { workbox: { publicPath: production_url }, manifest: { publicPath: manifest_url } }],
+    '@nuxtjs/axios',
+    '@nuxtjs/markdownit'
+  ],
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
@@ -110,8 +123,11 @@ export default {
       }
     },
     defaultAssets: {
-      font: {
-        family: 'Noto Sans SC'
+      font: null
+    },
+    pwa: {
+      manifest: {
+        start_url: 'https://fubuki.moe/?standalone=true'
       }
     }
   },
@@ -119,7 +135,7 @@ export default {
    ** Build configuration
    */
   build: {
-    publicPath: process.env.NODE_ENV === 'production' ? 'https://btn.lonelyion.com/' : '/_nuxt/',
+    publicPath: production_url,
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

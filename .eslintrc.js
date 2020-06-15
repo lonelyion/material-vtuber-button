@@ -7,13 +7,7 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint'
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:vue/recommended',
-    'plugin:prettier/recommended',
-    'prettier',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['eslint:recommended', 'plugin:vue/recommended', 'prettier', 'plugin:prettier/recommended'],
   // 校验 .vue 文件
   plugins: ['vue', 'prettier'],
   // 自定义规则
