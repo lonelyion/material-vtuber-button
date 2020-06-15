@@ -40,7 +40,14 @@ export default {
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@lonely_ion' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://fonts.loli.net/css?family=Noto Sans SC:100,300,400,500,700,900&display=swap'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -116,9 +123,7 @@ export default {
       }
     },
     defaultAssets: {
-      font: {
-        family: 'Noto Sans SC'
-      }
+      font: null
     },
     pwa: {
       manifest: {
