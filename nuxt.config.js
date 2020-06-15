@@ -1,5 +1,6 @@
 import colors from 'vuetify/es5/util/colors';
 const production_url = process.env.NODE_ENV === 'production' ? 'https://btn.lonelyion.com/' : '/_nuxt/';
+const manifest_url = process.env.NODE_ENV === 'production' ? '/' : '/_nuxt/';
 
 export default {
   mode: 'spa',
@@ -75,7 +76,7 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    ['@nuxtjs/pwa', { workbox: { publicPath: production_url }, manifest: { publicPath: production_url } }],
+    ['@nuxtjs/pwa', { workbox: { publicPath: production_url }, manifest: { publicPath: manifest_url } }],
     '@nuxtjs/axios',
     '@nuxtjs/markdownit'
   ],
