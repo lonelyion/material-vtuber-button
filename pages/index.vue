@@ -1,6 +1,7 @@
 <template>
   <v-layout column justify-center align-center app>
     <dev_warn />
+    <!-- 播放控制的浮动按钮 -->
     <v-speed-dial
       v-model="fab"
       fixed
@@ -58,7 +59,8 @@
       </v-btn>
     </v-speed-dial>
     <v-flex xs12 sm8 md6>
-      <v-card v-if="lives.length !== 0">
+      <!-- 直播面板 -->
+      <v-card :loading="lives_loading">
         <v-card-title>
           <v-icon class="primary--text" :class="dark_text" style="margin-right: 8px;">
             mdi-clock-outline
@@ -66,7 +68,6 @@
           {{ $t('live.activity') }}
         </v-card-title>
         <v-card-text>
-          <v-progress-circular v-if="lives_loading" indeterminate class="accent--text" />
           <div v-for="live in lives" :key="live.startTime">
             <div v-if="live.title.length" :class="dark_text">
               <span v-if="live.type === 'upcoming'">{{ $t('live.schedule') + format_time(live.startTime) }}</span>
@@ -83,25 +84,29 @@
           </div>
         </v-card-text>
       </v-card>
+      <!-- 对每个按钮组生成一个Card -->
       <v-card v-for="group in groups" :key="group.name">
         <v-card-title class="headline" :class="dark_text">
           {{ group.group_description[current_locale] }}
         </v-card-title>
         <v-card-text>
-          <v-btn
-            v-for="item in group.voice_list"
-            :key="item.name"
-            class="accent ma-1 pa-2 voice-button"
-            :class="dark_text"
-            rounded
-            height="max-content"
-            min-height="36px"
-            @click="play(item)"
-          >
-            <div class="voice-button-text">
-              {{ item.description[current_locale] }}
-            </div>
-          </v-btn>
+          <v-hover v-for="item in group.voice_list" :key="item.name">
+            <template v-slot="{ hover }">
+              <v-btn
+                class="ma-1 pa-2 voice-button"
+                :class="[dark_text, voice_button_color]"
+                :elevation="hover ? 6 : 2"
+                rounded
+                height="max-content"
+                min-height="36px"
+                @click="play(item)"
+              >
+                <div class="voice-button-text">
+                  {{ item.description[current_locale] }}
+                </div>
+              </v-btn>
+            </template>
+          </v-hover>
         </v-card-text>
       </v-card>
       <audio id="single_play" @ended="play_ended()" />
@@ -191,21 +196,26 @@ export default {
     };
   },
   computed: {
-    voice_host: function () {
+    voice_host() {
       if (process.env.NODE_ENV === 'production' && navigator.onLine && this.$i18n.locale === 'zh')
         return 'https://btn.lonelyion.com/voices/';
       else return '/voices/';
     },
-    dark_text: function () {
+    dark_text() {
       return {
-        'grey--text': this.$vuetify.theme.dark,
-        'text--lighten-2': this.$vuetify.theme.dark
+        'grey--text text--lighten-2': this.$vuetify.theme.dark
       };
     },
-    fab_icon: function () {
+    voice_button_color() {
+      return {
+        'light-blue darken-4': this.$vuetify.theme.dark,
+        'blue lighten-2 white--text': !this.$vuetify.theme.dark
+      };
+    },
+    fab_icon() {
       return [this.$vuetify.theme.dark ? 'white--text' : 'light-blue--text'];
     },
-    fab_color: function () {
+    fab_color() {
       return [this.$vuetify.theme.dark ? 'indigo darken-1' : 'white'];
     },
     speed_dial_color: function () {
@@ -227,6 +237,7 @@ export default {
     }
   },
   async mounted() {
+    this.$vuetify.theme.dark = this.$store.state.dark === 'true';
     await this.fetch_live_data();
   },
   methods: {
