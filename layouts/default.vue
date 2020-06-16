@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" :mobile-break-point="1024" class="elevation-3" fixed app>
+    <v-navigation-drawer v-model="drawer" :mobile-breakpoint="1024" class="elevation-3" fixed app>
       <!--
       <template v-slot:img>
         <v-img />
@@ -55,7 +55,6 @@
     </v-navigation-drawer>
     <v-app-bar
       dense
-      elevate-on-scroll
       class="primary white--text"
       :class="[this.$vuetify.theme.dark ? 'gradient-header-dark' : 'gradient-header-light']"
       app
@@ -96,7 +95,7 @@
         </v-list>
       </v-menu>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <v-container>
         <nuxt />
       </v-container>
@@ -129,7 +128,7 @@
           </div>
         </div>
       </v-footer>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
