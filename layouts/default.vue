@@ -104,13 +104,13 @@
           <div style="vertical-align: middle;">
             <span>&copy; {{ new Date().getFullYear() }} </span>
             <span>
-              <a href="https://github.com/lonelyion" target="_blank" style="text-decoration: none;">
+              <a href="https://github.com/lonelyion" target="_blank">
                 {{ $t('site.footer.lonely_ion') }}
               </a>
             </span>
             <span>
               &
-              <a href="https://github.com/oruyanke" target="_blank" style="text-decoration: none;">
+              <a href="https://github.com/oruyanke" target="_blank">
                 {{ $t('site.footer.oruyanke') }}
               </a>
             </span>
@@ -125,10 +125,15 @@
           </div>
           <div>
             <p>{{ $t('site.footer.content') }}</p>
+            <p v-if="$i18n.locale === 'zh'" style="font-size: 12px;">
+              <a href="https://icp.gov.moe" target="_blank">萌ICP备 </a>
+              <a href="https://icp.gov.moe/?keyword=20201005" target="_blank"> 20201005号</a>
+            </p>
           </div>
         </div>
       </v-footer>
     </v-main>
+    <console_message />
   </v-app>
 </template>
 
@@ -168,10 +173,17 @@ $blur-function: blur(3px);
 .nav-darwer-overlay-dark {
   background-color: rgba(0, 0, 0, 0.8);
 }
+a {
+  text-decoration: none;
+}
 </style>
 
 <script>
+import console_message from '../components/console_message';
 export default {
+  components: {
+    console_message
+  },
   data() {
     return {
       drawer: false,
