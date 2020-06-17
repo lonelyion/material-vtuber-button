@@ -15,7 +15,9 @@
   "live": {
     "activity": "ライブ ストリーム",
     "schedule": "予定",
-    "on_air": "ライブ配信中"
+    "on_air": "ライブ配信中",
+    "no_schedule": "まだ計画中の生放送は発見されていません。",
+    "move": "フブキボタン Webサイトのドメイン名がfubuki.moeに変更されました。"
   },
   "control": {
     "self": "コントロール",

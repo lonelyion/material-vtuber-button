@@ -133,6 +133,7 @@
         </div>
       </v-footer>
     </v-main>
+    <console_message />
   </v-app>
 </template>
 
@@ -178,7 +179,11 @@ a {
 </style>
 
 <script>
+import console_message from '../components/console_message';
 export default {
+  components: {
+    console_message
+  },
   data() {
     return {
       drawer: false,

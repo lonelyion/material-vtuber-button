@@ -25,7 +25,7 @@ export default {
         hid: 'keywords',
         name: 'keywords',
         content:
-          'フブキボタン,FUBUKI BUTTON,狐按钮,hololive,Shirakami Fubuki,白上フブキ,吹雪,小狐狸,屑狐狸,喵喵狐,语音按钮,ボイスボタン'
+          'フブキボタン,FUBUKI BUTTON,狐按钮,hololive,Shirakami Fubuki,白上フブキ,白上吹雪,吹雪,小狐狸,屑狐狸,喵喵狐,语音按钮,ボイスボタン'
       },
       { hid: 'og:site_name', property: 'og:site_name', content: 'フブキボタン' },
       { hid: 'og:type', property: 'og:type', content: 'website' },

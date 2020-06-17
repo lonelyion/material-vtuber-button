@@ -82,6 +82,14 @@
               </a>
             </div>
           </div>
+          <div v-if="lives.length === 0">
+            <p>{{ $t('live.no_schedule') }}</p>
+          </div>
+          <div>
+            <p style="margin-top: 8px;">
+              {{ $t('live.move') }}
+            </p>
+          </div>
         </v-card-text>
       </v-card>
       <!-- 对每个按钮组生成一个Card -->
@@ -351,7 +359,8 @@ export default {
   },
   head() {
     return {
-      title: this.$t('site.title') + '(^・ω・^§)ﾉ'
+      title: this.$t('site.title') + '(^・ω・^§)ﾉ',
+      link: [{ rel: 'canonical', href: 'https://fubuki.moe' }]
     };
   }
 };

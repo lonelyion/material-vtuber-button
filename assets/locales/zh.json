@@ -15,7 +15,9 @@
   "live": {
     "activity": "直播动态",
     "schedule": "计划",
-    "on_air": "正在直播"
+    "on_air": "正在直播",
+    "no_schedule": "还没有发现正在或计划中的直播",
+    "move": "狐按钮的访问域名已经改成fubuki.moe啦，快换掉你的收藏夹吧！"
   },
   "control": {
     "self": "播放控制",
