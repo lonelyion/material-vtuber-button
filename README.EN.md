@@ -9,7 +9,7 @@ README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md
 
 > Brand new voice buttons for Shirakami Fubuki, we are aimming at building a comprehensive project related to Shirakami Fubuki.
 
-Project Homepage: https://sfubuki.moe
+Project Homepage: https://fubuki.moe
 
 Related Links:
 
@@ -26,7 +26,7 @@ Related Links:
 
 ## Contributing
 
-If you don't know how to participate on GitHub, you can directly send voice clips or suggestions to [voice@sfubuki.moe](mailto:voice@sfubuki.moe) with title, content and your social ID(Twitter, Bilibili or so on). We will add your ID to the contributors list below.
+If you don't know how to participate on GitHub, you can directly send voice clips or suggestions to [voice@sfubuki.moe](mailto:voice@fubuki.moe) with title, content and your social ID(Twitter, Bilibili or so on). We will add your ID to the contributors list below.
 
 Also you can submit [Issues](https://github.com/copperion/fubuki-button/issues) to upload audio clips.
 

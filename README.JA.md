@@ -9,7 +9,7 @@ README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md
 
 > 新しい白上フブキのボイスボタン。私たちの目標は白上フブキの総合的なファンサイトを作ることです。
 
-ホームページ https://sfubuki.moe
+ホームページ https://fubuki.moe
 
 関連リンク:
 
@@ -26,7 +26,7 @@ README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md
 
 ## このプロジェクトへの貢献(コントリビュート)
 
-GitHubの開発に直接参加する方法が分からない場合は、素材や意見を直接以下のメールアドレスに送信してください。([voice@sfubuki.moe](mailto:voice@sfubuki.moe))。またメールの中にタイトル、内容及びあなたのID（Bilibili、Twitterやその他）を記述してください。そうすることで私達は下のコントリビューターリストにあなたの名前を掲載することができます。
+GitHubの開発に直接参加する方法が分からない場合は、素材や意見を直接以下のメールアドレスに送信してください。([voice@fubuki.moe](mailto:voice@sfubuki.moe))。またメールの中にタイトル、内容及びあなたのID（Bilibili、Twitterやその他）を記述してください。そうすることで私達は下のコントリビューターリストにあなたの名前を掲載することができます。
 
 もしくは素材や意見をGitHubの[Issues](https://github.com/copperion/fubuki-button/issues) ページに送ることもできます。メールの場合と同じようにタイトルと内容を記述してください。
 
