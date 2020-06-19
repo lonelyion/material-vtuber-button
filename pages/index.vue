@@ -250,16 +250,19 @@ export default {
   },
   methods: {
     async fetch_live_data() {
-      let fetched = await this.$axios.$get('https://api.jetri.co/live');
+      //TODO: 有空重构一下这段代码，接口变了好几回了
+      let fetched = await this.$axios.$get('https://api.jetri.co/live/1.1');
       let fbk_lives = [];
       const channel_id = 'UCdn5BQ06XqgXoAxIhbqw5Rg';
       fetched.live.forEach(function (item) {
         if (item.channel === channel_id) {
+          item.type = 'live';
           fbk_lives.push(item);
         }
       });
       fetched.upcoming.forEach(function (item) {
         if (item.channel === channel_id) {
+          item.type = 'upcoming';
           fbk_lives.push(item);
         }
       });

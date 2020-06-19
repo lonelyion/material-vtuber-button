@@ -9,7 +9,7 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 
 > 全新的白上吹雪语音按钮，目标是打造一个整合白上吹雪各个方面的应援项目
 
-项目地址： https://sfubuki.moe
+项目地址： https://fubuki.moe
 
 相关链接:
 
@@ -26,7 +26,7 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 
 ## 参与完善本项目
 
-如果您不知道如何直接参与GitHub开发，可以直接将素材或意见建议发送到[voice@sfubuki.moe](mailto:voice@sfubuki.moe)，带上标题、内容以及您的ID（Bilibili、Twitter等均可），贡献者名单将会有您的名字。
+如果您不知道如何直接参与GitHub开发，可以直接将素材或意见建议发送到[voice@sfubuki.moe](mailto:voice@fubuki.moe)，带上标题、内容以及您的ID（Bilibili、Twitter等均可），贡献者名单将会有您的名字。
 
 当然您也可以发在 [Issues](https://github.com/copperion/fubuki-button/issues) ，同样也请带上标题和内容。
 
