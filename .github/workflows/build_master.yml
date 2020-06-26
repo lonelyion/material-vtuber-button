@@ -11,24 +11,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+
       - name: Install Dependencies
         run: yarn
+
       - name: Generate Static Files
         run: yarn generate
-
-      - name: Setup Aliyun OSS
-        uses: manyuanrong/setup-ossutil@master
-        with:
-          endpoint: oss-cn-shanghai.aliyuncs.com
-          access-key-id: ${{ secrets.OSS_KEY_ID }}
-          access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
-
-      - name: Deploy to Aliyun OSS
-        run: ossutil cp -rf ./dist/ oss://sfubuki/ -u
 
       - name: Deploy to Pages Branch
         uses: JamesIves/github-pages-deploy-action@releases/v3
