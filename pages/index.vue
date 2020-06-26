@@ -304,6 +304,15 @@ export default {
       return require('dayjs').unix(stamp).format('YYYY/M/DD HH:mm');
     },
     play(item) {
+      if (process.client && process.env.NODE_ENV === 'production') {
+        // eslint-disable-next-line no-undef
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Audios',
+          eventAction: 'play',
+          eventLabel: item.name + ' ' + item.description['zh']
+        });
+      }
       let that = this;
       if (!this.overlap) {
         let sp = document.getElementById('single_play');
