@@ -1,6 +1,8 @@
 import colors from 'vuetify/es5/util/colors';
-const production_url = process.env.NODE_ENV === 'production' ? 'https://btn.lonelyion.com/' : '/_nuxt/';
-const manifest_url = process.env.NODE_ENV === 'production' ? '/' : '/_nuxt/';
+
+const is_production = process.env.NODE_ENV === 'production';
+const production_url = is_production ? 'https://btn.lonelyion.com/' : '/_nuxt/';
+const manifest_url = is_production ? '/' : '/_nuxt/';
 
 export default {
   mode: 'spa',
@@ -40,14 +42,7 @@ export default {
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@lonely_ion' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: 'https://fonts.loli.net/css?family=Noto Sans SC:100,300,400,500,700,900&display=swap'
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
    ** Customize the progress-bar color
@@ -61,8 +56,9 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '@plugins/i18n', ssr: false },
-    { src: '@plugins/eventBus.js', ssr: false }
+    { src: '@plugins/i18n', mode: 'client' },
+    { src: '@plugins/eventBus.js', mode: 'client' },
+    { src: '@plugins/analytics.js', mode: 'client' }
   ],
   router: {
     middleware: 'ui_config'
@@ -70,15 +66,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [
-    '@nuxtjs/vuetify',
-    [
-      '@nuxtjs/google-analytics',
-      {
-        id: `UA-103626808-5`
-      }
-    ]
-  ],
+  buildModules: [['@nuxtjs/vuetify', { treeShake: is_production }]],
   /*
    ** Nuxt.js modules
    */
@@ -123,11 +111,12 @@ export default {
       }
     },
     defaultAssets: {
-      font: null
+      font: null,
+      icons: 'mdiSvg'
     },
     pwa: {
       manifest: {
-        start_url: 'https://fubuki.moe/?standalone=true'
+        start_url: '/?standalone=true'
       }
     }
   },
@@ -136,6 +125,8 @@ export default {
    */
   build: {
     publicPath: production_url,
+    optimizeCSS: is_production,
+    extractCSS: is_production,
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

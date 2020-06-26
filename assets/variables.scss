@@ -3,5 +3,6 @@
 // The variables you want to modify
 // $font-size-root: 20px;
 
-$body-font-family: 'Noto Sans SC', sans serif;
-$heading-font-family: 'Noto Sans SC', sans serif;
+$body-font-family:  "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑","-apple-system",BlinkMacSystemFont,"Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","Noto Sans Japanese","ヒラギノ角ゴ Pro W3","メイリオ","Hiragino Kaku Gothic ProN","MS PGothic",Osaka,Arial,sans-serif;
+$heading-font-family: $body-font-family;
+

@@ -13,13 +13,22 @@
       <v-list style="padding-top: 0;">
         <v-list-item to="/" router exact dense>
           <v-list-item-action>
-            <v-icon>mdi-apps</v-icon>
+            <v-icon>{{ icons.apps }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>{{ $t('site.index') }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item v-for="(item, i) in nav_items" :key="i" :href="item.to" target="_blank" router exact dense>
+        <v-list-item
+          v-for="(item, i) in nav_items"
+          :key="i"
+          :href="item.to"
+          target="_blank"
+          rel="noreferrer"
+          router
+          exact
+          dense
+        >
           <v-list-item-action>
             <v-img :src="item.icon" style="width: 24px;" />
           </v-list-item-action>
@@ -31,9 +40,16 @@
       <div v-if="current_locale === 'zh'">
         <v-divider />
         <v-list>
-          <v-list-item v-for="item in external_cn" :key="item.to" dense :href="item.to" target="_blank">
+          <v-list-item
+            v-for="item in external_cn"
+            :key="item.to"
+            dense
+            :href="item.to"
+            target="_blank"
+            rel="noreferrer"
+          >
             <v-list-item-action>
-              <v-icon>{{ item.icon }}</v-icon>
+              <v-icon>{{ icons[item.icon] }}</v-icon>
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -45,7 +61,7 @@
       <v-list>
         <v-list-item dense to="/about" router exact>
           <v-list-item-action>
-            <v-icon>mdi-code-tags</v-icon>
+            <v-icon>{{ icons.code_tags }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>{{ $t('site.about') }}</v-list-item-title>
@@ -66,7 +82,7 @@
       <v-tooltip bottom>
         <template v-slot:activator="{ on }">
           <v-btn icon class="white--text" @click="switch_dark()" v-on="on">
-            <v-icon>mdi-brightness-2</v-icon>
+            <v-icon>{{ icons.brightness }}</v-icon>
           </v-btn>
         </template>
         <span>{{ $t('site.switch_dark_mode') }}</span>
@@ -76,7 +92,7 @@
           <v-tooltip bottom>
             <template v-slot:activator="{ on: tooltip }">
               <v-btn icon class="white--text" v-on="{ ...tooltip, ...menu }">
-                <v-icon>mdi-translate</v-icon>
+                <v-icon>{{ icons.translate }}</v-icon>
               </v-btn>
             </template>
             <span>{{ $t('site.switch_language') }}</span>
@@ -104,13 +120,13 @@
           <div style="vertical-align: middle;">
             <span>&copy; {{ new Date().getFullYear() }} </span>
             <span>
-              <a href="https://github.com/lonelyion" target="_blank">
+              <a href="https://github.com/lonelyion" target="_blank" rel="noreferrer">
                 {{ $t('site.footer.lonely_ion') }}
               </a>
             </span>
             <span>
               &
-              <a href="https://github.com/oruyanke" target="_blank">
+              <a href="https://github.com/oruyanke" target="_blank" rel="noreferrer">
                 {{ $t('site.footer.oruyanke') }}
               </a>
             </span>
@@ -119,15 +135,16 @@
               href="https://github.com/oruyanke/fubuki-button"
               target="_blank"
               style="vertical-align: middle;"
+              rel="noreferrer"
             >
-              <v-icon>mdi-github</v-icon>
+              <v-icon>{{ icons.github }}</v-icon>
             </v-btn>
           </div>
           <div>
             <p>{{ $t('site.footer.content') }}</p>
             <p v-if="$i18n.locale === 'zh'" style="font-size: 12px;">
-              <a href="https://icp.gov.moe" target="_blank">萌ICP备 </a>
-              <a href="https://icp.gov.moe/?keyword=20201005" target="_blank"> 20201005号</a>
+              <a href="https://icp.gov.moe" target="_blank" rel="noreferrer">萌ICP备 </a>
+              <a href="https://icp.gov.moe/?keyword=20201005" target="_blank" rel="noreferrer"> 20201005号</a>
             </p>
           </div>
         </div>
@@ -180,12 +197,22 @@ a {
 
 <script>
 import console_message from '../components/console_message';
+import { mdiApps, mdiCodeTags, mdiBrightness2, mdiTranslate, mdiGithub, mdiNewspaper, mdiAlphaBBox } from '@mdi/js';
 export default {
   components: {
     console_message
   },
   data() {
     return {
+      icons: {
+        apps: mdiApps,
+        code_tags: mdiCodeTags,
+        brightness: mdiBrightness2,
+        translate: mdiTranslate,
+        github: mdiGithub,
+        newspaper: mdiNewspaper,
+        alpha_b_box: mdiAlphaBBox
+      },
       drawer: false,
       fixed: false,
       nav_items: [
@@ -207,12 +234,12 @@ export default {
       ],
       external_cn: [
         {
-          icon: 'mdi-newspaper',
+          icon: 'newspaper',
           title: '白上吹雪周报',
           to: 'https://space.bilibili.com/487763794/article'
         },
         {
-          icon: 'mdi-alpha-b-box',
+          icon: 'alpha_b_box',
           title: 'Bilibili@狐按钮',
           to: 'https://space.bilibili.com/314977548'
         }

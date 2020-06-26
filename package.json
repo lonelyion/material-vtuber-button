@@ -13,19 +13,17 @@
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@mdi/font": "^5.1.45",
+    "@mdi/js": "^5.3.45",
     "@nuxtjs/axios": "^5.10.3",
     "@nuxtjs/markdownit": "^1.2.9",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "js-cookie": "^2.2.1",
+    "dayjs": "^1.8.28",
     "markdown-it-attrs": "^3.0.2",
     "markdown-it-div": "^1.1.0",
-    "moment": "^2.25.3",
     "nuxt": "^2.0.0",
     "vue-i18n": "^8.17.4"
   },
   "devDependencies": {
-    "@nuxtjs/google-analytics": "^2.2.3",
     "@nuxtjs/vuetify": "^1.0.0",
     "babel-eslint": "^10.1.0",
     "css-loader": "^3.5.3",

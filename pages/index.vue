@@ -14,23 +14,23 @@
       <template v-slot:activator>
         <v-btn slot="activator" v-model="fab" :class="speed_dial_color" dark fab hover>
           <v-icon v-if="fab">
-            mdi-close
+            {{ icons.close }}
           </v-icon>
           <v-icon v-else large>
-            mdi-play
+            {{ icons.play }}
           </v-icon>
         </v-btn>
       </template>
       <v-btn fab small :class="fab_color" @click.stop="stop_all()">
         <span class="fab-tip">{{ $t('control.stop') }}</span>
         <v-icon :class="fab_icon">
-          mdi-stop
+          {{ icons.stop }}
         </v-icon>
       </v-btn>
       <v-btn fab small :class="fab_color" @click.stop="get_random_voice()">
         <span class="fab-tip">{{ $t('control.pick_one') }}</span>
         <v-icon :class="fab_icon">
-          mdi-selection-ellipse-arrow-inside
+          {{ icons.selection_ellipse_arrow_inside }}
         </v-icon>
       </v-btn>
       <v-btn fab small :class="fab_color" :disabled="random" @click.stop="overlap = !overlap">
@@ -38,7 +38,7 @@
           {{ overlap_text }}
         </span>
         <v-icon :class="fab_icon">
-          mdi-view-parallel
+          {{ icons.view_parallel }}
         </v-icon>
       </v-btn>
       <v-btn fab small :class="fab_color" :disabled="random" @click.stop="repeat = !repeat">
@@ -46,7 +46,7 @@
           {{ repeat_text }}
         </span>
         <v-icon :class="fab_icon">
-          mdi-repeat
+          {{ icons.repeat }}
         </v-icon>
       </v-btn>
       <v-btn fab small :class="fab_color" :disabled="overlap || repeat" @click.stop="random = !random">
@@ -54,7 +54,7 @@
           {{ random_text }}
         </span>
         <v-icon :class="fab_icon">
-          mdi-shuffle
+          {{ icons.shuffle }}
         </v-icon>
       </v-btn>
     </v-speed-dial>
@@ -63,7 +63,7 @@
       <v-card :loading="lives_loading">
         <v-card-title>
           <v-icon class="primary--text" :class="dark_text" style="margin-right: 8px;">
-            mdi-clock-outline
+            {{ icons.clock_outline }}
           </v-icon>
           {{ $t('live.activity') }}
         </v-card-title>
@@ -75,6 +75,7 @@
               <a
                 :href="'https://www.youtube.com/watch?v=' + live.id"
                 target="_blank"
+                rel="noreferrer"
                 style="text-decoration: none;"
                 :class="live.type === 'live' ? 'error--text' : ''"
               >
@@ -185,8 +186,17 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
 
 <script>
 import voice_lists from '~/assets/voices.json';
-import moment from 'moment';
 import dev_warn from '../components/dev_warn';
+import {
+  mdiClose,
+  mdiPlay,
+  mdiStop,
+  mdiSelectionEllipseArrowInside,
+  mdiViewParallel,
+  mdiRepeat,
+  mdiShuffle,
+  mdiClockOutline
+} from '@mdi/js';
 
 export default {
   components: {
@@ -194,6 +204,16 @@ export default {
   },
   data() {
     return {
+      icons: {
+        close: mdiClose,
+        play: mdiPlay,
+        stop: mdiStop,
+        selection_ellipse_arrow_inside: mdiSelectionEllipseArrowInside,
+        view_parallel: mdiViewParallel,
+        repeat: mdiRepeat,
+        shuffle: mdiShuffle,
+        clock_outline: mdiClockOutline
+      },
       overlap: false,
       random: false,
       repeat: false,
@@ -281,7 +301,7 @@ export default {
       this.lives_loading = false;
     },
     format_time(stamp) {
-      return moment.unix(stamp).format('YYYY/M/DD HH:mm');
+      return require('dayjs').unix(stamp).format('YYYY/M/DD HH:mm');
     },
     play(item) {
       let that = this;
