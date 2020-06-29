@@ -5,7 +5,8 @@ const production_url = is_production ? 'https://btn.lonelyion.com/' : '/_nuxt/';
 const manifest_url = is_production ? '/' : '/_nuxt/';
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
+  target: 'static',
   server: {
     port: 3000, // default: 3000
     host: 'localhost' // default: localhost
@@ -56,7 +57,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '@plugins/i18n', mode: 'client' },
+    { src: '@plugins/i18n' },
     { src: '@plugins/eventBus.js', mode: 'client' },
     { src: '@plugins/analytics.js', mode: 'client' }
   ],
