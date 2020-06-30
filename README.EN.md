@@ -1,9 +1,9 @@
 # Fubuki-Button - Shirakami Fubuki's Voice Button
 
-![Version](https://img.shields.io/github/package-json/v/lonelyion/fubuki-button)
-![Build](https://img.shields.io/github/workflow/status/lonelyion/fubuki-button/FBK-BTN-NG-CI)
-![Last Commit](https://img.shields.io/github/last-commit/lonelyion/fubuki-button)
-![Starts](https://img.shields.io/github/stars/lonelyion/fubuki-button)
+![Version](https://img.shields.io/github/package-json/v/oruyanke/fubuki-button)
+![Build](https://img.shields.io/github/workflow/status/oruyanke/fubuki-button/FBK-BTN-NG-CI)
+![Last Commit](https://img.shields.io/github/last-commit/oruyanke/fubuki-button)
+![Starts](https://img.shields.io/github/stars/oruyanke/fubuki-button)
 
 README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md) | [日本語](https://github.com/oruyanke/fubuki-button/blob/master/README.JA.md) | **English**
 
@@ -26,7 +26,7 @@ Related Links:
 
 ## Contributing
 
-If you don't know how to participate on GitHub, you can directly send voice clips or suggestions to [voice@sfubuki.moe](mailto:voice@fubuki.moe) with title, content and your social ID(Twitter, Bilibili or so on). We will add your ID to the contributors list below.
+If you don't know how to participate on GitHub, you can directly send voice clips or suggestions to [voice@fubuki.moe](mailto:voice@fubuki.moe) with title, content and your social ID(Twitter, Bilibili or so on). We will add your ID to the contributors list below.
 
 Also you can submit [Issues](https://github.com/copperion/fubuki-button/issues) to upload audio clips.
 
