@@ -267,6 +267,13 @@ export default {
       this.$store.commit('SET_LANG', lang);
       this.$i18n.locale = lang;
     }
+  },
+  head() {
+    return {
+      htmlAttrs: {
+        lang: this.current_locale
+      }
+    };
   }
 };
 </script>

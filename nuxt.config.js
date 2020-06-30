@@ -74,18 +74,13 @@ export default {
   modules: [
     ['@nuxtjs/pwa', { workbox: { publicPath: production_url }, manifest: { publicPath: manifest_url } }],
     '@nuxtjs/axios',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/sitemap'
   ],
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
    */
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: false,
-    use: ['markdown-it-div', 'markdown-it-attrs']
-  },
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
@@ -114,12 +109,36 @@ export default {
     defaultAssets: {
       font: null,
       icons: 'mdiSvg'
-    },
-    pwa: {
-      manifest: {
-        start_url: '/?standalone=true'
-      }
     }
+  },
+  pwa: {
+    manifest: {
+      start_url: '/?standalone=true'
+    }
+  },
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: false,
+    use: ['markdown-it-div', 'markdown-it-attrs']
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://fubuki.moe',
+    routes: [
+      {
+        url: '/',
+        changefreq: 'daily',
+        priority: 1,
+        lastmod: new Date()
+      },
+      {
+        url: '/about',
+        changefreq: 'weekly',
+        priority: 0.5,
+        lastmod: new Date()
+      }
+    ]
   },
   /*
    ** Build configuration
