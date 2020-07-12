@@ -67,7 +67,8 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 - Bilibili [孤单离子](https://space.bilibili.com/7564991)
 - Bilibili [清流ht](https://space.bilibili.com/22311554)
 - Bilibili [绯月天则](https://space.bilibili.com/1592713)
-- hanyuu
+- Bilibili [hanyuu](https://m.bilibili.com/space/356250024)
+- Bilibili [蓝颜知渡](https://space.bilibili.com/378488520)
 
 翻译：
 
@@ -78,9 +79,14 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 
 特别感谢：
 
-- Bilibili [吹雪的猫咪茶铺](https://space.bilibili.com/431210892/)
+- [VTuber Music](https://vtbmusic.com/)
+- Bilibili [吹雪的猫咪茶铺](https://space.bilibili.com/431210892)
 - Bilibili [白上吹雪周报](https://space.bilibili.com/487763794)
+- Bilibili [戌神沁音的手指面包店](https://space.bilibili.com/45070033)
 - Bilibili [亡音ちゃん](https://space.bilibili.com/2613724)
+- 以及以下在GitHub参与过项目的各位
+
+[![GitHub Contributors](https://contributors-img.web.app/image?repo=oruyanke/fubuki-button)](https://github.com/oruyanke/fubuki-button/graphs/contributors)
 
 ## 协议
 

@@ -139,8 +139,14 @@ export default {
 .markdown-body code,
 .markdown-body kbd,
 .markdown-body pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-weight: normal;
+  font-size: 85%;
+  color: #24292e;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 6px;
 }
 
 .markdown-body hr {
