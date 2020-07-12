@@ -99,7 +99,12 @@
           {{ group.group_description[current_locale] }}
         </v-card-title>
         <v-card-text>
-          <voice-btn v-for="item in group.voice_list" :key="item.name" :class="voice_button_color" @click="play(item)">
+          <voice-btn
+            v-for="item in group.voice_list"
+            :key="item.name"
+            :class="voice_button_color"
+            @click.native="play(item)"
+          >
             {{ item.description[current_locale] }}
           </voice-btn>
         </v-card-text>
