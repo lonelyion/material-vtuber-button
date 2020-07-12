@@ -34,7 +34,7 @@ export default {
   }
 };
 </script>
-<style lang="css" scroped>
+<style lang="css">
 .markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
@@ -58,7 +58,7 @@ export default {
 .markdown-body h4 .octicon-link,
 .markdown-body h5 .octicon-link,
 .markdown-body h6 .octicon-link {
-  color: #1b1f23;
+  /*color: #1b1f23;*/
   vertical-align: middle;
   visibility: hidden;
 }
@@ -97,7 +97,7 @@ export default {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
-  color: #24292e;
+  /*color: #24292e;*/
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji,
     Segoe UI Emoji;
   font-size: 16px;
@@ -144,7 +144,7 @@ export default {
   font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
   font-weight: normal;
   font-size: 85%;
-  color: #24292e;
+  /*color: #24292e;*/
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 6px;
 }
@@ -695,7 +695,7 @@ export default {
 
 .markdown-body blockquote {
   padding: 0 1em;
-  color: #6a737d;
+  /*color: #6a737d;*/
   border-left: 0.25em solid #dfe2e5;
 }
 
@@ -945,7 +945,7 @@ export default {
   overflow: visible;
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   font-size: 12px;
-  color: #24292e;
+  /*color: #24292e;*/
   word-wrap: normal;
   white-space: pre;
 }
