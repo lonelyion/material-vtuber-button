@@ -59,6 +59,14 @@
       </div>
       <v-divider />
       <v-list>
+        <v-list-item dense to="/links" router exact>
+          <v-list-item-action>
+            <v-icon>{{ icons.play_list_star }}</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>{{ $t('links.title') }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item dense to="/about" router exact>
           <v-list-item-action>
             <v-icon>{{ icons.code_tags }}</v-icon>
@@ -150,7 +158,7 @@
         </div>
       </v-footer>
     </v-main>
-    <console_message />
+    <console-message />
   </v-app>
 </template>
 
@@ -196,11 +204,21 @@ a {
 </style>
 
 <script>
-import console_message from '../components/console_message';
-import { mdiApps, mdiCodeTags, mdiBrightness2, mdiTranslate, mdiGithub, mdiNewspaper, mdiAlphaBBox } from '@mdi/js';
+import ConsoleMessage from '../components/ConsoleMessage';
+import {
+  mdiApps,
+  mdiCodeTags,
+  mdiBrightness2,
+  mdiTranslate,
+  mdiGithub,
+  mdiNewspaper,
+  mdiAlphaBBox,
+  mdiPlaylistStar
+} from '@mdi/js';
+
 export default {
   components: {
-    console_message
+    ConsoleMessage
   },
   data() {
     return {
@@ -211,7 +229,8 @@ export default {
         translate: mdiTranslate,
         github: mdiGithub,
         newspaper: mdiNewspaper,
-        alpha_b_box: mdiAlphaBBox
+        alpha_b_box: mdiAlphaBBox,
+        play_list_star: mdiPlaylistStar
       },
       drawer: false,
       fixed: false,
@@ -234,14 +253,14 @@ export default {
       ],
       external_cn: [
         {
+          icon: 'alpha_b_box',
+          title: '御宅白狐的狐笋之林',
+          to: 'https://space.bilibili.com/314977548'
+        },
+        {
           icon: 'newspaper',
           title: '白上吹雪周报',
           to: 'https://space.bilibili.com/487763794/article'
-        },
-        {
-          icon: 'alpha_b_box',
-          title: 'Bilibili@狐按钮',
-          to: 'https://space.bilibili.com/314977548'
         }
       ]
     };

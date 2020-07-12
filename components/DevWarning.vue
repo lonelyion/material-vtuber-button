@@ -22,6 +22,7 @@
 
 <script>
 export default {
+  name: 'DevWarning',
   data() {
     return {
       dialog: false

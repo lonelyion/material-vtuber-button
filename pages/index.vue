@@ -1,6 +1,6 @@
 <template>
   <v-layout column justify-center align-center app>
-    <dev_warn />
+    <dev-warning />
     <!-- 播放控制的浮动按钮 -->
     <v-speed-dial
       v-model="fab"
@@ -99,23 +99,9 @@
           {{ group.group_description[current_locale] }}
         </v-card-title>
         <v-card-text>
-          <v-hover v-for="item in group.voice_list" :key="item.name">
-            <template v-slot="{ hover }">
-              <v-btn
-                class="ma-1 pa-2 voice-button"
-                :class="[dark_text, voice_button_color]"
-                :elevation="hover ? 6 : 2"
-                rounded
-                height="max-content"
-                min-height="36px"
-                @click="play(item)"
-              >
-                <div class="voice-button-text">
-                  {{ item.description[current_locale] }}
-                </div>
-              </v-btn>
-            </template>
-          </v-hover>
+          <voice-btn v-for="item in group.voice_list" :key="item.name" :class="voice_button_color" @click="play(item)">
+            {{ item.description[current_locale] }}
+          </voice-btn>
         </v-card-text>
       </v-card>
       <audio id="single_play" @ended="play_ended()" />
@@ -123,21 +109,10 @@
   </v-layout>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
 .v-card {
   margin: 8px auto;
-}
-.voice-button {
-  display: inline-block;
-  max-width: 100%;
-  word-wrap: break-word !important;
-  word-break: break-all !important;
-  white-space: normal !important;
-  text-transform: none !important;
-  font-weight: 400;
-  text-align: center;
-  /*background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%) !important;*/
 }
 
 .voice-button div {
@@ -186,21 +161,23 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
 
 <script>
 import voice_lists from '~/assets/voices.json';
-import dev_warn from '../components/dev_warn';
+import DevWarning from '../components/DevWarning';
+import VoiceBtn from '../components/voice-btn';
 import {
+  mdiClockOutline,
   mdiClose,
   mdiPlay,
-  mdiStop,
-  mdiSelectionEllipseArrowInside,
-  mdiViewParallel,
   mdiRepeat,
+  mdiSelectionEllipseArrowInside,
   mdiShuffle,
-  mdiClockOutline
+  mdiStop,
+  mdiViewParallel
 } from '@mdi/js';
 
 export default {
   components: {
-    dev_warn
+    VoiceBtn,
+    DevWarning
   },
   data() {
     return {

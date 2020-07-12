@@ -35,5 +35,20 @@
     "title": "Development Mode",
     "desc": "Dev mode may contains errors or vulnerability. We absolutely DO NOT guarantee any support and warranty. The actual new features are subject to the official version being launched.",
     "to_stable": "Return to Official version"
+  },
+  "links": {
+    "title": "Links",
+    "vm": "VTuber Music",
+    "collection": "VTuber Buttons Collection",
+    "mio": "Mio Button",
+    "korone": "Korone Button",
+    "okayu": "Okayu Button",
+    "peko": "Pekora Button",
+    "aqua": "Aqua Button",
+    "matsuri": "Matsuri Button",
+    "ayame": "Ayame Button",
+    "suisei": "Suisei Button",
+    "towa": "Towa Button",
+    "echo": "Echo Button"
   }
 }
