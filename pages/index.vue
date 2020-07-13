@@ -181,7 +181,7 @@ export default {
   computed: {
     voice_host() {
       if (process.env.NODE_ENV === 'production' && navigator.onLine && this.$i18n.locale === 'zh')
-        return 'https://btn.lonelyion.com/voices/';
+        return 'https://fubuki.lonelyion.com/voices/';
       else return '/voices/';
     },
     dark_text() {

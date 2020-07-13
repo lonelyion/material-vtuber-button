@@ -1,7 +1,7 @@
 import colors from 'vuetify/es5/util/colors';
 
 const is_production = process.env.NODE_ENV === 'production';
-const production_url = is_production ? 'https://btn.lonelyion.com/' : '/_nuxt/';
+const production_url = is_production ? 'https://fubuki.lonelyion.com/' : '/_nuxt/';
 const manifest_url = is_production ? '/' : '/_nuxt/';
 
 export default {
