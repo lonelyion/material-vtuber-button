@@ -277,6 +277,51 @@
             "en": "Eh?!",
             "ja": "あれれ？"
           }
+        },
+        {
+          "name": "f-129",
+          "path": "f-129.mp3",
+          "description": {
+            "zh": "(幼狐)呜哇",
+            "en": "(Little FBK)uaaaaaa",
+            "ja": "(ちびっ狐)うああああああ"
+          }
+        },
+        {
+          "name": "f-130",
+          "path": "f-130.mp3",
+          "description": {
+            "zh": "(幼狐)Nya 哇~",
+            "en": "(Little FBK)Nya wow",
+            "ja": "(ちびっ狐)にゃーわああああ"
+          }
+        },
+        {
+          "name": "f-131",
+          "path": "f-131.mp3",
+          "description": {
+            "zh": "(幼狐)哼 哥哥这个笨蛋",
+            "en": "(Little FBK)Brother is baka!",
+            "ja": "(ちびっ狐)うん　もうう　おにちゃん　バカ　バカ"
+          }
+        },
+        {
+          "name": "f-132",
+          "path": "f-132.mp3",
+          "description": {
+            "zh": "(幼狐)哇，去哪里了",
+            "en": "(Little FBK)Wow, where?",
+            "ja": "(ちびっ狐)わああ　どこいたの"
+          }
+        },
+        {
+          "name": "f-133",
+          "path": "f-133.mp3",
+          "description": {
+            "zh": "(幼狐)死掉了",
+            "en": "(Little FBK)I'm dead",
+            "ja": "(ちびっ狐)しんじゃだ"
+          }
         }
       ]
     },
@@ -466,6 +511,24 @@
             "zh": "库~ 库~",
             "en": "ku~ ku~",
             "ja": "（吸气）くぅぅぅぅぅぅ"
+          }
+        },
+        {
+          "name": "f-140",
+          "path": "f-140.mp3",
+          "description": {
+            "zh": "狐狸叫",
+            "en": "a a a ahaaahaa",
+            "ja": "あ　あっ　あっっ　はあはああ"
+          }
+        },
+        {
+          "name": "f-142",
+          "path": "f-142.mp3",
+          "description": {
+            "zh": "乌拉—",
+            "en": "ura-",
+            "ja": "うら　うら"
           }
         }
       ]
@@ -738,6 +801,60 @@
             "en": "Thank you very much(and cry)",
             "ja": "ありがとうございます（泣）"
           }
+        },
+        {
+          "name": "f-134",
+          "path": "f-134.mp3",
+          "description": {
+            "zh": "mio~",
+            "en": "mio~",
+            "ja": "ミオ～"
+          }
+        },
+        {
+          "name": "f-135",
+          "path": "f-135.mp3",
+          "description": {
+            "zh": "yeah—",
+            "en": "yeah—",
+            "ja": "yeah—"
+          }
+        },
+        {
+          "name": "f-138",
+          "path": "f-138.mp3",
+          "description": {
+            "zh": "真是的 你别生气啊",
+            "en": "Neee, don't be angry",
+            "ja": "おごらないでや　もう"
+          }
+        },
+        {
+          "name": "f-139",
+          "path": "f-139.mp3",
+          "description": {
+            "zh": "好了结束",
+            "en": "OK, ended",
+            "ja": "はい　おしまい"
+          }
+        },
+        {
+          "name": "f-141",
+          "path": "f-141.mp3",
+          "description": {
+            "zh": "啊嘞 难道说",
+            "en": "Could it be that",
+            "ja": "あれ　もしかして"
+          }
+        },
+        {
+          "name": "f-143",
+          "path": "f-143.mp3",
+          "description": {
+            "zh": "你胖了",
+            "en": "You are fat",
+            "ja": "ふ とってる"
+          }
         }
       ]
     },
@@ -1001,6 +1118,69 @@
             "en": "OK! I'm comming!",
             "ja": "よし、こら、来たっぜ！！！"
           }
+        },
+        {
+          "name": "f-124",
+          "path": "f-124.mp3",
+          "description": {
+            "zh": "(小黑)什么呀",
+            "en": "(Kuro-Chan)What the ...",
+            "ja": "(黒様)なんだよ"
+          }
+        },
+        {
+          "name": "f-125",
+          "path": "f-125.mp3",
+          "description": {
+            "zh": "(小黑)啊 好恶心",
+            "en": "(Kuro-Chan)Ah disgusting",
+            "ja": "(黒様)あっ　きもちわるい"
+          }
+        },
+        {
+          "name": "f-126",
+          "path": "f-126.mp3",
+          "description": {
+            "zh": "(小黑)啊啊好困",
+            "en": "(Kuro-Chan)Ah I'm so sleepy",
+            "ja": "(黒様)あっっ　ねむい"
+          }
+        },
+        {
+          "name": "f-127",
+          "path": "f-127.mp3",
+          "description": {
+            "zh": "(小黑)吹—雪—",
+            "en": "(Kuro-Chan)Fu-bu-ki--",
+            "ja": "(黒様)フーブーキ——"
+          }
+        },
+        {
+          "name": "f-128",
+          "path": "f-128.mp3",
+          "description": {
+            "zh": "(小黑)自己去啊，干嘛啊这个家伙",
+            "en": "(Kuro-Chan)Do it yourself! Who do u think u are?",
+            "ja": "(黒様)自分でいくやん　何だよ　こいつ"
+          }
+        },
+        {
+          "name": "f-137",
+          "path": "f-137.mp3",
+          "description": {
+            "zh": "帮大忙了",
+            "en": "Helped a lot",
+            "ja": "たすかる　たすかる"
+          }
+        },
+        {
+          "name": "f-147",
+          "path": "f-147.mp3",
+          "description": {
+            "zh": "啊救我",
+            "en": "Ah help me!",
+            "ja": "あっ　だすけて"
+          }
         }
       ]
     },
@@ -1110,6 +1290,15 @@
             "en": "boom boom boom boom~",
             "ja": "ぶんぶんあいやいやいやいぶんぶんぶんぶん"
           }
+        },
+        {
+          "name": "f-144",
+          "path": "f-144.mp3",
+          "description": {
+            "zh": "(吹竖笛)我心永恒",
+            "en": "(Clarinet)My Heart Will Go On",
+            "ja": "(クラリネットを弾く)マイ・ハート・ウィル・ゴー・オン"
+          }
         }
       ]
     },
@@ -1164,6 +1353,33 @@
             "zh": "玉米~玉米~玉米con(中文)",
             "en": "Corn~Corn~(Chinese)",
             "ja": "こーん、こーん(中国語)"
+          }
+        },
+        {
+          "name": "f-136",
+          "path": "f-136.mp3",
+          "description": {
+            "zh": "接龙 石蕊纸",
+            "en": "Ritoumasushi",
+            "ja": "しりとり り　りとうますし"
+          }
+        },
+        {
+          "name": "f-145",
+          "path": "f-145.mp3",
+          "description": {
+            "zh": "不知道为什么想吃午饭的肚子",
+            "en": "I don't know why but my stomach wants to have lunch",
+            "ja": "けもな　な　なかしらないけとひるごはんたべるおなか"
+          }
+        },
+        {
+          "name": "f-146",
+          "path": "f-146.mp3",
+          "description": {
+            "zh": "明明是猫",
+            "en": "Isn't this a cat",
+            "ja": "ちかばね　ね　ねこやんけ"
           }
         }
       ]
