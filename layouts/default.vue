@@ -149,6 +149,12 @@
             </v-btn>
           </div>
           <div>
+            <span>Powered by</span>
+            <a href="https://www.vercel.com/?utm_source=fubuki-button" target="_blank" rel="noreferrer">
+              <img :src="vercel_logo" alt="vercel" height="16px" />
+            </a>
+          </div>
+          <div>
             <p>{{ $t('site.footer.content') }}</p>
             <p v-if="$i18n.locale === 'zh'" style="font-size: 12px;">
               <a href="https://icp.gov.moe" target="_blank" rel="noreferrer">萌ICP备 </a>
@@ -268,6 +274,10 @@ export default {
   computed: {
     current_locale() {
       return this.$i18n.locale;
+    },
+    vercel_logo() {
+      const mode = this.$vuetify.theme.dark ? 'dark' : 'light';
+      return '/img/vercel/' + mode + '.svg';
     }
   },
   mounted() {
