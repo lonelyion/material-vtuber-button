@@ -120,10 +120,10 @@
       </v-menu>
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container class="page">
         <nuxt />
       </v-container>
-      <v-footer :fixed="false">
+      <v-footer :fixed="false" class="footer">
         <div>
           <div style="vertical-align: middle;">
             <span>&copy; {{ new Date().getFullYear() }} </span>
@@ -206,6 +206,14 @@ $blur-function: blur(3px);
 }
 a {
   text-decoration: none;
+}
+.page {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 150px;
+}
+.footer {
+  margin-top: -150px;
 }
 </style>
 

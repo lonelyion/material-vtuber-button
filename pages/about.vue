@@ -1,12 +1,10 @@
 <template>
-  <v-layout>
-    <v-flex>
-      <v-card>
-        <v-card-text>
-          <div class="markdown-body" v-html="about_md"></div>
-        </v-card-text>
-      </v-card>
-    </v-flex>
+  <v-layout column justify-center align-center app>
+    <v-card class="readme-card">
+      <v-card-text>
+        <div class="markdown-body" v-html="about_md"></div>
+      </v-card-text>
+    </v-card>
   </v-layout>
 </template>
 <script>
@@ -35,6 +33,9 @@ export default {
 };
 </script>
 <style lang="css">
+.readme-card {
+  margin-bottom: 16px;
+}
 .markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
