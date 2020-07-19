@@ -15,11 +15,6 @@
   </v-layout>
 </template>
 
-<style scoped>
-.link-button div:after {
-}
-</style>
-
 <script>
 import VoiceBtn from '../components/voice-btn';
 export default {
@@ -84,10 +79,34 @@ export default {
           color_class: 'purple lighten-3'
         },
         {
+          title: this.$t('links.ahoy'),
+          url: 'http://www.ahoybutton.art/',
+          emoji: '🏴‍☠️',
+          color_class: 'red accent-2'
+        },
+        {
           title: this.$t('links.echo'),
           url: 'https://sepeach.com/',
           emoji: '🍑',
           color_class: 'pink lighten-2'
+        },
+        {
+          title: this.$t('links.artia'),
+          url: 'https://artia.moe/',
+          emoji: '❄️',
+          color_class: 'light-blue lighten-2'
+        },
+        {
+          title: this.$t('links.sasa'),
+          url: 'https://sasa-kids.com',
+          emoji: '🎋',
+          color_class: 'pink lighten-3'
+        },
+        {
+          title: this.$t('links.bell'),
+          url: 'https://bell.colter.top/',
+          emoji: '🔔',
+          color_class: 'pink lighten-4'
         },
         {
           title: this.$t('links.vm'),
