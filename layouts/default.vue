@@ -150,7 +150,7 @@
           </div>
           <div>
             <span>Powered by</span>
-            <a href="https://www.vercel.com/?utm_source=fubuki-button" target="_blank" rel="noreferrer">
+            <a href="https://www.vercel.com/?utm_source=oruyanke" target="_blank" rel="noreferrer">
               <img :src="vercel_logo" alt="vercel" height="16px" />
             </a>
           </div>
