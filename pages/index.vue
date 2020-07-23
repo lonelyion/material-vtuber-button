@@ -180,8 +180,8 @@ export default {
   },
   computed: {
     voice_host() {
-      if (process.env.NODE_ENV === 'production' && navigator.onLine && this.$i18n.locale === 'zh')
-        return 'https://fubuki.lonelyion.com/voices/';
+      if (process.env.NODE_ENV === 'production')
+        return 'https://cdn.jsdelivr.net/gh/oruyanke/fubuki-button@master/static/voices/';
       else return '/voices/';
     },
     dark_text() {

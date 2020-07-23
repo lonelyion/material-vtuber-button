@@ -1,8 +1,6 @@
 import colors from 'vuetify/es5/util/colors';
 
 const is_production = process.env.NODE_ENV === 'production';
-const production_url = is_production ? 'https://fubuki.lonelyion.com/' : '/_nuxt/';
-const manifest_url = is_production ? '/' : '/_nuxt/';
 
 export default {
   mode: 'universal',
@@ -71,12 +69,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    ['@nuxtjs/pwa', { workbox: { publicPath: production_url }, manifest: { publicPath: manifest_url } }],
-    '@nuxtjs/axios',
-    '@nuxtjs/markdownit',
-    '@nuxtjs/sitemap'
-  ],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/axios', '@nuxtjs/markdownit', '@nuxtjs/sitemap'],
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
@@ -114,6 +107,13 @@ export default {
   pwa: {
     manifest: {
       start_url: '/?standalone=true'
+    },
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: 'https://cdn.jsdelivr.net/gh/oruyanke/fubuki-button@master/static/voices/*'
+        }
+      ]
     }
   },
   markdownit: {
@@ -133,6 +133,12 @@ export default {
         lastmod: new Date()
       },
       {
+        url: '/links',
+        changefreq: 'weekly',
+        priority: 0.5,
+        lastmod: new Date()
+      },
+      {
         url: '/about',
         changefreq: 'weekly',
         priority: 0.5,
@@ -144,7 +150,6 @@ export default {
    ** Build configuration
    */
   build: {
-    publicPath: production_url,
     optimizeCSS: is_production,
     extractCSS: is_production,
     extend(config, ctx) {
