@@ -28,6 +28,6 @@ function get_driver() {
 module.exports = get_driver;
 
 function get_commit() {
-  const rev = fs.readFileSync(process.env.GITHUB_WORKSPACE + '.git/refs/heads/master').toString();
+  const rev = fs.readFileSync(process.env.GITHUB_WORKSPACE + '/.git/refs/heads/master').toString();
   return rev.trim().slice(0, 7);
 }
