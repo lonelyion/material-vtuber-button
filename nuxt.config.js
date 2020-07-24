@@ -165,14 +165,21 @@ export default {
     }
   },
   hooks: {
-    build: {
-      done() {
-        if (process.env.IS_VERCEL_PRODUCTION) {
-          this.$axios
+    export: {
+      // eslint-disable-next-line no-unused-vars
+      done(generator) {
+        if (1) {
+          const axios = require('axios').default;
+          const dayjs = require('dayjs');
+          const utc = require('dayjs/plugin/utc');
+          dayjs.extend(utc);
+
+          console.log('Started triggering actions, build time', dayjs.utc().format());
+          axios
             .post(
               'https://api.github.com/repos/oruyanke/fubuki-button/dispatches',
               {
-                event_type: 'vercel_build'
+                event_type: 'Vercel Build ' + dayjs.utc().format()
               },
               {
                 headers: {
@@ -181,7 +188,7 @@ export default {
                 }
               }
             )
-            .then(r => console.log(r.data));
+            .then(r => console.log(r.statusText));
         }
       }
     }
