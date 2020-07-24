@@ -1,9 +1,11 @@
-name: Build
+name: Tests
 
-on:  [push, pull_request]
+on:
+  repository_dispatch:
+    types: [vercel_build]
 
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,5 +19,5 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      - name: Generate Static Files
-        run: yarn generate
+      - name: Run Mocha Tests
+        run: yarn test

@@ -163,5 +163,27 @@ export default {
         });
       }
     }
+  },
+  hooks: {
+    build: {
+      done() {
+        if (process.env.IS_VERCEL_PRODUCTION) {
+          this.$axios
+            .post(
+              'https://api.github.com/repos/oruyanke/fubuki-button/dispatches',
+              {
+                event_type: 'vercel_build'
+              },
+              {
+                headers: {
+                  Accept: 'application/vnd.github.everest-preview+json',
+                  Authorization: 'token ' + process.env.GH_TOKEN
+                }
+              }
+            )
+            .then(r => console.log(r.data));
+        }
+      }
+    }
   }
 };
