@@ -68,22 +68,21 @@
           {{ $t('live.activity') }}
         </v-card-title>
         <v-card-text>
-          <div v-for="live in lives" :key="live.startTime">
+          <!-- 正在直播 -->
+          <div v-for="live in lives" :key="live.id">
             <div v-if="live.title.length" :class="dark_text">
-              <span v-if="live.type === 'upcoming'">{{ $t('live.schedule') + format_time(live.startTime) }}</span>
-              <span v-if="live.type === 'live'" class="warning--text">{{ $t('live.on_air') }}</span>
-              <a
-                :href="'https://www.youtube.com/watch?v=' + live.id"
-                target="_blank"
-                rel="noreferrer"
-                style="text-decoration: none;"
-                :class="live.type === 'live' ? 'error--text' : ''"
-              >
-                {{ live.title }}
-              </a>
+              <span class="warning--text">{{ $t('live.on_air') }}</span>
+              <youtube-link :video-key="live.yt_video_key" :content="live.title" class="error--text" />
             </div>
           </div>
-          <div v-if="lives.length === 0">
+          <!-- 计划中的直播 -->
+          <div v-for="live in upcoming_lives" :key="live.id">
+            <div v-if="live.title.length" :class="dark_text">
+              <span>{{ $t('live.schedule') + format_time(live.live_schedule) }}</span>
+              <youtube-link :video-key="live.yt_video_key" :content="live.title" />
+            </div>
+          </div>
+          <div v-if="lives.length === 0 && upcoming_lives.leng">
             <p>{{ $t('live.no_schedule') }}</p>
           </div>
           <div>
@@ -140,7 +139,8 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
 <script>
 import voice_lists from '~/assets/voices.json';
 import DevWarning from '../components/DevWarning';
-import VoiceBtn from '../components/voice-btn';
+import VoiceBtn from '../components/VoiceBtn';
+import YoutubeLink from '../components/YoutubeLink';
 import {
   mdiClockOutline,
   mdiClose,
@@ -154,6 +154,7 @@ import {
 
 export default {
   components: {
+    YoutubeLink,
     VoiceBtn,
     DevWarning
   },
@@ -174,6 +175,7 @@ export default {
       repeat: false,
       fab: false,
       groups: voice_lists.groups,
+      upcoming_lives: [],
       lives: [],
       lives_loading: true
     };
@@ -225,38 +227,24 @@ export default {
   },
   methods: {
     async fetch_live_data() {
-      //TODO: 有空重构一下这段代码，接口变了好几回了
-      let fetched = await this.$axios.$get('https://api.jetri.co/live/1.1');
-      let fbk_lives = [];
-      const channel_id = 'UCdn5BQ06XqgXoAxIhbqw5Rg';
-      fetched.live.forEach(function (item) {
-        if (item.channel === channel_id) {
-          item.type = 'live';
-          fbk_lives.push(item);
-        }
-      });
-      fetched.upcoming.forEach(function (item) {
-        if (item.channel === channel_id) {
-          item.type = 'upcoming';
-          fbk_lives.push(item);
-        }
-      });
-      fbk_lives.forEach(function (item, index, object) {
-        if (!item.title.length) {
-          object.splice(index, 1);
-        }
-        if (item.type === 'live') {
-          item.startTime = 0;
-        }
-      });
-      this.lives = fbk_lives;
-      this.lives.sort(function (a, b) {
-        return a.startTime > b.startTime ? 1 : -1;
-      });
-      this.lives_loading = false;
+      const query_url = 'https://api.konkon.icu/v1/live';
+      const channel = 13; // HoloAPI ID
+      this.$axios
+        .get(query_url, { params: { channel_id: channel } })
+        .then(res => {
+          this.lives = res.data.live;
+          this.upcoming_lives = res.data.upcoming;
+          this.upcoming_lives.sort((a, b) => {
+            return a.live_schedule > b.live_schedule ? 1 : -1;
+          });
+        })
+        .catch(err => {
+          console.log(err);
+        })
+        .finally(() => (this.lives_loading = false));
     },
     format_time(stamp) {
-      return require('dayjs').unix(stamp).format('YYYY/M/DD HH:mm');
+      return require('dayjs')(stamp).format('YYYY/M/DD HH:mm');
     },
     play(item) {
       if (process.client && process.env.NODE_ENV === 'production') {

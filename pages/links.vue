@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import VoiceBtn from '../components/voice-btn';
+import VoiceBtn from '../components/VoiceBtn';
 export default {
   components: {
     VoiceBtn
