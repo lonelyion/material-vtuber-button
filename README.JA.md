@@ -103,7 +103,7 @@ GitHubの開発に直接参加する方法が分からない場合は、素材�
 
 ## サポート
 
-### BroswerStack
+### BrowserStack
 
 Proudly using BrowserStack.
 

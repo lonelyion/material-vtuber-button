@@ -105,7 +105,7 @@ This project is a work of enthusiasts and is not related to the Hololive officia
 
 ## 支持
 
-### BroswerStack
+### BrowserStack
 
 Proudly using BrowserStack.
 

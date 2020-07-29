@@ -98,7 +98,7 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 
 ## 支持
 
-### BroswerStack
+### BrowserStack
 
 Proudly using BrowserStack.
 

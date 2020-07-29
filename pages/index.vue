@@ -82,7 +82,7 @@
               <youtube-link :video-key="live.yt_video_key" :content="live.title" />
             </div>
           </div>
-          <div v-if="lives.length === 0 && upcoming_lives.leng">
+          <div v-if="lives.length === 0 && upcoming_lives.length === 0">
             <p>{{ $t('live.no_schedule') }}</p>
           </div>
           <div>
