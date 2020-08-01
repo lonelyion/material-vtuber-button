@@ -171,7 +171,15 @@
 <style lang="scss">
 $blur-function: blur(3px);
 .v-application {
-  font-family: $body-font-family, sans-serif !important;
+  html[lang='en'] & {
+    font-family: $en-body-fonts;
+  }
+  html[lang='ja'] & {
+    font-family: $ja-body-fonts;
+  }
+  html[lang='zh'] & {
+    font-family: $zh-body-fonts;
+  }
 }
 .gradient-header-light {
   background-image: linear-gradient(120deg, #1e64aa 0%, #55c8ff 100%) !important;
