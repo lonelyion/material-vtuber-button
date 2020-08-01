@@ -165,10 +165,10 @@ export default {
     }
   },
   hooks: {
-    export: {
+    generate: {
       // eslint-disable-next-line no-unused-vars
       done(generator) {
-        if (1) {
+        if (process.env.IS_VERCEL) {
           const axios = require('axios').default;
           const dayjs = require('dayjs');
           const utc = require('dayjs/plugin/utc');
