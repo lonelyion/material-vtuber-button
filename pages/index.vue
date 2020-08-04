@@ -85,11 +85,7 @@
           <div v-if="lives.length === 0 && upcoming_lives.length === 0">
             <p>{{ $t('live.no_schedule') }}</p>
           </div>
-          <div>
-            <p style="margin-top: 8px;">
-              {{ $t('live.move') }}
-            </p>
-          </div>
+          <div class="notification-board" v-html="$md.render($t('live.notification'))"></div>
         </v-card-text>
       </v-card>
       <!-- 对每个按钮组生成一个Card -->
@@ -133,6 +129,15 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
   opacity: 0.9;
   text-transform: none;
   letter-spacing: normal;
+}
+
+.notification-board {
+  white-space: pre-line;
+  height: auto;
+  display: flex;
+}
+.notification-board ::v-deep p {
+  margin-bottom: 0;
 }
 </style>
 

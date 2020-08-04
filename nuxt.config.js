@@ -120,7 +120,8 @@ export default {
     preset: 'default',
     linkify: true,
     breaks: false,
-    use: ['markdown-it-div', 'markdown-it-attrs']
+    use: ['markdown-it-div', 'markdown-it-attrs'],
+    injected: true
   },
   sitemap: {
     path: '/sitemap.xml',
