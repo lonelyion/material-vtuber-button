@@ -530,6 +530,15 @@
             "en": "ura-",
             "ja": "うら　うら"
           }
+        },
+        {
+          "name": "f-148",
+          "path": "f-148.mp3",
+          "description": {
+            "zh": "嘟~嘟噜 嘟~嘟噜",
+            "en": "du~dulu du~dulu",
+            "ja": "とっうるとっうるしる"
+          }
         }
       ]
     },
@@ -854,6 +863,15 @@
             "zh": "你胖了",
             "en": "You are fat",
             "ja": "ふ とってる"
+          }
+        },
+        {
+          "name": "f-149",
+          "path": "f-149.mp3",
+          "description": {
+            "zh": "快跑啊快跑啊",
+            "en": "Escape! Run away!",
+            "ja": "逃げる　逃げるだよ"
           }
         }
       ]
@@ -1298,6 +1316,15 @@
             "zh": "(吹竖笛)我心永恒",
             "en": "(Clarinet)My Heart Will Go On",
             "ja": "(クラリネットを弾く)マイ・ハート・ウィル・ゴー・オン"
+          }
+        },
+        {
+          "name": "f-150",
+          "path": "f-150.mp3",
+          "description": {
+            "zh": "激突！グルメレース(星之卡比)",
+            "en": "Get Up and Go-urmet!",
+            "ja": "激突！グルメレース"
           }
         }
       ]
