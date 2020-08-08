@@ -79,6 +79,7 @@ Audio Editors:
 
 Translation:
 
+- Twitter [噬魂韓植](https://twitter.com/S_H_H_Z1108)
 - GitHub [Dakumasu](https://github.com/dakuamsu)
 - GitHub [Yourein](https://github.com/Yourein)
 - Twitter [nekoy0212anagi](https://twitter.com/nekoy0212anagi)

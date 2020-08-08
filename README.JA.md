@@ -3,11 +3,11 @@
 ![Version](https://img.shields.io/github/package-json/v/oruyanke/fubuki-button)
 ![Build](https://img.shields.io/github/workflow/status/oruyanke/fubuki-button/FBK-BTN-NG-CI)
 ![Last Commit](https://img.shields.io/github/last-commit/oruyanke/fubuki-button)
-![Starts](https://img.shields.io/github/stars/oruyanke/fubuki-button)
+![Stars](https://img.shields.io/github/stars/oruyanke/fubuki-button)
 
 README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md) | **日本語** | [English](https://github.com/oruyanke/fubuki-button/blob/master/README.EN.md)
 
-> 新しい白上フブキのボイスボタン。私たちの目標は白上フブキの総合的なファンサイトを作ることです。
+> 新しい白上フブキのボイスボタン。白上フブキの総合ファンページを目指します。
 
 ホームページ https://fubuki.moe
 
@@ -77,6 +77,7 @@ GitHubの開発に直接参加する方法が分からない場合は、素材�
 
 翻訳：
 
+- Twitter [噬魂韓植](https://twitter.com/S_H_H_Z1108)
 - GitHub [Dakumasu](https://github.com/dakuamsu)
 - GitHub [Yourein](https://github.com/Yourein)
 - Twitter [nekoy0212anagi](https://twitter.com/nekoy0212anagi)

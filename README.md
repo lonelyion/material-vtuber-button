@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/github/package-json/v/oruyanke/fubuki-button)
 ![Build](https://img.shields.io/github/workflow/status/oruyanke/fubuki-button/FBK-BTN-NG-CI)
 ![Last Commit](https://img.shields.io/github/last-commit/oruyanke/fubuki-button)
-![Starts](https://img.shields.io/github/stars/oruyanke/fubuki-button)
+![Stars](https://img.shields.io/github/stars/oruyanke/fubuki-button)
 
 README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/master/README.JA.md) | [English](https://github.com/oruyanke/fubuki-button/blob/master/README.EN.md)
 
@@ -72,6 +72,7 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 
 翻译：
 
+- Bilibili [噬魂韩植](https://space.bilibili.com/35595270)
 - GitHub [Dakumasu](https://github.com/dakuamsu)
 - GitHub [Yourein](https://github.com/Yourein)
 - Twitter [nekoy0212anagi](https://twitter.com/nekoy0212anagi)
