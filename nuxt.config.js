@@ -168,6 +168,8 @@ export default {
       }
     }
   },
+  // This hook is designed for Fubuki-Button only
+  // Remove this code in other fork of button sites
   hooks: {
     generate: {
       // eslint-disable-next-line no-unused-vars

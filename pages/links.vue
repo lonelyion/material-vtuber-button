@@ -32,8 +32,9 @@ export default {
     }
   },
   mounted() {
+    const api = '//' + window.location.host + '/links.json';
     this.$axios
-      .get('/links.json')
+      .get(api)
       .then(res => {
         this.links = this.shuffle(
           res.data.filter(function (el) {
