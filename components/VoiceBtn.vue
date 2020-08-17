@@ -85,6 +85,8 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
   right: -20px;
   opacity: 0;
   transition: 0.5s $nonlinear-transition;
+  width: 20px;
+  height: 20px;
 }
 
 .vo-btn:hover div {
