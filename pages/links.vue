@@ -2,7 +2,7 @@
   <v-layout>
     <v-flex>
       <v-card>
-        <v-card-title>{{ $t('links.title') }}</v-card-title>
+        <v-card-title>{{ $t('site.links') }}</v-card-title>
         <v-card-text>
           <a v-for="item in links" :key="item.title" :href="item.url" target="_blank">
             <voice-btn :large="true" class="link-button white--text" :class="item.color" :emoji="item.emoji">
