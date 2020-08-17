@@ -112,6 +112,9 @@ export default {
       runtimeCaching: [
         {
           urlPattern: 'https://cdn.jsdelivr.net/gh/oruyanke/fubuki-button@master/static/voices/*'
+        },
+        {
+          urlPattern: 'https://emoji.lonelyion.com/svg/*'
         }
       ]
     }
