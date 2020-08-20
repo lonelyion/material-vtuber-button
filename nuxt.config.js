@@ -111,7 +111,7 @@ export default {
     workbox: {
       runtimeCaching: [
         {
-          urlPattern: 'https://cdn.jsdelivr.net/gh/oruyanke/fubuki-button@master/static/voices/*'
+          urlPattern: 'https://cdn.jsdelivr.net/gh/voosc/fubuki-button@master/static/voices/*'
         },
         {
           urlPattern: 'https://emoji.lonelyion.com/svg/*'
@@ -183,7 +183,7 @@ export default {
           console.log('Started triggering actions, build time', dayjs.utc().format());
           axios
             .post(
-              'https://api.github.com/repos/oruyanke/fubuki-button/dispatches',
+              'https://api.github.com/repos/voosc/fubuki-button/dispatches',
               {
                 event_type: 'Vercel Build ' + dayjs.utc().format()
               },

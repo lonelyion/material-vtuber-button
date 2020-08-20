@@ -11,7 +11,7 @@ export default {
     console.log(
       '%c' + this.$t('site.title') + '(^・ω・^§)ﾉ',
       'color: #6CB9F6',
-      'https://github.com/oruyanke/fubuki-button'
+      'https://github.com/voosc/fubuki-button'
     );
     console.log('The project has lived for ' + dayjs().diff(started, 'day') + ' days.');
   }

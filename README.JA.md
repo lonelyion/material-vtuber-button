@@ -1,11 +1,11 @@
 # フブキボタン - 白上フブキのボイスボタン
 
-![Version](https://img.shields.io/github/package-json/v/oruyanke/fubuki-button)
-![Build](https://img.shields.io/github/workflow/status/oruyanke/fubuki-button/FBK-BTN-NG-CI)
-![Last Commit](https://img.shields.io/github/last-commit/oruyanke/fubuki-button)
-![Stars](https://img.shields.io/github/stars/oruyanke/fubuki-button)
+![Version](https://img.shields.io/github/package-json/v/voosc/fubuki-button)
+![Build](https://img.shields.io/github/workflow/status/voosc/fubuki-button/FBK-BTN-NG-CI)
+![Last Commit](https://img.shields.io/github/last-commit/voosc/fubuki-button)
+![Stars](https://img.shields.io/github/stars/voosc/fubuki-button)
 
-README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md) | **日本語** | [English](https://github.com/oruyanke/fubuki-button/blob/master/README.EN.md)
+README: [中文](https://github.com/voosc/fubuki-button/blob/master/README.md) | **日本語** | [English](https://github.com/voosc/fubuki-button/blob/master/README.EN.md)
 
 > 新しい白上フブキのボイスボタン。白上フブキの総合ファンページを目指します。
 
@@ -28,7 +28,7 @@ README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md
 
 GitHubの開発に直接参加する方法が分からない場合は、素材や意見を直接以下のメールアドレスに送信してください。([voice@fubuki.moe](mailto:voice@fubuki.moe))。またメールの中にタイトル、内容及びあなたのID（Bilibili、Twitterやその他）を記述してください。そうすることで私達は下のコントリビューターリストにあなたの名前を掲載することができます。
 
-もしくは素材や意見をGitHubの[Issues](https://github.com/oruyanke/fubuki-button/issues) ページに送ることもできます。メールの場合と同じようにタイトルと内容を記述してください。
+もしくは素材や意見をGitHubの[Issues](https://github.com/voosc/fubuki-button/issues) ページに送ることもできます。メールの場合と同じようにタイトルと内容を記述してください。
 
 もしGitHubでの開発方法を知っている場合は、プロジェクトをフォークして変更してください。変更が完了したら、プルリクエストしてください。各項目の編集に関しては以下に記述されています。
 
@@ -92,11 +92,11 @@ GitHubの開発に直接参加する方法が分からない場合は、素材�
 - Bilibili [亡音ちゃん](https://space.bilibili.com/2613724)
 - そして、GitHubでこのプロジェクトに参加した以下の人々
 
-[![GitHub Contributors](https://contributors-img.web.app/image?repo=oruyanke/fubuki-button)](https://github.com/oruyanke/fubuki-button/graphs/contributors)
+[![GitHub Contributors](https://contributors-img.web.app/image?repo=voosc/fubuki-button)](https://github.com/voosc/fubuki-button/graphs/contributors)
 
 ## LICENCE
 
-プログラム： [MIT License](https://github.com/oruyanke/fubuki-button/blob/master/LICENSE)
+プログラム： [MIT License](https://github.com/voosc/fubuki-button/blob/master/LICENSE)
 
 音声: [Hololive 二次创作条款](https://www.hololive.tv/terms)
 

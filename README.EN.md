@@ -1,11 +1,11 @@
 # Fubuki-Button - Shirakami Fubuki's Voice Button
 
-![Version](https://img.shields.io/github/package-json/v/oruyanke/fubuki-button)
-![Build](https://img.shields.io/github/workflow/status/oruyanke/fubuki-button/FBK-BTN-NG-CI)
-![Last Commit](https://img.shields.io/github/last-commit/oruyanke/fubuki-button)
-![Starts](https://img.shields.io/github/stars/oruyanke/fubuki-button)
+![Version](https://img.shields.io/github/package-json/v/voosc/fubuki-button)
+![Build](https://img.shields.io/github/workflow/status/voosc/fubuki-button/FBK-BTN-NG-CI)
+![Last Commit](https://img.shields.io/github/last-commit/voosc/fubuki-button)
+![Starts](https://img.shields.io/github/stars/voosc/fubuki-button)
 
-README: [中文](https://github.com/oruyanke/fubuki-button/blob/master/README.md) | [日本語](https://github.com/oruyanke/fubuki-button/blob/master/README.JA.md) | **English**
+README: [中文](https://github.com/voosc/fubuki-button/blob/master/README.md) | [日本語](https://github.com/voosc/fubuki-button/blob/master/README.JA.md) | **English**
 
 > Brand new voice buttons for Shirakami Fubuki, we are aimming at building a comprehensive project related to Shirakami Fubuki.
 
@@ -28,7 +28,7 @@ Related Links:
 
 If you don't know how to participate on GitHub, you can directly send voice clips or suggestions to [voice@fubuki.moe](mailto:voice@fubuki.moe) with title, content and your social ID(Twitter, Bilibili or so on). We will add your ID to the contributors list below.
 
-Also you can submit [Issues](https://github.com/oruyanke/fubuki-button/issues) to upload audio clips.
+Also you can submit [Issues](https://github.com/voosc/fubuki-button/issues) to upload audio clips.
 
 If you can do some programming, just fork this repository and modify it. After you have done, just open a Pull Request. For detailed information, please read below.
 
@@ -94,13 +94,13 @@ Special Thanks to:
 - Bilibili [亡音ちゃん](https://space.bilibili.com/2613724)
 - And those who contributed to this project on GitHub
 
-[![GitHub Contributors](https://contributors-img.web.app/image?repo=oruyanke/fubuki-button)](https://github.com/oruyanke/fubuki-button/graphs/contributors)
+[![GitHub Contributors](https://contributors-img.web.app/image?repo=voosc/fubuki-button)](https://github.com/voosc/fubuki-button/graphs/contributors)
 
 ## LICENCE
 
 Audio: According to the [Hololive Secondary Creation Terms](https://www.hololive.tv/terms) (Japanese only).
 
-Other parts: [MIT License](https://github.com/oruyanke/fubuki-button/blob/master/LICENSE)
+Other parts: [MIT License](https://github.com/voosc/fubuki-button/blob/master/LICENSE)
 
 This project is a work of enthusiasts and is not related to the Hololive official.
 

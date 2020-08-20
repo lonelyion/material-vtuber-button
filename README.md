@@ -1,11 +1,11 @@
 # 狐按钮 / FUBUKI-BUTTON
 
-![Version](https://img.shields.io/github/package-json/v/oruyanke/fubuki-button)
-![Build](https://img.shields.io/github/workflow/status/oruyanke/fubuki-button/FBK-BTN-NG-CI)
-![Last Commit](https://img.shields.io/github/last-commit/oruyanke/fubuki-button)
-![Stars](https://img.shields.io/github/stars/oruyanke/fubuki-button)
+![Version](https://img.shields.io/github/package-json/v/voosc/fubuki-button)
+![Build](https://img.shields.io/github/workflow/status/voosc/fubuki-button/FBK-BTN-NG-CI)
+![Last Commit](https://img.shields.io/github/last-commit/voosc/fubuki-button)
+![Stars](https://img.shields.io/github/stars/voosc/fubuki-button)
 
-README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/master/README.JA.md) | [English](https://github.com/oruyanke/fubuki-button/blob/master/README.EN.md)
+README: **中文** | [日本語](https://github.com/voosc/fubuki-button/blob/master/README.JA.md) | [English](https://github.com/voosc/fubuki-button/blob/master/README.EN.md)
 
 > 全新的白上吹雪语音按钮，目标是打造一个整合白上吹雪各个方面的应援项目
 
@@ -28,7 +28,7 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 
 如果您不知道如何直接参与GitHub开发，可以直接将素材或意见建议发送到[voice@fubuki.moe](mailto:voice@fubuki.moe)，带上标题、内容以及您的ID（Bilibili、Twitter等均可），贡献者名单将会有您的名字。
 
-当然您也可以发在 [Issues](https://github.com/oruyanke/fubuki-button/issues) ，同样也请带上标题和内容。
+当然您也可以发在 [Issues](https://github.com/voosc/fubuki-button/issues) ，同样也请带上标题和内容。
 
 如果您可以进行开发，那么请Fork本项目进行修改，完成修改后在本项目中发起一个Pull Request，详细说明如下：
 
@@ -87,13 +87,13 @@ README: **中文** | [日本語](https://github.com/oruyanke/fubuki-button/blob/
 - Bilibili [亡音ちゃん](https://space.bilibili.com/2613724)
 - 以及以下在GitHub参与过项目的各位
 
-[![GitHub Contributors](https://contributors-img.web.app/image?repo=oruyanke/fubuki-button)](https://github.com/oruyanke/fubuki-button/graphs/contributors)
+[![GitHub Contributors](https://contributors-img.web.app/image?repo=voosc/fubuki-button)](https://github.com/voosc/fubuki-button/graphs/contributors)
 
 ## 协议
 
 音频部分: [Hololive 二次创作条款](https://www.hololive.tv/terms) (只有日语).
 
-其他部分：[MIT License](https://github.com/oruyanke/fubuki-button/blob/master/LICENSE)
+其他部分：[MIT License](https://github.com/voosc/fubuki-button/blob/master/LICENSE)
 
 本项目为爱好者作品，和 Hololive 官方没有关联
 

@@ -134,13 +134,13 @@
             </span>
             <span>
               &
-              <a href="https://github.com/oruyanke" target="_blank" rel="noreferrer">
+              <a href="https://space.bilibili.com/314977548" target="_blank" rel="noreferrer">
                 {{ $t('site.footer.oruyanke') }}
               </a>
             </span>
             <v-btn
               icon
-              href="https://github.com/oruyanke/fubuki-button"
+              href="https://github.com/voosc/fubuki-button"
               target="_blank"
               style="vertical-align: middle;"
               rel="noreferrer"
