@@ -198,6 +198,28 @@
     "color": "pink lighten-4"
   },
   {
+    "title": "kanata",
+    "tr": {
+      "zh": "彼方碳按钮",
+      "en": "Kanata Button",
+      "ja": "かなたんボタン"
+    },
+    "url": "https://kanata.club",
+    "emoji": "💫",
+    "color": "indigo lighten-2"
+  },
+  {
+    "title": "haato",
+    "tr": {
+      "zh": "心按钮",
+      "en": "Haato Button",
+      "ja": "はあとボタン"
+    },
+    "url": "https://haato.club",
+    "emoji": "♥",
+    "color": "pink lighten-2"
+  },
+  {
     "title": "vm",
     "tr": {
       "zh": "VTuber Music",
@@ -209,14 +231,14 @@
     "color": "cyan accent-4"
   },
   {
-  "title": "collection",
-  "tr": {
-    "zh": "VTuber 按钮合集",
-    "en": "VTuber Buttons Collection",
-    "ja": "VTuberの音声ボタンコレクション"
-  },
-  "url": "https://vtbbtn.org/",
-  "emoji": "\uD83D\uDCDA",
-  "color": "accent"
-}
+    "title": "collection",
+    "tr": {
+      "zh": "VTuber 按钮合集",
+      "en": "VTuber Buttons Collection",
+      "ja": "VTuberの音声ボタンコレクション"
+    },
+    "url": "https://vtbbtn.org/",
+    "emoji": "\uD83D\uDCDA",
+    "color": "accent"
+  }
 ]

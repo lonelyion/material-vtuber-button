@@ -27,7 +27,7 @@
           {{ icons.stop }}
         </v-icon>
       </v-btn>
-      <v-btn fab small :class="fab_color" @click.stop="get_random_voice()">
+      <v-btn fab small :class="fab_color" @click.stop="play_random_voice()">
         <span class="fab-tip">{{ $t('control.pick_one') }}</span>
         <v-icon :class="fab_icon">
           {{ icons.selection_ellipse_arrow_inside }}
@@ -98,7 +98,9 @@
             v-for="item in group.voice_list"
             :key="item.name"
             :class="voice_button_color"
-            @click.native="play(item)"
+            :playing="item.playing"
+            :progress="item.progress"
+            @click.native="re_play(item)"
           >
             {{ item.description[current_locale] }}
           </voice-btn>
@@ -180,6 +182,7 @@ export default {
       repeat: false,
       fab: false,
       groups: voice_lists.groups,
+      now_playing: new Set(),
       upcoming_lives: [],
       lives: [],
       lives_loading: true
@@ -229,6 +232,19 @@ export default {
   async mounted() {
     this.$vuetify.theme.dark = this.$store.state.dark === 'true';
     await this.fetch_live_data();
+    //Media Session Metadata
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.setActionHandler('nexttrack', () => {
+        this.play_random_voice();
+      });
+      navigator.mediaSession.setActionHandler('previoustrack', () => {
+        this.play_random_voice();
+      });
+      navigator.mediaSession.setActionHandler('pause', () => {
+        this.stop_all();
+        navigator.mediaSession.playbackState = 'paused';
+      });
+    }
   },
   methods: {
     async fetch_live_data() {
@@ -251,6 +267,55 @@ export default {
     format_time(stamp) {
       return require('dayjs')(stamp).format('YYYY/M/DD HH:mm');
     },
+    re_play(item) {
+      if (!this.overlap) {
+        this.now_playing.forEach(item => {
+          item.pause();
+          this.now_playing.delete(item);
+        });
+      }
+      let audio = new Audio(this.voice_host + item.path);
+      audio.load(); //This could fix iOS playing bug
+      const metadata = {
+        title: this.overlap ? this.$t('control.overlap_title') : item.description[this.current_locale],
+        artist: this.$t('control.full_name'),
+        album: this.$t('site.title') + '(^・ω・^§)',
+        artwork: [{ src: '/img/media-cover.jpg', sizes: '128x128', type: 'image/jpeg' }]
+      };
+      navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
+      audio.addEventListener('canplay', () => {
+        audio.volume = 1;
+        audio.play();
+        this.now_playing.add(audio);
+      });
+      let timer = setInterval(() => {
+        let prog = Number(((audio.currentTime / audio.duration) * 100).toFixed(1));
+        if (prog !== Infinity && !isNaN(prog)) {
+          this.$set(item, 'progress', prog);
+        } else {
+          this.$set(item, 'progress', 0);
+        }
+      }, 100);
+      audio.addEventListener('timeupdate', () => {});
+      let end_and_pause = () => {
+        //重叠播放下的循环播放实现
+        if (this.repeat) {
+          audio.play();
+        } else {
+          clearInterval(timer);
+          this.now_playing.delete(audio);
+        }
+        this.$set(item, 'playing', false);
+        this.$set(item, 'progress', 0);
+      };
+      audio.addEventListener('ended', end_and_pause);
+      audio.addEventListener('pause', end_and_pause);
+      this.$bus.$on('abort_play', () => {
+        audio.pause();
+        this.now_playing.delete(this.audio);
+        delete this.audio;
+      });
+    },
     play(item) {
       if (process.client && process.env.NODE_ENV === 'production') {
         // eslint-disable-next-line no-undef
@@ -261,23 +326,35 @@ export default {
           eventLabel: item.name + ' ' + item.description['zh']
         });
       }
-      let that = this;
       if (!this.overlap) {
         let sp = document.getElementById('single_play');
         sp.src = this.voice_host + item.path;
         sp.load();
-        sp.addEventListener('canplay', function () {
+        sp.addEventListener('canplay', () => {
           sp.volume = 1;
           sp.play();
+          this.$set(item, 'playing', true);
           if ('mediaSession' in navigator) {
             let meta = {
-              title: item.description[that.current_locale],
-              artist: that.$t('control.full_name'),
-              album: that.$t('site.title') + '(^・ω・^§)',
+              title: item.description[this.current_locale],
+              artist: this.$t('control.full_name'),
+              album: this.$t('site.title') + '(^・ω・^§)',
               artwork: [{ src: '/img/media-cover.jpg', sizes: '128x128', type: 'image/jpeg' }]
             };
             navigator.mediaSession.metadata = new window.MediaMetadata(meta);
           }
+        });
+        sp.addEventListener('timeupdate', () => {
+          let prog = Number(((sp.currentTime / sp.duration) * 100).toFixed(0));
+          if (prog !== Infinity && !isNaN(prog)) {
+            this.$set(item, 'progress', prog);
+          } else {
+            this.$set(item, 'progress', 0);
+          }
+        });
+        sp.addEventListener('ended', () => {
+          this.$set(item, 'playing', false);
+          this.$set(item, 'progress', 0);
         });
         this.$bus.$on('abort_play', () => {
           sp.pause();
@@ -288,22 +365,32 @@ export default {
         audio.load();
         if ('mediaSession' in navigator) {
           const metadata = {
-            title: that.$t('control.overlap_title'),
-            artist: that.$t('control.full_name'),
-            album: that.$t('site.title') + '(^・ω・^§)',
+            title: this.$t('control.overlap_title'),
+            artist: this.$t('control.full_name'),
+            album: this.$t('site.title') + '(^・ω・^§)',
             artwork: [{ src: '/img/media-cover.jpg', sizes: '128x128', type: 'image/jpeg' }]
           };
           navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
         }
-        audio.addEventListener('canplay', function () {
+        audio.addEventListener('canplay', () => {
           audio.volume = 1;
           audio.play();
         });
-        audio.addEventListener('ended', function () {
+        audio.addEventListener('timeupdate', () => {
+          let prog = Number(((audio.currentTime / audio.duration) * 100).toFixed(0));
+          if (prog !== Infinity && !isNaN(prog)) {
+            this.$set(item, 'progress', prog);
+          } else {
+            this.$set(item, 'progress', 0);
+          }
+        });
+        audio.addEventListener('ended', () => {
           //重叠播放下的循环播放实现
-          if (that.repeat) {
+          if (this.repeat) {
             audio.play();
           }
+          this.$set(item, 'playing', false);
+          this.$set(item, 'progress', 0);
         });
         this.$bus.$on('abort_play', () => {
           audio.pause();
@@ -311,14 +398,9 @@ export default {
         });
       }
     },
-    progress(audio, item) {
-      setInterval(function () {
-        item.progress = audio.currentTime / audio.duration;
-      }, 500);
-    },
     play_ended() {
       if (this.random) {
-        this.get_random_voice();
+        this.play_random_voice();
       } else if (this.repeat && !this.overlap) {
         //对于单个音频的循环播放
         let sp = document.getElementById('single_play');
@@ -328,7 +410,7 @@ export default {
     get_random_int(max) {
       return Math.floor(Math.random() * Math.floor(max));
     },
-    get_random_voice() {
+    play_random_voice() {
       let random_list = this.groups[this.get_random_int(this.groups.length)];
       this.play(random_list.voice_list[this.get_random_int(random_list.voice_list.length)]);
     },

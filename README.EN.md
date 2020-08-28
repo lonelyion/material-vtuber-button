@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/github/package-json/v/voosc/fubuki-button)
 ![Build](https://img.shields.io/github/workflow/status/voosc/fubuki-button/FBK-BTN-NG-CI)
 ![Last Commit](https://img.shields.io/github/last-commit/voosc/fubuki-button)
-![Starts](https://img.shields.io/github/stars/voosc/fubuki-button)
+![Stars](https://img.shields.io/github/stars/voosc/fubuki-button)
 
 README: [中文](https://github.com/voosc/fubuki-button/blob/master/README.md) | [日本語](https://github.com/voosc/fubuki-button/blob/master/README.JA.md) | **English**
 

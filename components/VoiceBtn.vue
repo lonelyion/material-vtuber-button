@@ -8,11 +8,14 @@
         rounded
         height="max-content"
         min-height="36px"
-        :large="large"
-        :style="{ '--hover-content': 'url(\'' + emoji_url + '\')' }"
+        :style="{
+          '--hover-content': 'url(\'' + emoji_url + '\')',
+          '--progress': progress + '%',
+          '--start-percent': progress - 5 + '%'
+        }"
       >
-        <div>
-          <slot></slot>
+        <div style="z-index: 2;">
+          <slot class="slot"></slot>
         </div>
       </v-btn>
     </template>
@@ -28,9 +31,13 @@ export default {
       default: '🌽',
       type: String
     },
-    large: {
+    playing: {
       default: false,
       type: Boolean
+    },
+    progress: {
+      default: 0,
+      type: Number
     }
   },
   data() {
@@ -39,7 +46,10 @@ export default {
         base: 'https://emoji.lonelyion.com',
         folder: '/svg',
         ext: '.svg'
-      }
+      },
+      transition: '',
+      width: '0',
+      timer: null
     };
   },
   computed: {
@@ -53,6 +63,30 @@ export default {
       let str = twemoji.parse(this.emoji, this.twe_para);
       let match = reg.exec(str);
       return match[1];
+    },
+    background_style() {
+      return {
+        //transition: this.transition,
+        width: this.width
+      };
+    }
+  },
+  watch: {
+    progress: {
+      immediate: false,
+      handler: function (val) {
+        if (val === 0) {
+          this.timer = setTimeout(() => {
+            this.transition = 'width 0.3s linear';
+            this.width = '0';
+          }, 100);
+        } else {
+          clearTimeout(this.timer);
+          this.timer = null;
+          this.transition = 'width 0.25s linear';
+          this.width = val + 10 + '%';
+        }
+      }
     }
   }
 };
@@ -68,7 +102,9 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
   text-transform: none !important;
   font-weight: 400;
   text-align: center;
-  /*background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%) !important;*/
+  z-index: 2;
+  background: linear-gradient(to right, #0288d1 var(--start-percent), #6bb8f6 var(--progress));
+  transition: background 0.25s linear;
 }
 
 .vo-btn div {
@@ -98,5 +134,17 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
   opacity: 1;
   right: 0;
   text-align: center;
+}
+
+.btn-progress {
+  position: absolute;
+  top: -8px;
+  left: -16px;
+  width: 0;
+  border-radius: 28px;
+  min-height: 36px;
+  height: 100%;
+  //background: blue;
+  transition: height 0.3s linear;
 }
 </style>
