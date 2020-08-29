@@ -322,6 +322,15 @@
             "en": "(Little FBK)I'm dead",
             "ja": "(ちびっ狐)しんじゃだ"
           }
+        },
+        {
+          "name": "f-151",
+          "path": "f-151.mp3",
+          "description": {
+            "zh": "啊 好疼啊噗喵",
+            "en": "Oh!It’s so hurt!",
+            "ja": "あっ痛いよぷにゃ"
+          }
         }
       ]
     },
@@ -538,6 +547,15 @@
             "zh": "嘟~嘟噜 嘟~嘟噜",
             "en": "du~dulu du~dulu",
             "ja": "とっうるとっうるしる"
+          }
+        },
+        {
+          "name": "f-152",
+          "path": "f-152.mp3",
+          "description": {
+            "zh": "PEKO叫",
+            "en": "Peko~Peko~",
+            "ja": "ぺこぺこ　ぺこぺこ"
           }
         }
       ]
@@ -872,6 +890,15 @@
             "zh": "快跑啊快跑啊",
             "en": "Escape! Run away!",
             "ja": "逃げる　逃げるだよ"
+          }
+        },
+        {
+          "name": "f-153",
+          "path": "f-153.mp3",
+          "description": {
+            "zh": "没 问 题 的 广 东 狐",
+            "en": "No Problem!(Cantonese)",
+            "ja": "全然問題ないー(広東語)\n"
           }
         }
       ]
