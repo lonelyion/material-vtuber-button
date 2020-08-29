@@ -3,7 +3,7 @@
     <template v-slot="{ hover }">
       <v-btn
         class="ma-1 pa-2 vo-btn"
-        :class="[dark_text]"
+        :class="[v_btn_classes]"
         :elevation="hover ? 6 : 2"
         rounded
         height="max-content"
@@ -47,9 +47,11 @@ export default {
     };
   },
   computed: {
-    dark_text() {
+    v_btn_classes() {
       return {
-        'grey--text text--lighten-2': this.$vuetify.theme.dark
+        'grey--text text--lighten-2 vo-btn-bg-dark': this.$vuetify.theme.dark,
+        'vo-btn-bg-light': !this.$vuetify.theme.dark,
+        playing: this.playing
       };
     },
     emoji_url() {
@@ -57,30 +59,6 @@ export default {
       let str = twemoji.parse(this.emoji, this.twe_para);
       let match = reg.exec(str);
       return match[1];
-    },
-    background_style() {
-      return {
-        //transition: this.transition,
-        width: this.width
-      };
-    }
-  },
-  watch: {
-    progress: {
-      immediate: false,
-      handler: function (val) {
-        if (val === 0) {
-          this.timer = setTimeout(() => {
-            this.transition = 'width 0.3s linear';
-            this.width = '0';
-          }, 100);
-        } else {
-          clearTimeout(this.timer);
-          this.timer = null;
-          this.transition = 'width 0.25s linear';
-          this.width = val + 5 + '%';
-        }
-      }
     }
   }
 };
@@ -97,8 +75,14 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
   font-weight: 400;
   text-align: center;
   z-index: 2;
+}
+
+.vo-btn-bg-light {
   background: linear-gradient(to right, #0288d1 var(--start-percent), #6bb8f6 var(--progress));
-  transition: background 0.25s linear;
+}
+
+.vo-btn-bg-dark {
+  background: linear-gradient(to right, #0288d1 var(--start-percent), #1362a1 var(--progress));
 }
 
 .vo-btn div {
@@ -140,5 +124,33 @@ $nonlinear-transition: cubic-bezier(0.25, 0.8, 0.5, 1);
   height: 100%;
   //background: blue;
   transition: height 0.3s linear;
+}
+
+.playing div {
+  animation: shake 3s linear infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-4px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-4px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 </style>

@@ -299,6 +299,7 @@ export default {
             play_end_timer = null;
           }
         }, 50);
+        ref.playing = false;
       };
       let clear_timer = () => {
         clearInterval(timer);
@@ -306,13 +307,16 @@ export default {
       };
       let audio = new Audio(this.voice_host + item.path);
       audio.load(); //This could fix iOS playing bug
-      const metadata = {
-        title: this.overlap ? this.$t('control.overlap_title') : item.description[this.current_locale],
-        artist: this.$t('control.full_name'),
-        album: this.$t('site.title') + '(^・ω・^§)',
-        artwork: [{ src: '/img/media-cover.jpg', sizes: '128x128', type: 'image/jpeg' }]
-      };
-      navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
+      if ('mediaSession' in navigator) {
+        const metadata = {
+          title: this.overlap ? this.$t('control.overlap_title') : item.description[this.current_locale],
+          artist: this.$t('control.full_name'),
+          album: this.$t('site.title') + '(^・ω・^§)',
+          artwork: [{ src: '/img/media-cover.jpg', sizes: '128x128', type: 'image/jpeg' }]
+        };
+        navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
+        navigator.mediaSession.playbackState = 'playing';
+      }
       audio.addEventListener('canplay', () => {
         audio.volume = 1;
         audio.play();
