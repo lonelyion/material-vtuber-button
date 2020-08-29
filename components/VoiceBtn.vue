@@ -30,14 +30,6 @@ export default {
     emoji: {
       default: '🌽',
       type: String
-    },
-    playing: {
-      default: false,
-      type: Boolean
-    },
-    progress: {
-      default: 0,
-      type: Number
     }
   },
   data() {
@@ -49,7 +41,9 @@ export default {
       },
       transition: '',
       width: '0',
-      timer: null
+      timer: null,
+      progress: 0,
+      playing: false
     };
   },
   computed: {
@@ -84,7 +78,7 @@ export default {
           clearTimeout(this.timer);
           this.timer = null;
           this.transition = 'width 0.25s linear';
-          this.width = val + 10 + '%';
+          this.width = val + 5 + '%';
         }
       }
     }

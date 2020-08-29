@@ -96,17 +96,15 @@
         <v-card-text>
           <voice-btn
             v-for="item in group.voice_list"
+            ref="voice_btn"
             :key="item.name"
             :class="voice_button_color"
-            :playing="item.playing"
-            :progress="item.progress"
-            @click.native="re_play(item)"
+            @click.native="play(item)"
           >
             {{ item.description[current_locale] }}
           </voice-btn>
         </v-card-text>
       </v-card>
-      <audio id="single_play" @ended="play_ended()" />
     </v-flex>
   </v-layout>
 </template>
@@ -267,13 +265,45 @@ export default {
     format_time(stamp) {
       return require('dayjs')(stamp).format('YYYY/M/DD HH:mm');
     },
-    re_play(item) {
+    play(item) {
+      let ref = null;
+      let timer = null;
+      this.$refs.voice_btn.forEach(i => {
+        if (i.$vnode.data.key === item.name) {
+          ref = i;
+        }
+      });
       if (!this.overlap) {
-        this.now_playing.forEach(item => {
-          item.pause();
-          this.now_playing.delete(item);
+        this.now_playing.forEach(i => {
+          i.pause();
+          this.now_playing.delete(i);
+          console.log(item.name, 'paused before new playing');
         });
       }
+      let setup_timer = () => {
+        if (timer !== null) clear_timer();
+        timer = setInterval(() => {
+          let prog = Number(((audio.currentTime / audio.duration) * 100).toFixed(2));
+          if (prog !== Infinity && !isNaN(prog)) {
+            ref.progress = prog;
+          } else {
+            ref.progress = 0;
+          }
+        }, 50);
+      };
+      let smooth_end = () => {
+        let play_end_timer = setInterval(() => {
+          ref.progress -= 5;
+          if (ref.progress <= 0) {
+            clearInterval(play_end_timer);
+            play_end_timer = null;
+          }
+        }, 50);
+      };
+      let clear_timer = () => {
+        clearInterval(timer);
+        timer = null;
+      };
       let audio = new Audio(this.voice_host + item.path);
       audio.load(); //This could fix iOS playing bug
       const metadata = {
@@ -287,125 +317,38 @@ export default {
         audio.volume = 1;
         audio.play();
         this.now_playing.add(audio);
+        ref.playing = true;
+        setup_timer();
       });
-      let timer = setInterval(() => {
-        let prog = Number(((audio.currentTime / audio.duration) * 100).toFixed(1));
-        if (prog !== Infinity && !isNaN(prog)) {
-          this.$set(item, 'progress', prog);
-        } else {
-          this.$set(item, 'progress', 0);
-        }
-      }, 100);
-      audio.addEventListener('timeupdate', () => {});
-      let end_and_pause = () => {
-        //重叠播放下的循环播放实现
+      audio.addEventListener('ended', () => {
         if (this.repeat) {
           audio.play();
+          this.now_playing.add(audio);
+          ref.playing = true;
+          setup_timer();
+        } else if (this.random) {
+          this.play_random_voice();
         } else {
-          clearInterval(timer);
+          smooth_end();
+          clear_timer();
           this.now_playing.delete(audio);
         }
-        this.$set(item, 'playing', false);
-        this.$set(item, 'progress', 0);
-      };
-      audio.addEventListener('ended', end_and_pause);
-      audio.addEventListener('pause', end_and_pause);
+      });
+      audio.addEventListener('pause', () => {
+        console.log(item.name, 'paused');
+        smooth_end();
+        //if (!this.repeat) {
+        clear_timer();
+        this.now_playing.delete(audio);
+        //}
+      });
       this.$bus.$on('abort_play', () => {
         audio.pause();
-        this.now_playing.delete(this.audio);
+        smooth_end();
+        clear_timer();
+        this.now_playing.delete(audio);
         delete this.audio;
       });
-    },
-    play(item) {
-      if (process.client && process.env.NODE_ENV === 'production') {
-        // eslint-disable-next-line no-undef
-        ga('send', {
-          hitType: 'event',
-          eventCategory: 'Audios',
-          eventAction: 'play',
-          eventLabel: item.name + ' ' + item.description['zh']
-        });
-      }
-      if (!this.overlap) {
-        let sp = document.getElementById('single_play');
-        sp.src = this.voice_host + item.path;
-        sp.load();
-        sp.addEventListener('canplay', () => {
-          sp.volume = 1;
-          sp.play();
-          this.$set(item, 'playing', true);
-          if ('mediaSession' in navigator) {
-            let meta = {
-              title: item.description[this.current_locale],
-              artist: this.$t('control.full_name'),
-              album: this.$t('site.title') + '(^・ω・^§)',
-              artwork: [{ src: '/img/media-cover.jpg', sizes: '128x128', type: 'image/jpeg' }]
-            };
-            navigator.mediaSession.metadata = new window.MediaMetadata(meta);
-          }
-        });
-        sp.addEventListener('timeupdate', () => {
-          let prog = Number(((sp.currentTime / sp.duration) * 100).toFixed(0));
-          if (prog !== Infinity && !isNaN(prog)) {
-            this.$set(item, 'progress', prog);
-          } else {
-            this.$set(item, 'progress', 0);
-          }
-        });
-        sp.addEventListener('ended', () => {
-          this.$set(item, 'playing', false);
-          this.$set(item, 'progress', 0);
-        });
-        this.$bus.$on('abort_play', () => {
-          sp.pause();
-        });
-      } else {
-        //重叠播放
-        let audio = new Audio(this.voice_host + item.path);
-        audio.load();
-        if ('mediaSession' in navigator) {
-          const metadata = {
-            title: this.$t('control.overlap_title'),
-            artist: this.$t('control.full_name'),
-            album: this.$t('site.title') + '(^・ω・^§)',
-            artwork: [{ src: '/img/media-cover.jpg', sizes: '128x128', type: 'image/jpeg' }]
-          };
-          navigator.mediaSession.metadata = new window.MediaMetadata(metadata);
-        }
-        audio.addEventListener('canplay', () => {
-          audio.volume = 1;
-          audio.play();
-        });
-        audio.addEventListener('timeupdate', () => {
-          let prog = Number(((audio.currentTime / audio.duration) * 100).toFixed(0));
-          if (prog !== Infinity && !isNaN(prog)) {
-            this.$set(item, 'progress', prog);
-          } else {
-            this.$set(item, 'progress', 0);
-          }
-        });
-        audio.addEventListener('ended', () => {
-          //重叠播放下的循环播放实现
-          if (this.repeat) {
-            audio.play();
-          }
-          this.$set(item, 'playing', false);
-          this.$set(item, 'progress', 0);
-        });
-        this.$bus.$on('abort_play', () => {
-          audio.pause();
-          delete this.audio;
-        });
-      }
-    },
-    play_ended() {
-      if (this.random) {
-        this.play_random_voice();
-      } else if (this.repeat && !this.overlap) {
-        //对于单个音频的循环播放
-        let sp = document.getElementById('single_play');
-        sp.play();
-      }
     },
     get_random_int(max) {
       return Math.floor(Math.random() * Math.floor(max));
