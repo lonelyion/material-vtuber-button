@@ -47,6 +47,7 @@
             :href="item.to"
             target="_blank"
             rel="noreferrer"
+            :download="item.title.includes('FubuMio') ? 'FubuMio头像框.png' : ''"
           >
             <v-list-item-action>
               <v-icon>{{ icons[item.icon] }}</v-icon>
@@ -235,7 +236,8 @@ import {
   mdiGithub,
   mdiNewspaper,
   mdiAlphaBBox,
-  mdiPlaylistStar
+  mdiPlaylistStar,
+  mdiCommentAccountOutline
 } from '@mdi/js';
 
 export default {
@@ -252,7 +254,8 @@ export default {
         github: mdiGithub,
         newspaper: mdiNewspaper,
         alpha_b_box: mdiAlphaBBox,
-        play_list_star: mdiPlaylistStar
+        play_list_star: mdiPlaylistStar,
+        account: mdiCommentAccountOutline
       },
       drawer: false,
       fixed: false,
@@ -274,6 +277,11 @@ export default {
         }
       ],
       external_cn: [
+        {
+          icon: 'account',
+          title: 'FubuMio贴贴限时头像框',
+          to: '/fubumio头像框.png'
+        },
         {
           icon: 'alpha_b_box',
           title: '御宅白狐的狐笋之林',
