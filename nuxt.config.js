@@ -57,11 +57,9 @@ export default {
   plugins: [
     { src: '@plugins/i18n' },
     { src: '@plugins/eventBus.js', mode: 'client' },
-    { src: '@plugins/analytics.js', mode: 'client' }
+    { src: '@plugins/analytics.js', mode: 'client' },
+    { src: '@plugins/route.js', mode: 'client' }
   ],
-  router: {
-    middleware: 'ui_config'
-  },
   /*
    ** Nuxt.js dev-modules
    */
