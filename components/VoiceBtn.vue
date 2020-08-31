@@ -30,6 +30,10 @@ export default {
     emoji: {
       default: '🌽',
       type: String
+    },
+    link: {
+      default: false,
+      type: Boolean
     }
   },
   data() {
@@ -49,8 +53,8 @@ export default {
   computed: {
     v_btn_classes() {
       return {
-        'grey--text text--lighten-2 vo-btn-bg-dark': this.$vuetify.theme.dark,
-        'vo-btn-bg-light': !this.$vuetify.theme.dark,
+        'grey--text text--lighten-2 vo-btn-bg-dark': this.link ? false : this.$vuetify.theme.dark,
+        'vo-btn-bg-light': this.link ? false : !this.$vuetify.theme.dark,
         playing: this.playing
       };
     },
