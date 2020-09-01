@@ -5,7 +5,13 @@
         <v-card-title>{{ $t('site.links') }}</v-card-title>
         <v-card-text>
           <a v-for="item in links" :key="item.title" :href="item.url" target="_blank">
-            <voice-btn :large="true" class="link-button white--text" :class="item.color" :emoji="item.emoji">
+            <voice-btn
+              class="link-button white--text"
+              :class="item.color"
+              :large="true"
+              :emoji="item.emoji"
+              :link="true"
+            >
               {{ item.tr[current_locale] }}
             </voice-btn>
           </a>
