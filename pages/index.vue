@@ -352,12 +352,15 @@ export default {
         }
       });
       audio.addEventListener('pause', () => {
-        console.log(item.name, 'paused');
+        // console.log(item.name, 'paused');
         smooth_end();
         //if (!this.repeat) {
         clear_timer();
         this.now_playing.delete(audio);
         //}
+        if('mediaSession' in navigator) {
+          navigator.mediaSession.playbackState = 'paused';
+        }
       });
       this.$bus.$on('abort_play', () => {
         audio.pause();
