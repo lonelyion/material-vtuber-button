@@ -1,0 +1,56 @@
+{
+  "site": {
+    "title": "【V按钮】",
+    "description": "】这里写个描述，比如XX按钮旨在打造一个XX的语音分享平台之类的】",
+    "keywords": "【网站的关键词 SEO】",
+    "url": "【https://xxxx.moe】 < 就是部署在哪个域名下面",
+    "social_image": "【https://xxxx.moe/img/social.png】 < 就是分享到推特之类的可以用这个当卡片封面",
+    "index": "主页",
+    "links": "友情链接",
+    "about": "关于",
+    "switch_dark_mode": "夜间模式开关",
+    "switch_language": "切换语言",
+    "footer": {
+      "author": "【海离Channel，写主要开发者/组织就行】",
+      "author_link": "【整个链接到开发者/组织，比如GitHub啊B站啊都可以】",
+      "repo_link": "【如果开源的话可以贴个git地址，不开源的话把这个设置成no_display】",
+      "content": "本站为爱好者作品，和**官方没有关联，STAFF名单以及项目参与方式请查看\"关于\"页面"
+    }
+  },
+  "control": {
+    "self": "播放控制",
+    "pick_one": "帮我选一个",
+    "stop": "停止",
+    "enabled": "开启",
+    "disabled": "关闭",
+    "overlap": "重叠播放",
+    "random": "随机播放",
+    "repeat": "洗脑循环",
+    "full_name": "【显示在媒体控制上的作者名，一般写V的名字就好】",
+    "overlap_title": "【显示在媒体控制上的作者名,只不过是重叠播放的，一般写V的名字就好】"
+  },
+  "navigator": {
+    "items": [
+      {
+        "icon": "/img/bilibili-fill.svg",
+        "title": "Bilibili 主页",
+        "to": "https://space.bilibili.com/7564991/"
+      },
+      {
+        "icon": "/img/bilibili-fill.svg",
+        "title": "Bilibili 直播间",
+        "to": "https://live.bilibili.com/449047"
+      },
+      {
+        "icon": "/img/youtube-fill.svg",
+        "title": "YouTube",
+        "to": "https://www.youtube.com/channel/频道号?sub_confirmation=1"
+      },
+      {
+        "icon": "/img/twitter-fill.svg",
+        "title": "Twitter",
+        "to": "https://twitter.com/用户名"
+      }
+    ]
+  }
+}

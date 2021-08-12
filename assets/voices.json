@@ -1,0 +1,69 @@
+{
+  "groups": [
+    {
+      "group_name": "actmoe",
+      "group_description": {
+        "zh": "第一个分类",
+        "en": "Moe",
+        "ja": "萌え"
+      },
+      "voice_list": [
+        {
+          "name": "v-001",
+          "path": "v-001.mp3",
+          "description": {
+            "zh": "示例1",
+            "en": "Example 1",
+            "ja": "例1"
+          }
+        },
+        {
+          "name": "v-002",
+          "path": "v-002.mp3",
+          "description": {
+            "zh": "示例2 民那我是你的爸爸",
+            "en": "Example 2 I'm your daddy!",
+            "ja": "例2 这日语我不会"
+          }
+        }
+      ]
+    },
+    {
+      "group_name": "nakigoe",
+      "group_description": {
+        "zh": "第二个分类",
+        "en": "Roaring",
+        "ja": "鳴き声"
+      },
+      "voice_list": [
+        {
+          "name": "v-003",
+          "path": "f-003.mp3",
+          "description": {
+            "zh": "示例3",
+            "en": "example3",
+            "ja": "例3"
+          }
+        },
+        {
+          "name": "v-004",
+          "path": "v-004.mp3",
+          "description": {
+            "zh": "示例4",
+            "en": "four",
+            "ja": "4"
+          }
+        },
+        {
+          "name": "v-005",
+          "path": "相对路径也可以/v-005.mp3",
+          "description": {
+            "zh": "五",
+            "en": "five",
+            "ja": "5"
+          }
+        }
+      ]
+    }
+  ]
+}
