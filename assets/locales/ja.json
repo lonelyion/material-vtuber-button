@@ -1,25 +1,21 @@
 {
   "site": {
-    "title": "フブキボタン",
-    "description": "新しい白上フブキのボイスボタン。私たちの目標は白上フブキの総合的なファンサイトを作ることです。",
+    "title": "【V按钮】",
+    "description": "】这里写个描述，比如XX按钮旨在打造一个XX的语音分享平台之类的】",
+    "keywords": "【网站的关键词 SEO】",
+    "url": "【https://xxxx.moe】 < 就是部署在哪个域名下面",
+    "social_image": "【https://xxxx.moe/img/social.png】 < 就是分享到推特之类的可以用这个当卡片封面",
     "index": "ホームページ",
     "links": "友情リンク",
     "about": "について",
     "switch_dark_mode": "ナイトモードスイッチ",
     "switch_language": "言語を切り替える",
     "footer": {
-      "lonely_ion": "孤独のイオン",
-      "oruyanke": "おるやんけ組",
-      "content": "このサイトはファン作品であり、公式とは関係ありません。STAFFリストとプロジェクト参加方式は「について」ページをご覧ください。"
+      "author": "【海离Channel，写主要开发者/组织就行】",
+      "author_link": "【整个链接到开发者/组织，比如GitHub啊B站啊都可以】",
+      "repo_link": "【如果开源的话可以贴个git地址，不开源的话把这个设置成no_display】",
+      "content": "本站为爱好者作品，和**官方没有关联，STAFF名单以及项目参与方式请查看\"关于\"页面"
     }
-  },
-  "live": {
-    "activity": "ライブ ストリーム",
-    "schedule": "予定",
-    "on_air": "ライブ配信中",
-    "loading": "生放送で取得中···",
-    "no_schedule": "まだ計画中の生放送は発見されていません。",
-    "notification": "日本語から中国語へのビデオ翻訳と校正を募集しています。詳細は[team@fubuki.moe](mailto:team@fubuki.moe)までお問い合わせください。"
   },
   "control": {
     "self": "コントロール",
@@ -30,12 +26,31 @@
     "overlap": "音声を重ねる",
     "random": "自動ランダム再生",
     "repeat": "ループ",
-    "full_name": "白上フブキ",
-    "overlap_title": "多くのフブキの音声"
+    "full_name": "【显示在媒体控制上的作者名，一般写V的名字就好】",
+    "overlap_title": "【显示在媒体控制上的作者名,只不过是重叠播放的，一般写V的名字就好】"
   },
-  "dev": {
-    "title": "開発モードのWebサイトにアクセスしています",
-    "desc": "開発モードでは、フブキボタンのベータ版に脆弱性、エラー、またはその他の問題が含まれる場合があります。 私たちはサポートを提供しておらず、問題または誤動作に対する明示的または黙示的な保証または補償を提供していません。实际新功能以正式版上线为准。",
-    "to_stable": "公式ページへ"
+  "navigator": {
+    "items": [
+      {
+        "icon": "/img/bilibili-fill.svg",
+        "title": "Bilibili 主页",
+        "to": "https://space.bilibili.com/7564991/"
+      },
+      {
+        "icon": "/img/bilibili-fill.svg",
+        "title": "Bilibili 直播间",
+        "to": "https://live.bilibili.com/449047"
+      },
+      {
+        "icon": "/img/youtube-fill.svg",
+        "title": "YouTube",
+        "to": "https://www.youtube.com/channel/频道号?sub_confirmation=1"
+      },
+      {
+        "icon": "/img/twitter-fill.svg",
+        "title": "Twitter",
+        "to": "https://twitter.com/用户名"
+      }
+    ]
   }
 }

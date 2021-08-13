@@ -64,6 +64,8 @@ git clone https://github.com/<你的用户名>/<刚才创建的仓库名称>
 
 首先是主题色，配置在`assets/themes.js`里面，分为亮色和暗色主题，可以使用[Vuetify预定义好的颜色](https://vuetifyjs.com/en/styles/colors/)，也可以使用16进制颜色，例如`primary: '#FF0000'`。
 
+还有是鼠标移动到按钮上会显示一个emoji，这个emoji的默认值可以在`components/VoiceBtn.vue`中修改，支持[Twemoji](https://twemoji.twitter.com/)，也就是推特样式的emoji。
+
 其余部分倒是不用修改太多，不同语言使用的字体配置在`assets/variables.scss`，具体的样式可以自行修改`layouts/`和`pages/`中对应页面的域内CSS。
 
 ### 添加音频切片
