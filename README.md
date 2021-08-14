@@ -33,7 +33,7 @@
 ### 从模板创建仓库
 
 1. 在 GitHub 上，导航到仓库的主页面。
-2. 在文件列表上方，单击 **Use this template**（使用此模板）。
+2. 在文件列表上方，单击 **[Use this template](https://github.com/lonelyion/material-vtuber-button/generate)**（使用此模板）。
 3. 使用 Owner（所有者）下拉菜单选择你想要拥有仓库的帐户，一般都是你自己的账户名称。
 4. 输入仓库的名称（例如hirro-button）和描述。
 5. 选择仓库可见性是公开(Public)还是私有(Private)。
@@ -60,6 +60,8 @@ git clone https://github.com/<你的用户名>/<刚才创建的仓库名称>
 如果需要添加某个语言，则将改语言的json文件删除，同时需要在`layouts/default.vue L83`处删除UI入口，在`plugins/i18n.js`和`store/index.js`两个文件分别删除相应的配置。
 
 网站的关于页面(`/about`)将会显示主目录下的`README.md`(也就是你现在正在阅读的这个文件)以及对应的语言(`README.lang.md`)，如果需要修改关于页支持的语言，可以到`pages/about.vue`中对应位置添加或删除，有现成的示例。
+
+此外，本模板支持Google Analytics，只需在`plugins/analytics.js`中将`UA-XXXXXXXXX-X`替换为自己的UA字符串即可，不需要的话可以注释掉或者将文件内容改为其他统计服务的JS。
 
 #### 外观样式等
 
