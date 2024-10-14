@@ -23,7 +23,7 @@
     "js-yaml-loader": "^1.2.2",
     "markdown-it-attrs": "^3.0.2",
     "markdown-it-div": "^1.1.0",
-    "nuxt": "^2.14.3",
+    "nuxt": "^3.12.4",
     "twemoji": "^13.0.1",
     "vue-i18n": "^8.17.4"
   },
